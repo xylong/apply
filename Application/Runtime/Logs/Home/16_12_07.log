@@ -1,0 +1,868 @@
+[ 2016-12-07T09:18:33+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T09:18:33+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-07T10:32:24+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:32:24+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:32:29+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname`,`cid`,`type` FROM `l_user` WHERE `account` = '马克思主义学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-12-07T10:32:29+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:32:29+08:00 ] ::1 /apply/index.php/Home/Index/index.html?type=1&pageid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `l_apply_material` WHERE ( applicant = 3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT l_apply_material.id,`theme`,`apply_code`,`qr_code`,`apply_time`,`applicant`,`isReturn`,a.isagree,u.nickname FROM `l_apply_material` LEFT JOIN l_user u on l_apply_material.applicant = u.id LEFT JOIN l_approve a on l_apply_material.id = a.aid AND a.type = 1  WHERE ( applicant = 3 ) ORDER BY a.isagree asc, apply_time desc LIMIT 0,20   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 83 行.
+
+[ 2016-12-07T10:32:29+08:00 ] ::1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+
+[ 2016-12-07T10:32:32+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 72 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 100 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 120 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 130 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 146 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 162 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 179 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:32:52+08:00 ] ::1 /apply/index.php/Home/Index/uploadPoster.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:33:25+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\VenueModel::apply_code() E:\wamp\www\apply\Application\Common\Model\VenueModel.class.php 第 52 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `l_apply_venue` (`theme`,`phone`,`number`,`place`,`stime`,`etime`,`board`,`remark`,`apply_code`,`qr_code`,`cid`,`type`,`apply_time`,`plan`,`applicant`) VALUES ('aaa','13925894568','2','aaaa','2016-12-07 08:00','2016-12-07 18:00','2016-12-07/584774d44da94.jpg','','201612079981','201612079981.png','16','1','2016-12-07 10:33:25','2016-12-07/584774f561ecc.zip','3') [ RunTime:0.0000s ]
+
+[ 2016-12-07T10:33:27+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 72 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 100 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 120 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 130 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 146 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 162 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 179 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-07T10:33:54+08:00 ] 127.0.0.1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:33:54+08:00 ] 127.0.0.1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:35:17+08:00 ] ::1 /apply/index.php/Home/Index/uploadPoster.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:35:52+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\VenueModel::apply_code() E:\wamp\www\apply\Application\Common\Model\VenueModel.class.php 第 52 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `l_apply_venue` (`theme`,`phone`,`number`,`place`,`stime`,`etime`,`board`,`remark`,`apply_code`,`qr_code`,`cid`,`type`,`apply_time`,`plan`,`applicant`) VALUES ('bbb','13487455896','3','bbb','2016-12-08 08:00','2016-12-08 18:00','2016-12-07/58477565ea664.jpg','','201612074501','201612074501.png','16','1','2016-12-07 10:35:52','2016-12-07/58477588140b4.zip','3') [ RunTime:0.0000s ]
+
+[ 2016-12-07T10:35:54+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 72 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 100 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 120 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 130 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 146 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 162 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 179 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:36:06+08:00 ] ::1 /apply/index.php/Home/Index/uploadPoster.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:36:26+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\VenueModel::apply_code() E:\wamp\www\apply\Application\Common\Model\VenueModel.class.php 第 52 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `l_apply_venue` (`theme`,`phone`,`number`,`place`,`stime`,`etime`,`board`,`remark`,`apply_code`,`qr_code`,`cid`,`type`,`apply_time`,`plan`,`applicant`) VALUES ('ccc','13925874589','1','ccc','2016-12-09 08:00','2016-12-09 18:00','2016-12-07/584775967b124.jpg','','201612079191','201612079191.png','16','1','2016-12-07 10:36:26','2016-12-07/584775aad94f4.zip','3') [ RunTime:0.0000s ]
+
+[ 2016-12-07T10:36:29+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 72 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 100 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 120 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 130 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 146 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 162 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 179 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:36:44+08:00 ] ::1 /apply/index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:36:44+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:37:05+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname`,`cid`,`type` FROM `l_user` WHERE `account` = '匹兹堡学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-12-07T10:37:05+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:37:05+08:00 ] ::1 /apply/index.php/Home/Index/index.html?type=1&pageid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `l_apply_material` WHERE ( applicant = 7 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT l_apply_material.id,`theme`,`apply_code`,`qr_code`,`apply_time`,`applicant`,`isReturn`,a.isagree,u.nickname FROM `l_apply_material` LEFT JOIN l_user u on l_apply_material.applicant = u.id LEFT JOIN l_approve a on l_apply_material.id = a.aid AND a.type = 1  WHERE ( applicant = 7 ) ORDER BY a.isagree asc, apply_time desc LIMIT 0,20   [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 83 行.
+
+[ 2016-12-07T10:37:05+08:00 ] ::1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+
+[ 2016-12-07T10:37:07+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 72 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 100 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 120 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 130 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 146 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 162 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 179 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:37:27+08:00 ] ::1 /apply/index.php/Home/Index/uploadPoster.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:37:41+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\VenueModel::apply_code() E:\wamp\www\apply\Application\Common\Model\VenueModel.class.php 第 52 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `l_apply_venue` (`theme`,`phone`,`number`,`place`,`stime`,`etime`,`board`,`remark`,`apply_code`,`qr_code`,`cid`,`type`,`apply_time`,`plan`,`applicant`) VALUES ('啊啊啊','13585241256','1','啊啊啊','2016-12-07 08:00','2016-12-07 18:00','2016-12-07/584775e75a1cc.jpg','','201612074121','201612074121.png','11','1','2016-12-07 10:37:41','2016-12-07/584775f54b384.zip','7') [ RunTime:0.0000s ]
+
+[ 2016-12-07T10:37:43+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 72 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 100 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 120 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 130 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 146 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 162 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 179 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:38:09+08:00 ] ::1 /apply/index.php/Home/Index/uploadPoster.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0040s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T10:38:34+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto E:\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\VenueModel::apply_code() E:\wamp\www\apply\Application\Common\Model\VenueModel.class.php 第 52 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\wamp\www\apply\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: INSERT INTO `l_apply_venue` (`theme`,`phone`,`number`,`place`,`stime`,`etime`,`board`,`remark`,`apply_code`,`qr_code`,`cid`,`type`,`apply_time`,`plan`,`applicant`) VALUES ('哦哦哦','13425463698','3','哦哦哦','2016-12-07 08:00','2016-12-07 13:00','2016-12-07/58477611a742c.jpg','','201612078991','201612078991.png','11','1','2016-12-07 10:38:34','2016-12-07/5847762a4a7cc.zip','7') [ RunTime:0.0010s ]
+
+[ 2016-12-07T10:38:36+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 72 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 100 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 120 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 130 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 146 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 162 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data E:\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 179 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T17:05:42+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T17:05:42+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T17:05:44+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`nickname`,`cid`,`type` FROM `l_user` WHERE `account` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-12-07T17:05:45+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-07T17:05:45+08:00 ] ::1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0070s ]
+
+[ 2016-12-07T17:05:45+08:00 ] ::1 /apply/index.php/Home/Index/index.html?type=1&pageid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `l_apply_material` WHERE ( applicant = 1541 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT l_apply_material.id,`theme`,`apply_code`,`qr_code`,`apply_time`,`applicant`,`isReturn`,a.isagree,u.nickname FROM `l_apply_material` LEFT JOIN l_user u on l_apply_material.applicant = u.id LEFT JOIN l_approve a on l_apply_material.id = a.aid AND a.type = 1  WHERE ( applicant = 1541 ) ORDER BY a.isagree asc, apply_time desc LIMIT 0,10   [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 83 行.
+

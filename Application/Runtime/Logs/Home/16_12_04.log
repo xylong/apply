@@ -1,0 +1,1884 @@
+[ 2016-12-04T00:12:25+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T00:17:03+08:00 ] 127.0.0.1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T00:17:07+08:00 ] 127.0.0.1 /apply/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T00:45:06+08:00 ] 127.0.0.1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T10:21:07+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T14:51:07+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T14:57:19+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:00:33+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:00:41+08:00 ] ::1 /apply/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:00:51+08:00 ] ::1 /apply/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:00:51+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:03:10+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:03:48+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:03:52+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:04:09+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:04:13+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:06:06+08:00 ] ::1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:06:06+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:06:51+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:06:51+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+
+[ 2016-12-04T22:08:10+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+
+[ 2016-12-04T22:08:11+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:08:15+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:08:24+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:08:24+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+
+[ 2016-12-04T22:08:41+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+
+[ 2016-12-04T22:09:30+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:09:31+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:09:36+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:10:20+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:10:20+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+
+[ 2016-12-04T22:11:08+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+
+[ 2016-12-04T22:11:09+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:11:13+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:11:21+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:11:33+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0000s ]
+
+[ 2016-12-04T22:11:38+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:13:58+08:00 ] ::1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '经济学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:13:58+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+ERR: 1146:La table 'apply.l_ayoung' n'existe pas
+ [ SQL语句 ] : SHOW COLUMNS FROM `l_ayoung`
+
+[ 2016-12-04T22:15:15+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+
+[ 2016-12-04T22:15:29+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lists D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\e8224d00d7e8d57723bc83810b31f33e.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:16:38+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lists D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\e8224d00d7e8d57723bc83810b31f33e.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:18:51+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lists D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\e8224d00d7e8d57723bc83810b31f33e.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-12-04T22:18:51+08:00 ] ::1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0040s ]
+
+[ 2016-12-04T22:18:52+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lists D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\e8224d00d7e8d57723bc83810b31f33e.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:18:53+08:00 ] ::1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+
+[ 2016-12-04T22:19:10+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lists D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\e8224d00d7e8d57723bc83810b31f33e.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:19:10+08:00 ] ::1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0060s ]
+
+[ 2016-12-04T22:19:11+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`isdel` FROM `l_material` WHERE `pid` = 0 AND `isdel` = 1 ORDER BY id asc  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 170 行.
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 178 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 72 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 90 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 100 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 145 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 188 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 207 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:19:13+08:00 ] ::1 /apply/index.php/Home/Index/applyWorkshop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 204 行.
+SQL: SHOW COLUMNS FROM `l_young` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `l_young`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 65 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 65 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 73 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 81 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 103 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 113 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 113 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 119 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 119 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 130 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 134 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 143 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 143 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 146 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 163 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-12-04T22:20:08+08:00 ] ::1 /apply/index.php/Home/Index/applyWorkshop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 204 行.
+SQL: SHOW COLUMNS FROM `l_young` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `l_young`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 65 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 65 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 73 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 81 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 103 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 113 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 113 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 119 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 119 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 130 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 134 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 143 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 143 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 146 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 163 行.
+NOTIC: [8] Undefined variable: apply D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\94342d8373310cff3222b4b898a7c5ce.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:20:09+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`isdel` FROM `l_material` WHERE `pid` = 0 AND `isdel` = 1 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 170 行.
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 178 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 72 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 90 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 100 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 145 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 188 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 207 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:20:11+08:00 ] ::1 /apply/index.php/Home/Index/applySite.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 66 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 72 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 88 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 96 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 100 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 120 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 130 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 140 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 146 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 162 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 168 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\883047aeb9fec54e7cfcecf69f4c2f77.php 第 179 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:20:13+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lists D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\e8224d00d7e8d57723bc83810b31f33e.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:20:13+08:00 ] ::1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0040s ]
+
+[ 2016-12-04T22:20:15+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`isdel` FROM `l_material` WHERE `pid` = 0 AND `isdel` = 1 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 170 行.
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 178 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 72 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 90 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 100 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 145 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 188 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 207 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:20:22+08:00 ] ::1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: lists D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\e8224d00d7e8d57723bc83810b31f33e.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:20:22+08:00 ] ::1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+
+[ 2016-12-04T22:20:36+08:00 ] 127.0.0.1 /apply/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-04T22:20:36+08:00 ] 127.0.0.1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:20:44+08:00 ] 127.0.0.1 /apply/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_user` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`nickname` FROM `l_user` WHERE `account` = '软件学院' AND `password` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:20:44+08:00 ] 127.0.0.1 /apply/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: lists D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\e8224d00d7e8d57723bc83810b31f33e.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:20:44+08:00 ] 127.0.0.1 /apply/index.php/Home/Index/getApplyType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+
+[ 2016-12-04T22:20:46+08:00 ] 127.0.0.1 /apply/index.php/Home/Index/index.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `l_apply_material` LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Array to string conversion D:\wamp\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 78 行.
+ERR: 1054:Champ 'Array' inconnu dans on clause
+ [ SQL语句 ] : SELECT l_apply_material.id,`theme`,`apply_code`,`qr_code`,`apply_time`,`applicant`,`isReturn`,a.isagree,u.nickname FROM `l_apply_material` LEFT JOIN l_user u on l_apply_material.applicant = u.id LEFT JOIN l_approve a on l_apply_material.id = a.aid AND a.type = Array  ORDER BY apply_time desc LIMIT 0,20  
+ERR: 1054:Champ 'Array' inconnu dans on clause
+ [ SQL语句 ] : SELECT l_apply_material.id,`theme`,`apply_code`,`qr_code`,`apply_time`,`applicant`,`isReturn`,a.isagree,u.nickname FROM `l_apply_material` LEFT JOIN l_user u on l_apply_material.applicant = u.id LEFT JOIN l_approve a on l_apply_material.id = a.aid AND a.type = Array  ORDER BY apply_time desc LIMIT 0,20  
+
+[ 2016-12-04T22:20:48+08:00 ] 127.0.0.1 /apply/index.php/Home/Index/index.html?type=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+ERR: Think\Model:getLists方法不存在！
+
+[ 2016-12-04T22:20:56+08:00 ] 127.0.0.1 /apply/index.php/Home/Index/index.html?type=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `l_apply_young` LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Array to string conversion D:\wamp\wamp\www\apply\Application\Common\Model\AyoungModel.class.php 第 109 行.
+ERR: 1054:Champ 'Array' inconnu dans on clause
+ [ SQL语句 ] : SELECT l_apply_young.id,`apply_code`,`qr_code`,`apply_time`,u.nickname,a.isagree FROM `l_apply_young` LEFT JOIN l_user u on l_apply_young.applicant = u.id LEFT JOIN l_approve a on a.aid = l_apply_young.id AND a.type = Array  ORDER BY id desc LIMIT 0,20  
+ERR: 1054:Champ 'Array' inconnu dans on clause
+ [ SQL语句 ] : SELECT l_apply_young.id,`apply_code`,`qr_code`,`apply_time`,u.nickname,a.isagree FROM `l_apply_young` LEFT JOIN l_user u on l_apply_young.applicant = u.id LEFT JOIN l_approve a on a.aid = l_apply_young.id AND a.type = Array  ORDER BY id desc LIMIT 0,20  
+
+[ 2016-12-04T22:21:10+08:00 ] 127.0.0.1 /apply/index.php/Home/Index/index.html?type=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+ERR: Think\Model:getLists方法不存在！
+
+[ 2016-12-04T22:22:26+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`isdel` FROM `l_material` WHERE `pid` = 0 AND `isdel` = 1 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 170 行.
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 178 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 72 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 90 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 100 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 145 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 188 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 207 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-04T22:23:16+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\AmaterialModel::apply_code() D:\wamp\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 37 行.
+
+[ 2016-12-04T22:23:22+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\AmaterialModel::apply_code() D:\wamp\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 37 行.
+
+[ 2016-12-04T22:24:20+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\AmaterialModel::apply_code() D:\wamp\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 37 行.
+
+[ 2016-12-04T22:24:31+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: validate D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\AmaterialModel::apply_code() D:\wamp\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 37 行.
+
+[ 2016-12-04T22:26:31+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [2] trim() expects parameter 1 to be string, array given D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1217 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp\www\apply\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Missing argument 1 for Common\Model\AmaterialModel::apply_code() D:\wamp\wamp\www\apply\Application\Common\Model\AmaterialModel.class.php 第 37 行.
+NOTIC: [2] imagepng(./Public/qrcode/201612046481.png): failed to open stream: No such file or directory D:\wamp\wamp\www\apply\ThinkPHP\Library\Vendor\phpqrcode\phpqrcode.php 第 954 行.
+SQL: INSERT INTO `l_apply_material` (`theme`,`phone`,`stime`,`etime`,`quantity`,`other`,`apply_code`,`qr_code`,`apply_time`,`applicant`) VALUES ('测试物资申请','13925874569','2016-12-04 08:00','2016-12-04 18:00','40_1','','201612046481','201612046481.png','2016-12-04 22:26:31','8') [ RunTime:0.0010s ]
+
+[ 2016-12-04T22:26:34+08:00 ] ::1 /apply/index.php/Home/Index/applyMaterials.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `l_material` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_material` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_apply_young` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `l_approve` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_process` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `l_apply_venue` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name`,`isdel` FROM `l_material` WHERE `pid` = 0 AND `isdel` = 1 ORDER BY id asc  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 170 行.
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 40  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 41  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 42  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 44  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 45  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 46  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 47  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 48  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 49  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 50  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 51  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 54  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 55  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 56  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 57  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 58  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 59  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 60  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 61  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 62  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 63  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 64  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 65  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 66  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 67  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 68  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 69  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 70  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 71  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 72  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 73  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 74  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 75  [ RunTime:0.0010s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `status` FROM `l_material` WHERE `pid` = 77  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Home\Controller\IndexController.class.php 第 178 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 58 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 72 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 82 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 90 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 100 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 145 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 188 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 207 行.
+NOTIC: [8] Undefined variable: data D:\wamp\wamp\www\apply\Application\Runtime\Cache\Home\c61586669bc1edddd8455c56ab5b2af0.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+

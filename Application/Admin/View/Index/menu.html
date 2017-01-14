@@ -1,0 +1,158 @@
+<include file="Public:header" />
+
+<div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content mailbox-content">
+                        <div class="file-manager">
+                            <a class="btn btn-block btn-primary compose-mail" href="javascript:;">新增</a>
+                            <div class="space-25"></div>
+                            <h5>菜单结构</h5>
+                           
+                            <div class="ibox ">
+                                <div class="ibox-content">
+
+                                    <div class="dd" id="nestable">
+                                        <ol class="dd-list">
+                                            <li class="dd-item" data-id="1">
+                                                <div class="dd-handle">1 - Lorem ipsum</div>
+                                            </li>
+                                            <li class="dd-item" data-id="2">
+                                                <div class="dd-handle">2 - Dolor sit</div>
+                                                <ol class="dd-list">
+                                                    <li class="dd-item" data-id="3">
+                                                        <div class="dd-handle">3 - Adipiscing elit</div>
+                                                    </li>
+                                                    <li class="dd-item" data-id="4">
+                                                        <div class="dd-handle">4 - Nonummy nibh</div>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="tag-title">Labels</h5>
+                            <ul class="tag-list" style="padding: 0">
+                                <li><a href=""><i class="fa fa-tag"></i> Family</a></li>
+                                <li><a href=""><i class="fa fa-tag"></i> Work</a></li>
+                                <li><a href=""><i class="fa fa-tag"></i> Home</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 animated fadeInRight">
+            <div class="mail-box-header">
+                <h2>
+                    Navigation detail
+                </h2>
+            </div>
+                <div class="mail-box">
+
+
+                <div class="mail-body">
+
+                    <form class="form-horizontal" method="get">
+                        <div class="form-group"><label class="col-sm-2 control-label">名称</label>
+                            <div class="col-sm-10"><input type="text" class="form-control"></div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">地址</label>
+                            <div class="col-sm-10"><input type="text" class="form-control"></div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">父节点</label>
+                            <div class="col-sm-10">
+                                <div class="input-group">
+                                	<input type="text" class="form-control" readonly><span class="input-group-btn">
+                                	<button type="button" class="btn btn-primary"><i class="fa fa-hand-o-left"></i></button></span></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">图标</label>
+                            <div class="col-sm-10"><input type="text" class="form-control"></div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">统计函数</label>
+                            <div class="col-sm-10"><input type="text" class="form-control"></div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">排序</label>
+                            <div class="col-sm-10"><input type="text" class="form-control"></div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">状态</label>
+                            <div class="col-sm-10">
+                                <div class="input-group m-b">
+                                    <div class="input-group-btn">
+                                        <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Action <span class="caret"></span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">备注</label>
+							<div class="col-sm-10"><textarea class="form-control" name="remark" rows="5"></textarea></div>
+						</div>
+                    </form>
+
+                </div>
+
+                   
+                    <div class="mail-body text-right tooltip-demo">
+                        <a href="mailbox.html" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Send"><i class="fa fa-reply"></i> Send</a>
+                        <a href="mailbox.html" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Discard email"><i class="fa fa-times"></i> Discard</a>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+
+                </div>
+            </div>
+        </div>
+</div>
+
+<include file="Public:footer" />
+<script src="__JS__/plugins/nestable/jquery.nestable.js"></script>
+<script>
+ $(document).ready(function(){
+
+     var updateOutput = function (e) {
+         var list = e.length ? e : $(e.target),
+                 output = list.data('output');
+         if (window.JSON) {
+             output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+         } else {
+             output.val('JSON browser support required for this demo.');
+         }
+     };
+     // activate Nestable for list 1
+     $('#nestable').nestable({
+         group: 1
+     }).on('change', updateOutput);
+
+     // output initial serialised data
+     updateOutput($('#nestable').data('output', $('#nestable-output')));
+
+     $('#nestable-menu').on('click', function (e) {
+         var target = $(e.target),
+                 action = target.data('action');
+         if (action === 'expand-all') {
+             $('.dd').nestable('expandAll');
+         }
+         if (action === 'collapse-all') {
+             $('.dd').nestable('collapseAll');
+         }
+     });
+ });
+</script>

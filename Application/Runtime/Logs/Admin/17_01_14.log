@@ -1,0 +1,62 @@
+[ 2017-01-14T12:28:57+08:00 ] 127.0.0.1 /apply/index.php?m=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2017-01-14T12:29:49+08:00 ] 127.0.0.1 /apply/index.php?m=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `oa_node` [ RunTime:0.0166s ]
+ERR: 1146:Table 'oa.oa_role_user' doesn't exist
+ [ SQL语句 ] : 		SELECT distinct c.id, c.pid, c.name, c.url,c.icon		FROM oa_role_user AS a, oa_role_node b, oa_node AS c 		WHERE a.role_id = b.role_id and c.is_del=0 		AND a.user_id =1		AND c.is_del =0 		AND c.id = b.node_id 		AND c.pid = 0 		ORDER BY c.sort asc
+ERR: 1146:Table 'oa.oa_role_user' doesn't exist
+ [ SQL语句 ] : 		SELECT distinct c.id, c.pid, c.name, c.url,c.icon		FROM oa_role_user AS a, oa_role_node b, oa_node AS c 		WHERE a.role_id = b.role_id and c.is_del=0 		AND a.user_id =1		AND c.is_del =0 		AND c.id = b.node_id 		AND c.pid = 0 		ORDER BY c.sort asc
+
+[ 2017-01-14T12:30:39+08:00 ] 127.0.0.1 /apply/index.php?m=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005418s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000321s ]
+
+[ 2017-01-14T12:31:43+08:00 ] 127.0.0.1 /apply/index.php?m=admin&c=apply&a=square
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000286s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000308s ]
+
