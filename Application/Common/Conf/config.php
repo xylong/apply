@@ -7,16 +7,23 @@ return array(
     'DB_USER'   => 'root', // 用户名
     'DB_PWD'    => 'xuyunlong', // 密码
     'DB_PORT'   => 3306, // 端口
-    'DB_PREFIX' => 'oa_', // 数据库表前缀  
+    'DB_PREFIX' => 'oa_', // 数据库表前缀
+
+
+    /* 布局 */
+    'LAYOUT_ON'=>true,
+    'LAYOUT_NAME'=>'layout',
 
     
 	/* 模板相关配置 */
     'TMPL_PARSE_STRING' => array(
-        '__CSS__' => __ROOT__ . '/Public/css',
-        '__JS__' => __ROOT__ . '/Public/js',
-        '__IMG__' => __ROOT__ . '/Public/img',
-        '__FONT__' => __ROOT__ . '/Public/font-awesome',
+        '__CSS__'       => __ROOT__ . '/Public/css',
+        '__JS__'        => __ROOT__ . '/Public/js',
+        '__IMG__'       => __ROOT__ . '/Public/img',
+        '__FONT__'      => __ROOT__ . '/Public/font-awesome',
     ),
+
+
 
 
 );
