@@ -10,7 +10,20 @@ class IndexController extends Controller
     }
 
 
-    
+    public function borrow()
+	{
+		$this->display();
+	}
+
+	public function house()
+	{
+		$this->display();
+	}
+
+	public function square()
+	{
+		$this->display();
+	}
 
 
 
