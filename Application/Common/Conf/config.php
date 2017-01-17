@@ -10,11 +10,6 @@ return array(
     'DB_PREFIX' => 'oa_', // 数据库表前缀
 
 
-    /* 布局 */
-    'LAYOUT_ON'=>true,
-    'LAYOUT_NAME'=>'layout',
-
-    
 	/* 模板相关配置 */
     'TMPL_PARSE_STRING' => array(
         '__CSS__'       => __ROOT__ . '/Public/css',
