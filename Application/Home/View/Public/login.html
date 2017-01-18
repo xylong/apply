@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>活动申请登录</title>
+    <link rel="stylesheet" href="__CSS__/jq22.css">
+</head>
+<body>
+    <div id="login">
+        <div class="wrapper">
+            <div class="login">
+                <form action="#" method="post" class="container offset1 loginform">
+                    <div id="owl-login">
+                        <div class="hand"></div>
+                        <div class="hand hand-r"></div>
+                        <div class="arms">
+                            <div class="arm"></div>
+                            <div class="arm arm-r"></div>
+                        </div>
+                    </div>
+                    <div class="pad">
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="email" class="control-label fa fa-envelope"></label>
+                                <input id="email" type="text" placeholder="账号" tabindex="1" autofocus="autofocus" class="form-control input-medium">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="password" class="control-label fa fa-asterisk"></label>
+                                <input id="password" type="password" name="password" placeholder="密码" tabindex="2" class="form-control input-medium">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" tabindex="4" class="btn btn-primary">登录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="__JS__/jquery-2.1.1.js"></script>
+        <script>
+        $(function() {
+            $('#login #password').focus(function() {
+                $('#owl-login').addClass('password');
+            }).blur(function() {
+                $('#owl-login').removeClass('password');
+            });
+        });
+        </script>
+    </div>
+</body>
+</html>
