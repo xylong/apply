@@ -43,21 +43,24 @@
                     </div>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">系统设置</span> <span class="fa arrow"></span></a>
+                    <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">物资借用</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="index.html">菜单管理</a></li>
-                        <li><a href="dashboard_2.html">Dashboard v.2</a></li>
+                        <li><a href="{:U('Index/borrow_list')}">申请记录</a></li>
+                        <li><a href="{:U('Index/borrow')}">物资申请</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a>
+                    <a href="javascript:;"><i class="fa fa-edit"></i> <span class="nav-label">青春工坊</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="{:U('Index/house_list')}">申请记录</a></li>
+                        <li><a href="{:U('Index/house')}">工坊申请</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                    <a href="javascript:;"><i class="fa fa-envelope"></i> <span class="nav-label">展场展架 </span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="{:U('Index/borrow')}">borrow</a></li>
-                        <li><a href="{:U('Index/house')}">house</a></li>
-                        <li><a href="{:U('Index/square')}">square</a></li>
+                        <li><a href="{:U('Index/square_list')}">申请记录</a></li>
+                        <li><a href="{:U('Index/square')}">展场展架申请</a></li>
                     </ul>
                 </li>
             </ul>
@@ -177,7 +180,7 @@
 
 
                 <li>
-                    <a href="login.html">
+                    <a href="{:U('Public/logout')}">
                         <i class="fa fa-sign-out"></i> Log out
                     </a>
                 </li>

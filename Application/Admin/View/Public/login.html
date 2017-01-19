@@ -30,14 +30,14 @@
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
             <p>Login in. To see it in action.</p>
-            <form class="m-t" role="form" id="form_login">
+            <form class="m-t" role="form" id="form_login" action="{:U('Public/check_login')}" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" name="account" placeholder="输入账号">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" name="pwd" placeholder="输入密码">
                 </div>
-                <button type="button" class="btn btn-primary block full-width m-b" onclick="login()">Login</button>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
                 <a href="javascript:;"><small>Forgot password?</small></a>
             </form>
@@ -48,13 +48,6 @@
     <script src="__JS__/jquery-2.1.1.js"></script>
     <script src="__JS__/bootstrap.min.js"></script>
     <script src="__JS__/common.js"></script>
-    <script>
-        function login() {
-            if (check_form("form_login")) {
-                sendForm("form_login", "{:U('public/check_login')}");
-            }
-        }
-    </script>
 </body>
 
 </html>

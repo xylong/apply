@@ -6,10 +6,15 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        $this->display('main');
+        $this->display('_index');
     }
 
     public function borrow()
+	{
+		$this->display();
+	}
+
+	public function borrow_list()
 	{
 		$this->display();
 	}
@@ -19,7 +24,17 @@ class IndexController extends BaseController
 		$this->display();
 	}
 
+	public function house_list()
+	{
+		$this->display();
+	}
+
 	public function square()
+	{
+		$this->display();
+	}
+
+	public function square_list()
 	{
 		$this->display();
 	}

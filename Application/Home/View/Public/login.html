@@ -9,7 +9,7 @@
     <div id="login">
         <div class="wrapper">
             <div class="login">
-                <form action="#" method="post" class="container offset1 loginform">
+                <form action="{:U('Public/check_login')}" method="post" class="container offset1 loginform">
                     <div id="owl-login">
                         <div class="hand"></div>
                         <div class="hand hand-r"></div>
@@ -21,8 +21,8 @@
                     <div class="pad">
                         <div class="control-group">
                             <div class="controls">
-                                <label for="email" class="control-label fa fa-envelope"></label>
-                                <input id="email" type="text" placeholder="账号" tabindex="1" autofocus="autofocus" class="form-control input-medium">
+                                <label for="username" class="control-label fa fa-envelope"></label>
+                                <input id="username" type="text" name="username" placeholder="账号" tabindex="1" autofocus="autofocus" class="form-control input-medium">
                             </div>
                         </div>
                         <div class="control-group">
