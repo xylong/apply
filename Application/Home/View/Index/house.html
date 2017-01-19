@@ -130,8 +130,9 @@
         var d = date.getDate();
         var m = date.getMonth();
         var y = date.getFullYear();
+        var calendar = $('#calendar');
 
-        $('#calendar').fullCalendar({
+        calendar.fullCalendar({
             header: {
                 left: 'prev,next today',
                 center: 'title',
@@ -150,18 +151,10 @@
    
             ],
             dayClick: function(date, allDay, jsEvent, view) {
-                $('#calendar').fullCalendar( 'gotoDate', date );
-                $('#calendar').fullCalendar('changeView','agendaDay')
+                calendar.fullCalendar( 'gotoDate', date );
+                calendar.fullCalendar('changeView','agendaDay')
             },
         });
-
-        function goToMonth(month) {
-                var date = new Date();
-                var d = date.getDate();
-                var m = month !== undefined ? parseInt(month, 0) : date.getMonth();
-                var y = date.getFullYear();
-                return new Date(y, m, d);
-            }
 
 
     });
