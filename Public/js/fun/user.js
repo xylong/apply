@@ -14,10 +14,10 @@ var vm = new Vue({
 	},
 
 	methods : {
-		getList : function (p) {
+		getList : function () {
 			this.$http.get('demo',{
 				type : this.isActive,
-				p    : p		
+				p    : this.current
 		    }).then(function(res){
 		    	this.list = res.data.data;
 		    	this.total = parseInt(res.data.count);
@@ -32,7 +32,7 @@ var vm = new Vue({
 	},
 
 	events:{
-        pagechange:function(){
+        pagechange:function(p){
             this.getList();
         }
     },

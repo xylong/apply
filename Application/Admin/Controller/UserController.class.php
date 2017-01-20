@@ -22,7 +22,8 @@ class UserController extends BaseController
 	{
 		if (IS_AJAX) {
 			$type = I('get.type');
-			$data = $this->user->getUsers($type);
+			$p = I('get.p', 1);
+			$data = $this->user->getUsers($type, $p);
 			exit(json_encode($data));
 		}
 	}

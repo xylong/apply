@@ -5,13 +5,19 @@ use Think\Model;
 class UserModel extends Model
 {
 
-	public function getUsers($type)
+	/**
+	 * 用户列表
+	 * @param  integer $type 用户类型
+	 * @param  [integer] $p  页码  
+	 * @return array       分页数据和总页数
+	 */
+	public function getUsers($type, $p)
 	{
 		$map = array('type' => $type);
 
 		$Page = new \Think\Page($count, 10);
 		$count = $this->where($map)->count();
-		$rows = $this->page($page, 10)->where($map)->field(array('id', 'account', 'cid', 'nickname', 'phone'))->order('id')->select();
+		$rows = $this->page($p, 10)->where($map)->field(array('id', 'account', 'cid', 'nickname', 'phone'))->order('id')->select();
 
 		return array(
 			'data' => $rows,
