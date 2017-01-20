@@ -20,7 +20,7 @@ var vm = new Vue({
 				p    : p		
 		    }).then(function(res){
 		    	this.list = res.data.data;
-		    	this.total = res.data.count;
+		    	this.total = parseInt(res.data.count);
 		    },function(res){
 		        console.log(res.status);
 		    });
