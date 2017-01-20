@@ -45,7 +45,8 @@ class PublicController extends Controller
 		$auth_id = session(C('USER_AUTH_KEY'));
 		if (isset($auth_id)) {
 			session(C('USER_AUTH_KEY'), null);
-			session('username', null);
+			session('account', $data['account']);
+			session('nickname', null);
 			session('utype', null);
 
 			redirect(U(C('USER_AUTH_GATEWAY')));

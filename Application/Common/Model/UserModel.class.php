@@ -5,6 +5,20 @@ use Think\Model;
 class UserModel extends Model
 {
 
+	public function getUsers($type)
+	{
+		$map = array('type' => $type);
+
+		$Page = new \Think\Page($count, 10);
+		$count = $this->where($map)->count();
+		$rows = $this->page($page, 10)->where($map)->field(array('id', 'account', 'cid', 'nickname', 'phone'))->order('id')->select();
+
+		return array(
+			'data' => $rows,
+			'count' => $count
+		);
+	}
+
 	public function doLogin($data)
 	{
 		$password = md5($data['password']);
@@ -24,7 +38,8 @@ class UserModel extends Model
 	private function setAuthInfo($data)
 	{
 		session(C('USER_AUTH_KEY'), $data['id']);
-		session('username', $data['account']);
+		session('account', $data['account']);
+		session('nickname', $data['nickname']);
 		session('utype', $data['type']);
 
 		$time = time();

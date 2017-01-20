@@ -28,8 +28,8 @@
                                 <img alt="image" class="img-circle" src="__IMG__/profile_small.jpg" />
                                  </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                                 </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{$Think.session.admin_name}</strong>
+                                 </span> <span class="text-muted text-xs block">个人中心 <b class="caret"></b></span> </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
                                 <li><a href="profile.html">Profile</a></li>
                                 <li><a href="contacts.html">Contacts</a></li>
@@ -57,14 +57,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a>
-                    </li>
-                    <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Apply </span><span class="label label-warning pull-right">16/24</span></a>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">审核 </span><span class="label label-warning pull-right">16/24</span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{:U('Apply/borrow')}">one</a></li>
-                            <li><a href="{:U('Apply/house')}">two</a></li>
-                            <li><a href="{:U('Apply/square')}">three</a></li>
+                            <li><a href="{:U('Apply/borrow')}">物资申请</a></li>
+                            <li><a href="{:U('Apply/house')}">青春工坊申请</a></li>
+                            <li><a href="{:U('Apply/square')}">展场展架申请</a></li>
                         </ul>
                     </li>
                 </ul>

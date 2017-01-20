@@ -83,6 +83,64 @@
     </div>
 </div>
 
+<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated rollIn">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">青春工坊申请</h4>
+                <small class="font-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+            </div>
+            <div class="modal-body">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <form class="form-horizontal">
+                            
+                            <div class="form-group"><label class="col-lg-2 control-label">申请人</label>
+                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">联系方式</label>
+                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">指导老师</label>
+                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-sm-2 control-label">选择场地</label>
+
+                                <div class="col-sm-10">
+                                    <select class="form-control m-b" name="account">
+                                        <option value="0">请选择</option>
+                                        <option>绘智格</option>
+                                        <option>艺韵厅</option>
+                                        <option>创意格</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">使用事由</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control diff-textarea"></textarea>
+                                </div>
+                            </div>
+                          
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <include file="Public:footer" />
 <!-- iCheck -->
 <script src="__JS__/plugins/iCheck/icheck.min.js"></script>
@@ -97,31 +155,29 @@
 
     $(document).ready(function() {
 
-            $('.i-checks').iCheck({
-                checkboxClass: 'icheckbox_square-green',
-                radioClass: 'iradio_square-green'
-            });
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green'
+        });
 
         /* initialize the external events
          -----------------------------------------------------------------*/
+        function drag() {
+            $('#external-events div.external-event').each(function() {
 
+                $(this).data('event', {
+                    title: $.trim($(this).text()),
+                    stick: true
+                });
 
-        $('#external-events div.external-event').each(function() {
+                $(this).draggable({
+                    zIndex: 1111999,
+                    revert: true,
+                    revertDuration: 0
+                });
 
-            // store data so the calendar knows to render an event upon drop
-            $(this).data('event', {
-                title: $.trim($(this).text()), // use the element's text as the event title
-                stick: true // maintain when user navigates (see docs on the renderEvent method)
             });
-
-            // make the event draggable using jQuery UI
-            $(this).draggable({
-                zIndex: 1111999,
-                revert: true,      // will cause the event to go back to its
-                revertDuration: 0  //  original position after the drag
-            });
-
-        });
+        }
 
 
         /* initialize the calendar
@@ -150,9 +206,19 @@
             events: [
    
             ],
+
             dayClick: function(date, allDay, jsEvent, view) {
+                drag(); // 进入某天中允许多拽
                 calendar.fullCalendar( 'gotoDate', date );
                 calendar.fullCalendar('changeView','agendaDay')
+            },
+
+            eventClick: function(calEvent, jsEvent, view) {
+                $('#myModal').modal('show');
+            },
+
+            eventDrop: function(event,dayDelta,minuteDelta,allDay,revertFunc) {
+                console.log('hello')
             },
         });
 
