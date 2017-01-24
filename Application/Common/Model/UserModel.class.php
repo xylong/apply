@@ -11,10 +11,18 @@ class UserModel extends Model
 	 * @param  [integer] $p  页码  
 	 * @return array       分页数据和总页数
 	 */
-	public function getUsers($type, $p)
+	public function getUsers($type, $p, $keyword)
 	{
-		$map = array('type' => $type);
-
+		if (checkAccount($keyword)) {
+			$map['account'] = array('EQ', $keyword);
+		} else if (checkPhone($keyword)) {
+			$map['phone'] = array('EQ', $keyword);
+		} else if ($keyword) {
+			$map['nickname'] = array('LIKE', '%'.$keyword.'%');
+		} else {
+			$map = array('type' => $type);
+		}
+		
 		$Page = new \Think\Page($count, 10);
 		$count = $this->where($map)->count();
 		$rows = $this->page($p, 10)->where($map)->field(array('id', 'account', 'cid', 'nickname', 'phone'))->order('id')->select();

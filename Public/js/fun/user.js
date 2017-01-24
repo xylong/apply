@@ -7,6 +7,7 @@ var vm = new Vue({
 			{type:3,name:'校级学生组织'}
 		],
 		list : [],
+		keyword : '',
 
 		total: 0,
         display: 10,
@@ -14,13 +15,21 @@ var vm = new Vue({
 	},
 
 	methods : {
-		getList : function () {
-			this.$http.get('demo',{
-				type : this.isActive,
-				p    : this.current
-		    }).then(function(res){
-		    	this.list = res.data.data;
-		    	this.total = parseInt(res.data.count);
+		getList : function (p) {
+			if (p) this.current = p;
+
+			var map = {};
+			if (this.keyword.length > 0) {
+				map = { p : this.current, keyword : this.keyword };
+			} else {
+				map = { type : this.isActive, p : this.current};
+			}
+
+			this.$http
+				.get('users', map)
+				.then(function(res) {
+		    		this.list = res.data.data;
+		    		this.total = parseInt(res.data.count);
 		    },function(res){
 		        console.log(res.status);
 		    });
