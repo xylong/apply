@@ -8,7 +8,8 @@ class UserModel extends Model
 	/**
 	 * 用户列表
 	 * @param  integer $type 用户类型
-	 * @param  [integer] $p  页码  
+	 * @param  integer $p  页码  
+	 * @param  string $p  搜索关键字
 	 * @return array       分页数据和总页数
 	 */
 	public function getUsers($type, $p, $keyword)

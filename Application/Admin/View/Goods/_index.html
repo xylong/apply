@@ -1,0 +1,58 @@
+<include file="Public:header" />
+
+	<div class="wrapper wrapper-content" id="goods">
+	    <div class="row">
+	        <div class="col-lg-3">
+	            <div class="ibox float-e-margins">
+	                <div class="ibox-content">
+	                    <div class="file-manager">
+	                        <h5>按分类展示:</h5>
+	                        <a href="javascript:;" class="file-control" :class="{ active : isActive == v.type }" v-for="v in type" v-text="v.name" @click="tab(v.type)"></a>
+	                        <div class="hr-line-dashed"></div>
+	                        <button class="btn btn-primary btn-block">Upload Files</button>
+	                        <div class="hr-line-dashed"></div>
+	                        <h5 v-show="pid">当前分类统计</h5>
+	                        <ul class="folder-list" style="padding: 0" v-show="pid">
+	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>总数：{{ statistics.total }}</a></li>
+	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>借出：{{ statistics.free }}</a></li>
+	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>可用：{{ statistics.stock }}</a></li>
+	                        </ul>
+	                        <h5 class="tag-title">物品分类</h5>
+	                        <ul class="tag-list" style="padding: 0" v-if="isActive">
+	                            <li v-for="v in classify | filterBy isActive in 'classify'" @click="goodsList(v.id)"><a href="javascript:;">{{ v.name }}</a></li>
+	                        </ul>
+	                        <ul class="tag-list" style="padding: 0" v-else>
+	                            <li v-for="v in classify" @click="goodsList(v.id)"><a href="javascript:;">{{ v.name }}</a></li>
+	                        </ul>
+	                        <div class="clearfix"></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="col-lg-9 animated fadeInRight">
+	            <div class="row">
+	                <div class="col-lg-12">
+	                    <div class="file-box" v-for="v in goods">
+	                        <div class="file">
+	                            <a href="javascript:;">
+	                                <span class="corner"></span>
+
+	                                <div class="icon">
+	                                    <i class="fa fa-file"></i>
+	                                </div>
+	                                <div class="file-name">
+	                                    {{ v.number }}
+	                                    <br/>
+	                                    <small>编辑&nbsp;&nbsp;&nbsp;删除</small>
+	                                </div>
+	                            </a>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+            </div>
+        </div>
+    </div>
+
+<include file="Public:footer" />
+<script src="__JS__/fun/goods.js"></script>
