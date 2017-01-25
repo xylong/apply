@@ -1,0 +1,163 @@
+<include file="Public:header" />
+<link href="__CSS__/plugins/iCheck/custom.css" rel="stylesheet">
+
+<link href="__CSS__/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+<link href="__CSS__/plugins/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print'>
+
+<link href="__CSS__/style.css" rel="stylesheet">
+
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInDown">
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Draggable Events</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#">Config option 1</a>
+                            </li>
+                            <li><a href="#">Config option 2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div id='external-events'>
+                        <p>Drag a event and drop into callendar.</p>
+                        <div class='external-event navy-bg'>物资申请</div>
+                        <div class='external-event navy-bg'>Check the new CI from Corporation.</div>
+                        <div class='external-event navy-bg'>Send documents to John.</div>
+                        <div class='external-event navy-bg'>Phone to Sandra.</div>
+                        <div class='external-event navy-bg'>Chat with Michael.</div>
+                        <p class="m-t">
+                            <input type='checkbox' id='drop-remove' class="i-checks" checked /> <label for='drop-remove'>remove after drop</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <h2>FullCalendar</h2> is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is
+                    easily configured to use your own feed format (an extension is provided for Google Calendar).
+                    <p>
+                        <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar documentation</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Striped Table </h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#">Config option 1</a>
+                            </li>
+                            <li><a href="#">Config option 2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal fade" id="myModal" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">物资借用申请</h4>
+                <small class="font-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>
+            </div>
+            <div class="modal-body">
+
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <form class="form-horizontal">
+
+                            <div class="form-group"><label class="col-lg-2 control-label">活动主题</label>
+                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control" v-model="theme"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group"><label class="col-lg-2 control-label">手机</label>
+                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control" v-model="phone"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="data_5"><label class="col-lg-2 control-label">借用时间</label>
+                                <div class="col-lg-10">
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" disabled v-model="start" />
+                                        <span class="input-group-addon">to</span>
+                                        <input type="text" class="input-sm form-control" disabled v-model="end | reduceDay" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="form-group"><label class="col-lg-2 control-label">分类物品</label>
+                                <div class="col-lg-10">
+                                    <div style="height: 250px;">
+                                        <div class="full-height-scroll">
+                                            <ul class="list-group clear-list m-t">
+                                                <li class="list-group-item" v-for="v in classify">
+                                                    <span class="pull-right">
+                                                        <input type="text" >
+                                                    </span>
+                                                    <span class="text-success" v-text="v.name"></span>
+                                                    <i class="text-navy" v-text="v.total-v.stock"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" @click="sub">提交申请</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<include file="Public:footer" />
+<!-- iCheck -->
+<script src="__JS__/plugins/iCheck/icheck.min.js"></script>
+
+<!-- jQuery UI custom -->
+<script src="__JS__/jquery-ui.custom.min.js"></script>
+
+<!-- Full Calendar -->
+<script src="__JS__/plugins/fullcalendar/moment.min.js"></script>
+<script src="__JS__/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="__JS__/fun/borrow.js"></script>
