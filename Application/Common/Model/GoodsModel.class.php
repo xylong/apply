@@ -13,22 +13,38 @@ class GoodsModel extends Model
 	 */
 	public function getGoods($pid = 0, $flag = false)
 	{
-		// 返回分类下所有物品
+		// 获取所有分类及库存
+		if ($flag) {
+			return $this->inventory();
+		}
+
+		// 返回分类下所有物品及库存
 		if ($pid) {
 			$map = array(
 				'pid' => array('EQ', $pid),
 				'isdel' => 1
 			);
-			return $this->where($map)->field(array('id', 'number', 'status'))->order('id')->select();
+			$goods = $this->where($map)->field(array('id', 'number', 'status'))->order('id')->select();
+			$stock = $this->inventory($pid);
 		}
-		// 统计全部分类的库存情况
-		if ($flag) {
-			$sql = 'SELECT a.id,a.`name`,COUNT(*) total, SUM(b.`status`) stock FROM oa_goods a INNER JOIN oa_goods b ON a.id = b.pid WHERE a.pid = 0 GROUP BY a.id';
-			return $this->query($sql);
-		}
+
 		// 返回所有分类
-		$data = $this->where(array('pid' => 0, 'isdel' => 1))->order('id asc')->field(array('id', 'name', 'classify'))->select();	
+		$data = $this->where(array('pid' => 0, 'isdel' => 1))->order('id asc')->field(array('id', 'name', 'classify'))->select();
 		return $data;
+	}
+
+	/**
+	 * 库存
+	 * @param  integer $pid 分类id
+	 * @return array
+	 */
+	private function inventory($pid)
+	{
+		if ($pid) {
+			$map = 'WHERE a.id = ' . $pid;
+		}
+		$sql = 'SELECT a.id,a.`name`,COUNT(*) total, SUM(b.`status`) stock FROM oa_goods a INNER JOIN oa_goods b ON a.id = b.pid ' . $map . ' GROUP BY a.id';
+		return $this->query($sql);
 	}
 
 
