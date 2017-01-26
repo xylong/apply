@@ -26,6 +26,7 @@ $(document).ready(function() {
     var vm = new Vue({
         data : {
             theme : '',
+            phone : '',
             start : '',
             end : '',
 
