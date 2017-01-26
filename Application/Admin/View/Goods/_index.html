@@ -13,9 +13,9 @@
 	                        <div class="hr-line-dashed"></div>
 	                        <h5 v-show="pid">当前分类统计</h5>
 	                        <ul class="folder-list" style="padding: 0" v-show="pid">
-	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>总数：{{ statistics.total }}</a></li>
-	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>借出：{{ statistics.free }}</a></li>
-	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>可用：{{ statistics.stock }}</a></li>
+	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>总数：{{ inventory.stock }}</a></li>
+	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>借出：{{ inventory.occupy }}</a></li>
+	                            <li><a href="javascript:;"><i class="fa fa-folder"></i>可用：{{ inventory.free }}</a></li>
 	                        </ul>
 	                        <h5 class="tag-title">物品分类</h5>
 	                        <ul class="tag-list" style="padding: 0" v-if="isActive">

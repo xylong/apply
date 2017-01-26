@@ -21,7 +21,8 @@ class BorrowController extends BaseController
     public function apply()
 	{
 		if (IS_AJAX) {
-			
+			$post = I('post.');
+			exit(json_encode($post));
 		}
 		$this->display();
 	}

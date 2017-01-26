@@ -26,6 +26,10 @@ class GoodsModel extends Model
 			);
 			$goods = $this->where($map)->field(array('id', 'number', 'status'))->order('id')->select();
 			$stock = $this->inventory($pid);
+			return array(
+				'goods' => $goods,
+				'stock' => $stock
+			);
 		}
 
 		// 返回所有分类
@@ -43,7 +47,7 @@ class GoodsModel extends Model
 		if ($pid) {
 			$map = 'WHERE a.id = ' . $pid;
 		}
-		$sql = 'SELECT a.id,a.`name`,COUNT(*) total, SUM(b.`status`) stock FROM oa_goods a INNER JOIN oa_goods b ON a.id = b.pid ' . $map . ' GROUP BY a.id';
+		$sql = 'SELECT a.id,a.`name`,COUNT(*) stock, SUM(b.`status`) occupy FROM oa_goods a INNER JOIN oa_goods b ON a.id = b.pid ' . $map . ' GROUP BY a.id';
 		return $this->query($sql);
 	}
 

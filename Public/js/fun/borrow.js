@@ -22,7 +22,6 @@ $(document).ready(function() {
 
     });
 
-
     var vm = new Vue({
         data : {
             theme : '',
@@ -30,7 +29,8 @@ $(document).ready(function() {
             start : '',
             end : '',
 
-            classify : []
+            classify : [],
+            borrow : []
         },
 
         filters: {
@@ -44,18 +44,45 @@ $(document).ready(function() {
                 write : function (value) {
                     return value;
                 }
+            },
+            goodsNum : {
+                read : function (value) {
+                    if (value) {
+                        return value.replace(/.+\_/, '');
+                    }
+                },
+                write : function (newVal, oldVal, index) {
+                    if (newVal) {
+                        return index + '_' + newVal;
+                    }
+                }
             }
         },
 
         methods : {
            sub : function () {
-               console.log(this.start, this.end)
-           }
+               this.checkData();
+
+               //    this.$http.post('apply',{
+               this.$http.post('index.php?s=/Home/Borrow/apply',{
+                    goods : this.borrow,
+                    start : this.start,
+                    end   : this.end
+                },{
+                    emulateJSON:true
+                }).then(function(res){
+                    console.log(res.data);
+                },function(res){
+                    alert(res.status);
+                });
+           },
+
         },
 
         ready : function () {
             this.$http
-                .get('getGoods')
+                // .get('getGoods')
+                .get('index.php?s=/Home/Borrow/getGoods')
                 .then(function(res) {
                     this.classify = res.data;
             },function(res){
@@ -100,7 +127,7 @@ $(document).ready(function() {
         },
 
         renderEvent : function () {
-            alert(123)  
+            alert(123)
         },
 
         eventDrop: function(event,dayDelta,minuteDelta,allDay,revertFunc) {
