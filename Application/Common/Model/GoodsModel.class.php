@@ -38,7 +38,7 @@ class GoodsModel extends Model
 	 * @param  integer $pid 分类id
 	 * @return array
 	 */
-	private function inventory($pid)
+	private function inventory($pid = 0)
 	{
 		if ($pid) {
 			$map = 'WHERE a.id = ' . $pid;
