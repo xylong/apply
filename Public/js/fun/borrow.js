@@ -1,4 +1,9 @@
-$(document).ready(function() {
+// $(document).ready(function() {
+    // var apply = (function () {
+    //     return $.get('index', function (res) {
+    //         return res;
+    //     });
+    // })();
 
     $('.i-checks').iCheck({
         checkboxClass: 'icheckbox_square-green',
@@ -24,6 +29,8 @@ $(document).ready(function() {
 
     var vm = new Vue({
         data : {
+            apply : [],
+
             theme : '',
             phone : '',
             start : '',
@@ -52,39 +59,66 @@ $(document).ready(function() {
                     }
                 },
                 write : function (newVal, oldVal, index) {
-                    if (newVal) {
-                        return index + '_' + newVal;
-                    }
+                    if (newVal) return index + '_' + newVal;
                 }
             }
         },
 
         methods : {
-           sub : function () {
-               this.checkData();
+            sub : function () {
+                var post = this.filterData();
+                if (!post) return;
 
-               //    this.$http.post('apply',{
-               this.$http.post('index.php?s=/Home/Borrow/apply',{
-                    goods : this.borrow,
-                    start : this.start,
-                    end   : this.end
-                },{
+                this.$http.post('apply', post, {
                     emulateJSON:true
                 }).then(function(res){
                     console.log(res.data);
                 },function(res){
                     alert(res.status);
                 });
+            },
+
+            // 过滤提交的数据
+            filterData : function () {
+                if (this.theme.length === 0) return;
+                if (!checkPhone(this.phone)) return;
+
+                // 处理借用的数量
+                var len = this.borrow.length;
+                if (len === 0) return;
+                for (var i = 0; i < len; i++) {
+                    if (this.borrow[i] === undefined) this.borrow[i] = 0;
+                }
+
+                // 处理截止日期
+                if (this.end) this.end = this.end.substring(0, 8) + (parseInt(this.end.substring(8)) - 1);
+
+                return {
+                    borrow: this.borrow,
+                    theme : this.theme,
+                    phone : this.phone,
+                    stime : this.start,
+                    etime : this.end
+                }
            },
 
+           // 获取物资分类及库存
+           getClassify : function () {
+                this.$http
+                    .get('getGoods')
+                    .then(function(res) {
+                        this.classify = res.data;
+                },function(res){
+                    console.log(res.status);
+                });
+            }
         },
 
         ready : function () {
             this.$http
-                // .get('getGoods')
-                .get('index.php?s=/Home/Borrow/getGoods')
+                .get('index')
                 .then(function(res) {
-                    this.classify = res.data;
+                    this.apply = res.data;
             },function(res){
                 console.log(res.status);
             });
@@ -115,12 +149,18 @@ $(document).ready(function() {
                 $(this).remove();
             }
         },
-        events: [
-
-        ],
+        // events: [
+        //     {
+        //         title: 'Long Event',
+        //         start: '2017-01-15',
+        //         end: '2017-01-17'
+        //     }
+        // ],
+        events : vm.apply,
 
 
         eventClick: function(event, jsEvent, view) {
+            vm.getClassify();
             vm.start = event.start.format('YYYY-MM-DD');
             vm.end = event.end ? event.end.format('YYYY-MM-DD') : null;
             $('#myModal').modal('show');
@@ -136,4 +176,4 @@ $(document).ready(function() {
     });
 
 
-});
+// });

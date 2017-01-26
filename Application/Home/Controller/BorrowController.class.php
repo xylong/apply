@@ -7,22 +7,35 @@ use Think\Controller;
 class BorrowController extends BaseController
 {
 	private $goods;
+	private $borrow;
 
 	public function _initialize()
 	{
 		$this->goods = D('Goods');
+		$this->borrow = D('Borrow');
 	}
 
     public function index()
     {
+    	if (IS_AJAX) {
+    		$data = $this->borrow->getApplyByMonth('2017-01');
+    		exit(json_encode($data));
+    	}
         $this->display('_index');
     }
 
     public function apply()
 	{
 		if (IS_AJAX) {
-			$post = I('post.');
-			exit(json_encode($post));
+			if (!$this->borrow->create()) {
+                $this->error($this->borrow->getError());
+            } else {
+                if ($this->borrow->add()) {
+                    returnJson(true, '申请提交成功');
+                } else {
+                    returnJson(false, '申请提交失败');
+                }
+            }
 		}
 		$this->display();
 	}
