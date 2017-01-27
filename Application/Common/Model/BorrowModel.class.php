@@ -36,15 +36,19 @@ class BorrowModel extends Model
 	}
 
 	/**
-	 * 根据月份获取数据
+	 * 根据时间段获取数据
 	 * @param  string $map 月份(如：2017-01)
 	 * @return array
 	 */
-	public function getApplyByMonth($map)
+	public function getApplyByTimes($start, $end)
 	{
-		$sql = "SELECT id,theme title,DATE_FORMAT(stime,'%Y-%m-%d') start,DATE_FORMAT(etime,'%Y-%m-%d') end FROM oa_borrow WHERE DATE_FORMAT(stime,'%Y-%m') = DATE_FORMAT(NOW(), '{$map}')";
+		$sql = "SELECT id,uid,theme title,DATE_FORMAT(stime,'%Y-%m-%d') start,DATE_FORMAT(etime,'%Y-%m-%d') end FROM oa_borrow WHERE stime BETWEEN '{$start}' AND '{$end}'";
 		return $this->query($sql);
 	}
 
+	public function getApplyById($id)
+	{
+		return $this->where(array('id' => $id))->find();
+	}
 
 }

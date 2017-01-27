@@ -34,19 +34,37 @@
                     <div id='external-events'>
                         <p>拖拽申请框到日历中编辑申请.</p>
                         <div class='external-event navy-bg'><i class="fa fa-arrows"></i>物资申请</div>
-<!--                         <p class="m-t">
-                            <input type='checkbox' id='drop-remove' class="i-checks" checked /> <label for='drop-remove'>remove after drop</label>
-                        </p>
- -->                    </div>
+                    </div>
                 </div>
             </div>
-            <div class="ibox float-e-margins">
+            <div class="ibox float-e-margins" id="bar" v-show="isVisible">
                 <div class="ibox-content">
-                    <h2>FullCalendar</h2> is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is
-                    easily configured to use your own feed format (an extension is provided for Google Calendar).
-                    <p>
-                        <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar documentation</a>
-                    </p>
+                    <div class="file-manager">
+                        <h2>详情信息</h2>
+                        <div class="space-25"></div>
+                        <h5>Folders</h5>
+                        <ul class="folder-list m-b-md" style="padding: 0">
+                            <li v-for="v in info.borrow"><a href="javascript:;"> <i class="fa fa-inbox "></i> {{ v.name }} <span class="label label-warning pull-right">{{ v.num }}</span> </a></li>
+                        </ul>
+                        <h5>颜色含义</h5>
+                        <ul class="category-list" style="padding: 0">
+                            <li><a href="javascript:;"> <i class="fa fa-circle text-navy"></i> 公共的 </a></li>
+                            <li><a href="javascript:;"> <i class="fa fa-circle text-primary"></i> 私有的</a></li>
+                        </ul>
+
+                        <h5 class="tag-title">Labels</h5>
+                        <ul class="tag-list" style="padding: 0">
+                            <li><a href=""><i class="fa fa-tag"></i> Family</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Work</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Home</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Children</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Holidays</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Music</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Photography</a></li>
+                            <li><a href=""><i class="fa fa-tag"></i> Film</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
                 </div>
             </div>
         </div>

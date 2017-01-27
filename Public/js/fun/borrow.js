@@ -1,10 +1,4 @@
 // $(document).ready(function() {
-    // var apply = (function () {
-    //     return $.get('index', function (res) {
-    //         return res;
-    //     });
-    // })();
-
     $('.i-checks').iCheck({
         checkboxClass: 'icheckbox_square-green',
         radioClass: 'iradio_square-green'
@@ -105,7 +99,7 @@
            // 获取物资分类及库存
            getClassify : function () {
                 this.$http
-                    .get('getGoods')
+                    .get('index.php?s=/Home/Borrow/getGoods')
                     .then(function(res) {
                         this.classify = res.data;
                 },function(res){
@@ -115,15 +109,37 @@
         },
 
         ready : function () {
-            this.$http
-                .get('index')
-                .then(function(res) {
-                    this.apply = res.data;
-            },function(res){
-                console.log(res.status);
-            });
+            this.getClassify();
         }
     }).$mount('#myModal');
+
+    var bar = new Vue({
+        data : {
+            isVisible : false,
+            info : {}
+        },
+        methods : {
+            getApply : function (id) {
+                this.$http
+                    .get('index.php?s=/Home/Borrow/getApply', {
+                        id : id
+                    })
+                    .then(function(res) {
+                        res.data.borrow = res.data.borrow.split(',').map(function (item) {
+                            var tmp = item.split('_');
+                            for (obj of vm.classify) {
+                                if (tmp[0] == obj.id) {
+                                    return { id : tmp[0], name : obj.name, num : tmp[1] }
+                                }
+                            }
+                        });
+                        this.info = res.data;
+                },function(res){
+                    console.log(res.status);
+                });
+            }
+        }
+    }).$mount('#bar');
 
 
     /* initialize the calendar
@@ -149,17 +165,26 @@
                 $(this).remove();
             }
         },
-        // events: [
-        //     {
-        //         title: 'Long Event',
-        //         start: '2017-01-15',
-        //         end: '2017-01-17'
-        //     }
-        // ],
-        events : vm.apply,
-
+        events: {
+            url: 'index.php?s=/Home/Borrow/index',
+            type: 'get',
+            error: function() {
+                alert('there was an error while fetching events!');
+            },
+            editable : false
+        },
 
         eventClick: function(event, jsEvent, view) {
+            if (event.id) {
+                if (event.viewable) {
+                    bar.getApply(event.id);
+                    bar.isVisible = true;
+                } else {
+                    bar.info = {};
+                    bar.isVisible = false;
+                }
+                return;
+            };
             vm.getClassify();
             vm.start = event.start.format('YYYY-MM-DD');
             vm.end = event.end ? event.end.format('YYYY-MM-DD') : null;

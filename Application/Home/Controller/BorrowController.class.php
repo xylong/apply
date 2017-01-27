@@ -18,7 +18,18 @@ class BorrowController extends BaseController
     public function index()
     {
     	if (IS_AJAX) {
-    		$data = $this->borrow->getApplyByMonth('2017-01');
+    		$start = I('get.start');
+    		$end = I('get.end');
+    		$data = $this->borrow->getApplyByTimes($start, $end);
+    		foreach ($data as $index => $item) {
+    			// 区分自己的申请
+    			if (session(C('USER_AUTH_KEY')) == $item['uid']) {
+    				$data[$index]['color'] = '#52d1e3';
+    				$data[$index]['viewable'] = true;
+    			} else {
+    				$data[$index]['viewable'] = false;
+    			}
+    		}
     		exit(json_encode($data));
     	}
         $this->display('_index');
@@ -38,6 +49,15 @@ class BorrowController extends BaseController
             }
 		}
 		$this->display();
+	}
+
+	public function getApply()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id', 0);
+			$data = $this->borrow->getApplyById($id);
+			exit(json_encode($data));
+		}
 	}
 
 	public function getGoods()
