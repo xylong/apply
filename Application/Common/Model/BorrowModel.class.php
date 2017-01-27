@@ -9,7 +9,6 @@ class BorrowModel extends Model
 		array('theme', 'require', '活动主题必填', 1, '', 1),	// 主题
 		array('phone', 'checkPhone', '手机格式错误', 1, 'function', 1),	// 手机号
 		array('stime', 'require', '开始时间必选', 1),	// 开始时间
-		array('etime', 'require', '结束时间必选', 2),	// 结束时间
 		array('borrow', 'is_array', '借用详情必填', 1, 'function', 1),	// 申请数量
 	);
 
@@ -37,12 +36,13 @@ class BorrowModel extends Model
 
 	/**
 	 * 根据时间段获取数据
-	 * @param  string $map 月份(如：2017-01)
+	 * @param  string $start 起始日期(如：2017-01-01)
+	 * @param  string $end 截止日期(如：2017-01-01)
 	 * @return array
 	 */
 	public function getApplyByTimes($start, $end)
 	{
-		$sql = "SELECT id,uid,theme title,DATE_FORMAT(stime,'%Y-%m-%d') start,DATE_FORMAT(etime,'%Y-%m-%d') end FROM oa_borrow WHERE stime BETWEEN '{$start}' AND '{$end}'";
+		$sql = "SELECT id,uid,theme title,DATE_FORMAT(stime,'%Y-%m-%d') `start`,DATE_FORMAT(etime,'%Y-%m-%d') `end` FROM oa_borrow WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
 		return $this->query($sql);
 	}
 

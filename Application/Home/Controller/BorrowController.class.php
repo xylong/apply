@@ -22,6 +22,9 @@ class BorrowController extends BaseController
     		$end = I('get.end');
     		$data = $this->borrow->getApplyByTimes($start, $end);
     		foreach ($data as $index => $item) {
+    			if ($item['end'] != '0000-00-00 00:00:00') {
+	    			$data[$index]['end'] = substr($item['end'], 0, 8) . (substr($item['end'], 8, 2) + 1);
+    			}
     			// 区分自己的申请
     			if (session(C('USER_AUTH_KEY')) == $item['uid']) {
     				$data[$index]['color'] = '#52d1e3';

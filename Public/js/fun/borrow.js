@@ -66,7 +66,9 @@
                 this.$http.post('apply', post, {
                     emulateJSON:true
                 }).then(function(res){
-                    console.log(res.data);
+                    $('#myModal').modal('hide');
+                    this.theme = this.phone = this.start = this.end = '';
+                    this.borrow = [];
                 },function(res){
                     alert(res.status);
                 });
@@ -84,22 +86,25 @@
                     if (this.borrow[i] === undefined) this.borrow[i] = 0;
                 }
 
-                // 处理截止日期
-                if (this.end) this.end = this.end.substring(0, 8) + (parseInt(this.end.substring(8)) - 1);
 
-                return {
+                var data = {
                     borrow: this.borrow,
                     theme : this.theme,
                     phone : this.phone,
-                    stime : this.start,
-                    etime : this.end
-                }
+                    stime : this.start
+                };
+
+                // 处理截止日期
+                this.end = this.end ? this.end.substring(0, 8) + (parseInt(this.end.substring(8)) - 1) : null;
+                if (this.end) data.etime = this.end;
+
+                return data;
            },
 
            // 获取物资分类及库存
            getClassify : function () {
                 this.$http
-                    .get('index.php?s=/Home/Borrow/getGoods')
+                    .get('getGoods')
                     .then(function(res) {
                         this.classify = res.data;
                 },function(res){
@@ -121,7 +126,7 @@
         methods : {
             getApply : function (id) {
                 this.$http
-                    .get('index.php?s=/Home/Borrow/getApply', {
+                    .get('getApply', {
                         id : id
                     })
                     .then(function(res) {
@@ -154,7 +159,7 @@
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'month,agendaDay'
+            right: 'month'
         },
         editable: true,
         droppable: true, // this allows things to be dropped onto the calendar
@@ -166,7 +171,7 @@
             }
         },
         events: {
-            url: 'index.php?s=/Home/Borrow/index',
+            url: 'index',
             type: 'get',
             error: function() {
                 alert('there was an error while fetching events!');
@@ -175,6 +180,18 @@
         },
 
         eventClick: function(event, jsEvent, view) {
+            var now = new Date().Format("yyyy-MM-dd");
+            if (event.start.format('YYYY-MM-DD') < now) {
+                swal({
+                    title: "申请错误",
+                    text: "起始时间不能小于当前时间",
+                    type: "warning",
+                    confirmButtonColor: "#DD6B55",
+                    closeOnConfirm: false
+                });
+                return
+            };
+
             if (event.id) {
                 if (event.viewable) {
                     bar.getApply(event.id);
@@ -189,15 +206,7 @@
             vm.start = event.start.format('YYYY-MM-DD');
             vm.end = event.end ? event.end.format('YYYY-MM-DD') : null;
             $('#myModal').modal('show');
-        },
-
-        renderEvent : function () {
-            alert(123)
-        },
-
-        eventDrop: function(event,dayDelta,minuteDelta,allDay,revertFunc) {
-            console.log('hello')
-        },
+        }
     });
 
 
