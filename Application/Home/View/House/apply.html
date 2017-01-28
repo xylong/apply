@@ -7,6 +7,33 @@
 
 <div class="wrapper wrapper-content">
     <div class="row animated fadeInDown">
+        <div class="col-lg-9">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Striped Table </h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#">Config option 1</a>
+                            </li>
+                            <li><a href="#">Config option 2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
         <div class="col-lg-3">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
@@ -48,33 +75,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-9">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>Striped Table </h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#">Config option 1</a>
-                            </li>
-                            <li><a href="#">Config option 2</a>
-                            </li>
-                        </ul>
-                        <a class="close-link">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="ibox-content">
-                    <div id="calendar"></div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -90,19 +90,25 @@
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
                         <form class="form-horizontal">
-                            
+
                             <div class="form-group"><label class="col-lg-2 control-label">申请人</label>
-                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="proposer">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.proposer.isVisible" v-text="prompt.proposer.msg">.</span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">联系方式</label>
-                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="phone">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.phone.isVisible" v-text="prompt.phone.msg"></span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">指导老师</label>
-                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="tutor">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.tutor.isVisible" v-text="prompt.tutor.msg"></span>
                                 </div>
                             </div>
 
@@ -111,26 +117,27 @@
                                 <div class="col-sm-10">
                                     <select class="form-control m-b" name="account">
                                         <option value="0">请选择</option>
-                                        <option>绘智格</option>
-                                        <option>艺韵厅</option>
-                                        <option>创意格</option>
+                                        <option v-model="1">绘智格</option>
+                                        <option v-model="2">艺韵厅</option>
+                                        <option v-model="3">创意格</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">使用事由</label>
                                 <div class="col-lg-10">
-                                    <textarea class="form-control diff-textarea"></textarea>
+                                    <textarea class="form-control diff-textarea" v-model="reason"></textarea>
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.reason.isVisible" v-text="prompt.reason.msg"></span>
                                 </div>
                             </div>
-                          
+
                         </form>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" @click="sub">提交申请</button>
             </div>
         </div>
     </div>
