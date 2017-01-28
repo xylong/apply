@@ -15,18 +15,16 @@ class UserModel extends Model
 	public function getUsers($type, $p, $keyword)
 	{
 		if (checkAccount($keyword)) {
-			$map['account'] = array('EQ', $keyword);
+			$map['oa_user.account'] = array('EQ', $keyword);
 		} else if (checkPhone($keyword)) {
-			$map['phone'] = array('EQ', $keyword);
-		} else if ($keyword) {
-			$map['nickname'] = array('LIKE', '%'.$keyword.'%');
+			$map['oa_user.phone'] = array('EQ', $keyword);
 		} else {
-			$map = array('type' => $type);
+			$map = array('oa_user.type' => $type);
 		}
-		
+
 		$Page = new \Think\Page($count, 10);
 		$count = $this->where($map)->count();
-		$rows = $this->page($p, 10)->where($map)->field(array('id', 'account', 'cid', 'nickname', 'phone'))->order('id')->select();
+		$rows = $this->page($p, 10)->join('LEFT JOIN __COLLEGE__ ON __USER__.cid = __COLLEGE__.id')->where($map)->field('oa_user.id,account,phone,oa_college.name nickname')->order('id')->select();
 
 		return array(
 			'data' => $rows,
@@ -37,12 +35,13 @@ class UserModel extends Model
 	public function doLogin($data)
 	{
 		$password = md5($data['password']);
-		$map1 = array('account' => $data['username'], 'password' => $password, 'status' => 1);
-		$map2 = array('username' => $data['username'], 'password' => $password, 'status' => 1);
+		$map1 = array('oa_user.account' => $data['username'], 'oa_user.password' => $password, 'oa_user.status' => 1);
+		$map2 = array('oa_user.username' => $data['username'], 'oa_user.password' => $password, 'oa_user.status' => 1);
+		$field = array('oa_user.id,account,last_login_time,oa_college.name college');
 
-		if ($user_info = $this->where($map1)->find()) {
+		if ($user_info = $this->join('LEFT JOIN __COLLEGE__ ON __USER__.cid = __COLLEGE__.id')->field($field)->where($map1)->find()) {
 			$this->setAuthInfo($user_info);
-		} elseif ($user_info = $this->where($map2)->find()) {
+		} elseif ($user_info = $this->join('LEFT JOIN __COLLEGE__ ON __USER__.cid = __COLLEGE__.id')->field($field)->where($map2)->find()) {
 			$this->setAuthInfo($user_info);
 		} else {
 			return false;
@@ -54,8 +53,7 @@ class UserModel extends Model
 	{
 		session(C('USER_AUTH_KEY'), $data['id']);
 		session('account', $data['account']);
-		session('nickname', $data['nickname']);
-		session('utype', $data['type']);
+		session('nickname', $data['college']);
 
 		$time = time();
 		$_data = array(
