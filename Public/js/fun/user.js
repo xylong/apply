@@ -26,7 +26,7 @@ var vm = new Vue({
 			}
 
 			this.$http
-				.get('users', map)
+				.get('index.php?s=/Admin/User/users', map)
 				.then(function(res) {
 		    		this.list = res.data.data;
 		    		this.total = parseInt(res.data.count);

@@ -11,6 +11,9 @@
     <link href="__CSS__/bootstrap.min.css" rel="stylesheet">
     <link href="__FONT__/css/font-awesome.css" rel="stylesheet">
 
+    <!-- Toastr style -->
+    <link href="__CSS__/plugins/toastr/toastr.min.css" rel="stylesheet">
+
     <link href="__CSS__/animate.css" rel="stylesheet">
     <link href="__CSS__/style.css" rel="stylesheet">
 
@@ -43,26 +46,33 @@
                         </div>
                     </li>
                     <li>
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">系统设置</span> <span class="fa arrow"></span></a>
+                        <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">系统设置</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{:U('Index/index')}">菜单管理</a></li>
                             <li><a href="dashboard_2.html">Dashboard v.2</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">用户管理</span> <span class="fa arrow"></span></a>
+                        <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">用户管理</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{:U('User/index')}">用户列表</a></li>
                             <li><a href="{:U('User/colleges')}">学院/部门</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">物品管理 </span><span class="label label-warning pull-right">16/24</span></a>
+                        <a href="javascript:;"><i class="fa fa-envelope"></i> <span class="nav-label">物品管理 </span><span class="label label-warning pull-right">16/24</span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{:U('Goods/index')}">物资管理</a></li>
                             <li><a href="{:U('Goods/apply')}">物资申请</a></li>
                             <!-- <li><a href="{:U('Apply/house')}">青春工坊申请</a></li> -->
                             <!-- <li><a href="{:U('Apply/square')}">展场展架申请</a></li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;"><i class="fa fa-envelope"></i> <span class="nav-label">青春工坊 </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="{:U('House/index')}">工坊管理</a></li>
+                            <li><a href="{:U('House/apply')}">工坊申请</a></li>
                         </ul>
                     </li>
                 </ul>

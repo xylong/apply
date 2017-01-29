@@ -63,7 +63,7 @@
                 var post = this.filterData();
                 if (!post) return;
 
-                this.$http.post('apply', post, {
+                this.$http.post('index.php?s=/Home/Borrow/apply', post, {
                     emulateJSON:true
                 }).then(function(res){
                     $('#myModal').modal('hide');
@@ -104,7 +104,7 @@
            // 获取物资分类及库存
            getClassify : function () {
                 this.$http
-                    .get('getGoods')
+                    .get('index.php?s=/Home/Borrow/getGoods')
                     .then(function(res) {
                         this.classify = res.data;
                 },function(res){
@@ -126,7 +126,7 @@
         methods : {
             getApply : function (id) {
                 this.$http
-                    .get('getApply', {
+                    .get('index.php?s=/Home/Borrow/getApply', {
                         id : id
                     })
                     .then(function(res) {
@@ -171,7 +171,7 @@
             }
         },
         events: {
-            url: 'index',
+            url: 'index.php?s=/Home/Borrow/index',
             type: 'get',
             error: function() {
                 alert('there was an error while fetching events!');
@@ -181,7 +181,7 @@
 
         eventClick: function(event, jsEvent, view) {
             var now = new Date().Format("yyyy-MM-dd");
-            if (event.start.format('YYYY-MM-DD') < now) {
+            if (lessCurrentTime(event.start.format('YYYY-MM-DD'))) {
                 swal({
                     title: "申请错误",
                     text: "起始时间不能小于当前时间",
