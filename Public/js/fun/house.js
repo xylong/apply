@@ -88,7 +88,6 @@
     }).$mount('#myModal');
 
 
-
     /* initialize the calendar
      -----------------------------------------------------------------*/
     var date = new Date();
