@@ -6,8 +6,11 @@ use Think\Controller;
  */
 class HouseController extends BaseController
 {
+	private $house;
+
 	public function _initialize()
 	{
+		$this->house = D('House');
 	}
 
     public function index()
@@ -25,6 +28,13 @@ class HouseController extends BaseController
 	}
 
 
+	function getHouse()
+	{
+		if (IS_AJAX) {
+			$data = $this->house->getHouse();
+			exit(json_encode($data));
+		}
+	}
 
 
 

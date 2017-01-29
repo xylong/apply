@@ -24,7 +24,7 @@
             code : '',
             proposer : '',
             tutor : '',
-            house : '',
+            selected : '',
             phone : '',
             reason : '',
             start : '',
@@ -33,19 +33,20 @@
                 proposer : {isVisible : false, msg : '申请人不能为空'},
                 phone : {isVisible : false, msg : '联系方式不能为空'},
                 tutor : {isVisible : false, msg : '指导老师不能为空'},
-                house : {isVisible : false, msg : '请选择青春工坊'},
+                selected : {isVisible : false, msg : '请选择青春工坊'},
                 reason : {isVisible : false, msg : '使用事由不能为空'}
-            }
+            },
+            houses : []
         },
 
         methods : {
             sub : function () {
                 if (this.checkData()) {
-                    this.$http.post('index.php?s=/Home/House/apply.', {
+                    this.$http.post('index.php?s=/Home/House/apply', {
                         proposer : this.proposer,
                         phone : this.phone,
                         tutor : this.tutor,
-                        house : this.house,
+                        house : this.selected,
                         reason : this.reason,
                         stime : this.start,
                         etime : this.end
@@ -76,6 +77,13 @@
         },
 
         ready : function () {
+            this.$http
+                .get('index.php?s=/Home/House/getHouse')
+                .then(function(res){
+                    this.houses = res.data;
+                },function(res){
+                    alert(res.status);
+            });
         }
     }).$mount('#myModal');
 
