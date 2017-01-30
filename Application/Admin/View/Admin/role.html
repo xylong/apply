@@ -6,11 +6,11 @@
             <div class="ibox">
                 <div class="ibox-content">
                     <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
-                    <h2>学院列表</h2>
+                    <h2>管理员列表</h2>
                     <div class="input-group">
-                        <input type="text" placeholder="输入关键词 " class="input form-control" v-model="keyword">
+                        <input type="text" placeholder="输入管理员名字" class="input form-control" v-model="keyword">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn btn-primary" @click="getList(1)"> <i class="fa fa-search"></i> Search</button>
+                            <button type="button" class="btn btn btn-primary" @click="getList(1)"> <i class="fa fa-search"></i> 搜索</button>
                         </span>
                     </div>
                     <div class="clients-list">
@@ -23,15 +23,15 @@
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>名称</th>
-                                                    <th>uid</th>
+                                                    <th>一卡通</th>
                                                     <th class="text-center">操作</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr v-for="v in list">
                                                     <td v-text="v.id"></td>
-                                                    <td v-text="v.name"></td>
-                                                    <td v-text="v.uid"></td>
+                                                    <td v-text="v.account"></td>
+                                                    <td v-text="v.id_number"></td>
                                                     <td class="text-center">
                                                         <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i>查看</button>
                                                         <button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
@@ -135,4 +135,4 @@
 
 <include file="Public:footer" />
 <script src="__JS__/common/page.js"></script>
-<script src="__JS__/admin/college.js"></script>
+<script src="__JS__/admin/admin.js"></script>

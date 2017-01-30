@@ -12,7 +12,7 @@ var vm = new Vue({
 		getList : function (p) {
 			if (p) this.current = p;
 
-			this.$http.get('colleges',{
+			this.$http.get('index.php?s=/Admin/User/colleges',{
 				keyword : this.keyword,
 				p : this.current
 		    }).then(function(res){

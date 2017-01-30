@@ -25,7 +25,7 @@ class RentModel extends Model
 
 
     /**
-	 * 根据时间段获取数据
+	 * 根据时间段获取申请
 	 * @param  string $start 起始日期(如：2017-01-01)
 	 * @param  string $end 截止日期(如：2017-01-01)
 	 * @return array
@@ -35,6 +35,22 @@ class RentModel extends Model
 		$sql = "SELECT `id`,`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
 		return $this->query($sql);
 	}
+
+
+    /**
+     * 根据审核者获取申请
+     * @param  integer  $uid        审核者uid
+     * @param  boolean $is_examine  true／false [未审核／已审核]
+     * @return array
+     */
+    public function getApplyByUid($uid, $is_examine)
+    {
+        $filed = array('id', 'code', 'house', 'proposer', 'apply_time');
+
+        if (!$is_examine) {
+            return $this->field($filed)->select();
+        }
+    }
 
 
 }

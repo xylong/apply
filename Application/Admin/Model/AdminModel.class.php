@@ -14,10 +14,33 @@ class AdminModel extends Model
 		array('password', 'checkPwd', '密码不能小于6位', 1, 'function', 1)
 	);
 
-	protected $_auto = array ( 
+	protected $_auto = array (
 		array('status','1'),
 		array('password', 'md5', 3, 'function'),
 	);
+
+
+	/**
+	 * 用户列表
+	 * @param  integer $p  页码
+	 * @return array       分页数据和总页数
+	 */
+	public function getUsers($p, $keyword)
+	{
+		$map = array('status' => 1);
+		if ($keyword) {
+			$map['account'] = array('LIKE', '%'.$keyword.'%');
+		}
+
+		$count = $this->where($map)->count();
+		$Page = new \Think\Page($count, 10);
+		$rows = $this->page($p, 10)->where($map)->field(array('id','account','id_number','phone'))->order('id')->select();
+		
+		return array(
+			'data' => $rows,
+			'count' => $count
+		);
+	}
 
 
 	/**

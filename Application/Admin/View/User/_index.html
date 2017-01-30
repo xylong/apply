@@ -32,7 +32,6 @@
                                                     <th>账号</th>
                                                     <th>昵称</th>
                                                     <th>手机</th>
-                                                    <th>cid</th>
                                                     <th class="text-center">操作</th>
                                                 </tr>
                                             </thead>
@@ -42,7 +41,6 @@
                                                     <td v-text="v.account"></td>
                                                     <td v-text="v.nickname"></td>
                                                     <td v-text="v.phone"></td>
-                                                    <td v-text="v.cid"></td>
                                                     <td class="text-center">
                                                         <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i>查看</button>
                                                         <button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
@@ -121,7 +119,7 @@
                                     tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
                                 <hr/>
-                         
+
                             </div>
                             </div>
                         </div>
@@ -136,13 +134,13 @@
     <nav>
         <ul class="pagination">
             <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(1)"> 首页 </a></li>
-            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(current - 1)"> 上一页 </a></li> 
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(current - 1)"> 上一页 </a></li>
             <li v-for="p in grouplist" :class="{'active': current == p.val}"><a href="javascript:;" @click="setCurrent(p.val)"> {{ p.text }} </a></li>
             <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(current + 1)"> 下一页</a></li>
             <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(page)"> 尾页 </a></li>
         </ul>
         <!-- <ul class="pagination pull-right">
-            <li><span> 共 {{ total }}  条数据 </span></li>          
+            <li><span> 共 {{ total }}  条数据 </span></li>
             <li><span> 每页显示 {{ display }}  条数据 </span></li>
             <li><span> 共 {{ page }} 页 </span></li>
             <li><span> 当前第 {{ current }} 页 </span></li>
@@ -151,8 +149,8 @@
 </template>
 
 <include file="Public:footer" />
-<script src="__JS__/fun/page.js"></script>
-<script src="__JS__/fun/user.js"></script>
+<script src="__JS__/common/page.js"></script>
+<script src="__JS__/admin/user.js"></script>
 <script>
     // $('.footable').footable();
 
