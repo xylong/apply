@@ -34,6 +34,7 @@
                                                     <td v-text="v.id_number"></td>
                                                     <td class="text-center">
                                                         <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i>查看</button>
+                                                        <button class="btn btn-warning btn-xs" @click="access(v.id)"><i class="fa fa-edit"></i>权限分配</button>
                                                         <button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
                                                     </td>
                                                 </tr>
@@ -52,70 +53,22 @@
             <div class="ibox ">
 
                 <div class="ibox-content">
-                    <div class="tab-content">
-                        <div id="contact-1" class="tab-pane active">
-                            <div class="row m-b-lg">
-                                <div class="col-lg-4 text-center">
-                                    <h2>Nicki Smith</h2>
-
-                                    <div class="m-b-sm">
-                                        <img alt="image" class="img-circle" src="__IMG__/a2.jpg"
-                                             style="width: 62px">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <strong>
-                                        About me
-                                    </strong>
-
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                    <button type="button" class="btn btn-primary btn-sm btn-block"><i
-                                            class="fa fa-envelope"></i> Send Message
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="client-detail">
-                            <div class="full-height-scroll">
-
-                                <strong>Last activity</strong>
-
-                                <ul class="list-group clear-list">
-                                    <li class="list-group-item fist-item">
-                                        <span class="pull-right"> 09:00 pm </span>
-                                        Please contact me
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pull-right"> 10:16 am </span>
-                                        Sign a contract
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pull-right"> 08:22 pm </span>
-                                        Open new shop
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pull-right"> 11:06 pm </span>
-                                        Call back to Sylvia
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pull-right"> 12:00 am </span>
-                                        Write a letter to Sandra
-                                    </li>
-                                </ul>
-                                <strong>Notes</strong>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <hr/>
-
-                            </div>
+                    <h2>角色列表</h2>
+                    <form method="get" class="form-horizontal">
+                        <div class="form-group"><label class="col-sm-2 control-label text-info">选择角色</label>
+                            <div class="col-sm-10">
+                                <div v-for="v in role" class="i-checks"><label> <input type="checkbox" v-model="jurisdiction" value="{{v.id}}"> <i></i> {{ v.name }} </label></div>
                             </div>
                         </div>
-                    </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary" type="button" @click="assign">保存</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
             </div>
         </div>
     </div>
@@ -134,5 +87,6 @@
 </template>
 
 <include file="Public:footer" />
+<!-- iCheck -->
 <script src="__JS__/common/page.js"></script>
 <script src="__JS__/admin/admin.js"></script>

@@ -5,7 +5,11 @@ var vm = new Vue({
         current: 1,
 
         list : [],
-        keyword : ''
+        keyword : '',
+
+        uid : 0,    // 用户id
+        role : [],  // 角色列表
+        jurisdiction : []   // 角色权限
     },
 
     methods : {
@@ -26,6 +30,40 @@ var vm = new Vue({
             });
         },
 
+        // 获取权限
+        access : function (id) {
+            this.uid = id;
+            this.$http
+                .get('index.php?s=/Admin/Admin/getPermission', {
+                    user_id : this.uid
+                })
+                .then(function(res) {
+                    this.jurisdiction = res.data;
+                },function(res){
+                    console.log(res.status);
+                });
+        },
+
+        // 分配权限
+        assign : function () {
+            if (this.jurisdiction.length === 0 || this.uid === 0) {
+                toastr.warning('未选择用户或角色');
+                return;
+            }
+
+            this.$http
+                .post('index.php?s=/Admin/Admin/allot', {
+                    role_id : this.jurisdiction,
+                    user_id : this.uid
+                }, {
+                    emulateJSON:true
+                }).then(function(res){
+                    toastr.success('分配成功');
+                },function(res){
+                    toastr.success('分配失败');
+                });
+        }
+
     },
 
     events:{
@@ -36,5 +74,13 @@ var vm = new Vue({
 
     ready : function () {
         this.getList();
+        this.$http
+            .get('index.php?s=/Admin/Admin/role')
+            .then(function(res) {
+                this.role = res.data;
+            },function(res){
+                console.log(res.status);
+            });
     }
 }).$mount('#app');
+
