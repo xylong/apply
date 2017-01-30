@@ -44,3 +44,20 @@ function lessCurrentTime(time) {
 	}
 	return time < now ? true : false;
 }
+
+/**
+ * 计算日程结束时间
+ * @param  {string} old   [旧时间(yyyy-MM-dd hh:mm:ss)]
+ * @param  {integer} seconds [变动时间（秒）]
+ * @return {string}         新时间
+ */
+function eventEnd(old, seconds) {
+	var tmp = new Date(old);
+	var m    = seconds % 3600,
+		hour = (seconds - m) / 3600,
+		minutes = m / 60;
+
+	tmp.setHours(tmp.getHours() + hour);
+	tmp.setMinutes(tmp.getMinutes() + minutes);
+	return tmp.Format('yyyy-MM-dd hh:mm:ss');
+}

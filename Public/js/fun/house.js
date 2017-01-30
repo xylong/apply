@@ -31,7 +31,7 @@
             end : '',
             prompt : {
                 proposer : {isVisible : false, msg : '申请人不能为空'},
-                phone : {isVisible : false, msg : '联系方式不能为空'},
+                phone : {isVisible : false, msg : '手机号格式错误'},
                 tutor : {isVisible : false, msg : '指导老师不能为空'},
                 selected : {isVisible : false, msg : '请选择青春工坊'},
                 reason : {isVisible : false, msg : '使用事由不能为空'}
@@ -40,6 +40,7 @@
         },
 
         methods : {
+            // 提交申请
             sub : function () {
                 if (this.checkData()) {
                     this.$http.post('index.php?s=/Home/House/apply', {
@@ -53,10 +54,11 @@
                     }, {
                         emulateJSON:true
                     }).then(function(res){
-                        console.log(res.data);
+                        toastr.success('申请提交成功');
                         $('#myModal').modal('hide');
                         this.proposer = this.phone = this.tutor = this.house = this.reason = this.start = this.end = '';
                     },function(res){
+                        toastr.error('申请提交失败');
                         alert(res.status);
                     });
                 }
@@ -102,37 +104,49 @@
             center: 'title',
             right: 'month,agendaDay'
         },
+        selectable:true,
+        selectHelper:true,
+        axisFormat: 'H(:mm)',
         editable: true,
         droppable: true, // this allows things to be dropped onto the calendar
         dropAccept: '.cool-event',
-        // events: {
-        //     url: 'index',
-        //     type: 'get',
-        //     error: function() {
-        //         alert('there was an error while fetching events!');
-        //     },
-        //     editable : false
-        // },
+
+        events: {
+            url: 'index.php?s=/Home/House/index',
+            type: 'get',
+            error: function() {
+                alert('there was an error while fetching events!');
+            },
+            editable : false
+        },
 
         dayClick: function( date, allDay, jsEvent, view ) {
-            if (lessCurrentTime(date.format('YYYY-MM-DD'))) {
-                swal({
-                    title: "申请错误",
-                    text: "预约时间不能小于当前时间",
-                    type: "warning",
-                    confirmButtonColor: "#DD6B55",
-                    closeOnConfirm: false
-                });
-                return;
-            }
+            var flag = !lessCurrentTime(date.format('YYYY-MM-DD')); // 可否外部拖拽 true／false
 
             // 切换日视图
             calendar.fullCalendar( 'gotoDate', date );
             calendar.fullCalendar('changeView','agendaDay');
-            if (calendar.fullCalendar('getView').name === 'agendaDay') {
+            if (calendar.fullCalendar('getView').name === 'agendaDay' && flag) {
                 $('.external-event:first').addClass('cool-event');
             }
 
+        },
+
+        // 外部移入
+        drop: function ( date, jsEvent, view ) {
+            vm.start = date.format('YYYY-MM-DD HH:mm:ss');
+            vm.end =  eventEnd(vm.start, 7200);
+        },
+
+        // 内部移动日程
+        eventDrop : function( event, dayDelta, revertFunc ) {
+            vm.start = event.start.format('YYYY-MM-DD HH:mm:ss');
+            vm.end = eventEnd(vm.end, dayDelta._milliseconds / 1000);
+        },
+
+        // 调整日程
+        eventResize : function( event, dayDelta, revertFunc ) {
+            vm.end = eventEnd(vm.end, dayDelta._milliseconds / 1000);
         },
 
         eventClick: function(event, jsEvent, view) {

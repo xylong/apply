@@ -24,4 +24,17 @@ class RentModel extends Model
 	);
 
 
+    /**
+	 * 根据时间段获取数据
+	 * @param  string $start 起始日期(如：2017-01-01)
+	 * @param  string $end 截止日期(如：2017-01-01)
+	 * @return array
+	 */
+	public function getApplyByTimes($start, $end)
+	{
+		$sql = "SELECT `id`,`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
+		return $this->query($sql);
+	}
+
+
 }
