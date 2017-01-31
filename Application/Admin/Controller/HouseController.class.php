@@ -31,12 +31,22 @@ class HouseController extends BaseController
 	{
 		if (IS_AJAX) {
 			$is_examine = I('get.is_examine', 0);
-			$auth_id = session(C('USER_AUTH_KEY'));
-			$data = $this->rent->getApplyByUid($auth_id, $is_examine);
+			$p = I('get.p', 1);
+			$data = $this->rent->getApplyByUid($is_examine, $p);
 			exit(json_encode($data));
 		}
-		var_dump($auth_id);
 		$this->display();
+	}
+
+
+	// 申请详情
+	public function applyDetail()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id', 0);
+			$data = $this->rent->detail($id);
+			exit(json_encode($data));
+		}
 	}
 
 

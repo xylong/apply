@@ -35,7 +35,7 @@ class AdminModel extends Model
 		$count = $this->where($map)->count();
 		$Page = new \Think\Page($count, 10);
 		$rows = $this->page($p, 10)->where($map)->field(array('id','account','id_number','phone'))->order('id')->select();
-		
+
 		return array(
 			'data' => $rows,
 			'count' => $count
@@ -70,6 +70,10 @@ class AdminModel extends Model
 		if ($data['account'] === 'admin') {
 			session(C('ADMIN_AUTH_KEY'), true);
 		}
+
+		$role_id = M('RoleUser')->where(array('user_id' => $data['id']))->getField('role_id', true);
+		session('role_id', $role_id);
+
 		session(C('USER_AUTH_KEY'), $data['id']);
 		session('admin_name', $data['account']);
 

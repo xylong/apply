@@ -39,17 +39,48 @@ class RentModel extends Model
 
     /**
      * 根据审核者获取申请
-     * @param  integer  $uid        审核者uid
      * @param  boolean $is_examine  true／false [未审核／已审核]
+     * @param  integer $p  页码
      * @return array
      */
-    public function getApplyByUid($uid, $is_examine)
+    public function getApplyByUid($is_examine, $p)
     {
-        $filed = array('id', 'code', 'house', 'proposer', 'apply_time');
+        // 获取对应角色的筛选条件
+        $auth_id = session(C('USER_AUTH_KEY'));
 
-        if (!$is_examine) {
-            return $this->field($filed)->select();
+        // 判断接收人
+        $map['receiver'] = array('IN', $_SESSION['role_id']);
+
+        // 已审核和未审核区分
+        if ($is_examine) {
+            $map['oa_approve.aid'] = array('NEQ' => NULL);
         }
+
+        $count = $this->count();
+        $Page = new \Think\Page($count, 10);
+        $rows = $this->page($p, 10)
+                    ->where($map)
+                    ->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid')
+                    ->field(array('id', 'code', 'house', 'proposer', 'apply_time'))
+                    ->order('apply_time desc')->select();
+
+        return array(
+            'data' => $rows,
+            'count' => $count
+        );
+    }
+
+
+    public function detail($id)
+    {
+        $apply = $this->where(array('oa_rent.id' => $id))
+                    ->field(array('id', 'code', 'uid', 'house', 'proposer', 'tutor', 'stime', 'reason', 'etime', 'apply_time'))
+                    ->find();
+        $result = M('Approve')->where(array('aid' => $id, 'type' => 2))->select();
+        return array(
+            'apply' => $apply,
+            'result' => $result
+        );
     }
 
 

@@ -18,4 +18,6 @@ class HouseModel extends Model
         return $this->select();
     }
 
+
+
 }

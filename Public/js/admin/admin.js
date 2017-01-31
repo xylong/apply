@@ -38,7 +38,11 @@ var vm = new Vue({
                     user_id : this.uid
                 })
                 .then(function(res) {
-                    this.jurisdiction = res.data;
+                    if (res.data) {
+                        this.jurisdiction = res.data;
+                    } else {
+                        this.jurisdiction = [];
+                    }
                 },function(res){
                     console.log(res.status);
                 });
@@ -83,4 +87,3 @@ var vm = new Vue({
             });
     }
 }).$mount('#app');
-
