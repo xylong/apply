@@ -9,6 +9,7 @@ return array(
     'DB_PORT'   => 3306, // 端口
     'DB_PREFIX' => 'oa_', // 数据库表前缀
 
+    'URL_MODEL' => 3,
 
 	/* 模板相关配置 */
     'TMPL_PARSE_STRING' => array(
@@ -18,7 +19,11 @@ return array(
         '__FONT__'      => __ROOT__ . '/Public/font-awesome',
     ),
 
-
+    /* 审核步骤 */
+    'AUDIT' => array(
+        array( ),
+        array(10, 12),
+    )
 
 
 );
