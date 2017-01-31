@@ -75,6 +75,10 @@
                     }
                 }
                 return flag;
+            },
+
+            getEvent: function () {
+                
             }
         },
 
@@ -150,6 +154,7 @@
         },
 
         eventClick: function(event, jsEvent, view) {
+            if (event.id) return;
             $('#myModal').modal('show');
         },
 

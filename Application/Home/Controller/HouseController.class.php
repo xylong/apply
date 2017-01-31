@@ -21,6 +21,30 @@ class HouseController extends BaseController
 			$start = I('get.start');
     		$end = I('get.end');
 			$data = $this->rent->getApplyByTimes($start, $end);
+			$house = M('House')->select();
+			foreach ($data as $index => $item) {
+
+				switch ($item['house']) {
+					case '1':
+						$data[$index]['color'] = '#23c6c8';
+						break;
+
+					case '2':
+						$data[$index]['color'] = '#f8ac59';
+						break;
+					
+					default:
+						$data[$index]['color'] = '#ed5565';
+						break;
+				}
+
+				foreach ($house as $h) {
+					if ($h['id'] == $item['id']) {
+						$data[$index]['title'] = $h['name'];
+						break;
+					}
+				}
+			}
 			exit(json_encode($data));
 		}
         $this->display('_index');

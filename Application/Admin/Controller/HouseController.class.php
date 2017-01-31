@@ -50,6 +50,21 @@ class HouseController extends BaseController
 	}
 
 
+	// 提交审核结果
+	public function review()
+	{
+		if (IS_AJAX) {
+			$data = I('post.');
+			if ($this->rent->audit($data)) {
+				returnJson(true, '审核成功');
+			} else {
+				returnJson(true, '审核成功');
+			}
+		}
+	}
+
+
+	// 编辑青春工坊
     public function edit()
     {
         if (IS_AJAX) {

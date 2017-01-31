@@ -51,4 +51,20 @@ class BorrowModel extends Model
 		return $this->where(array('id' => $id))->find();
 	}
 
+
+	public function audit($data)
+    {
+        $data['type'] = 1;
+        $data['uid'] = session('auth_id');
+        $data['time'] = date('Y-m-d H:i:s', time());
+
+        // 审核成功后将申请接收人往后转发
+        if (M('Approve')->add($data)) {
+            $step = C('STEP');
+            $new_receiver = $step[1][1];
+            return $this->save(array('id' => $data['id'], 'receiver' => $new_receiver));
+        }
+        return false;
+    }
+
 }

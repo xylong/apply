@@ -1,3 +1,14 @@
+/*
+|--------------------------------------------------------------------------
+| 后台青春工坊审核
+|--------------------------------------------------------------------------
+|
+| @author   darker
+| @since    Version 1.0.0
+| @date     2017-1-31
+|
+*/
+
 var vm = new Vue({
     data : {
         total: 0,
@@ -9,7 +20,10 @@ var vm = new Vue({
         applys : [],
 
         detail : {}, // 申请详情
-        result : [] // 审核结果
+        result : [], // 审核结果
+
+        picked : '',    // 提交的审核结果
+        opinion : '' // 意见
     },
     methods : {
         tabChange : function (type) {
@@ -45,8 +59,39 @@ var vm = new Vue({
 		    },function(res){
 		        console.log(res.status);
 		    });
+        },
+
+        sub : function () {
+            if (this.picked.length === 0) {
+                toastr.warning('请选择通过还是拒绝');
+                return;
+            }
+
+            this.$http
+                .post('index.php?s=/Admin/House/review', {
+                    aid : this.detail.id,
+                    isagree : this.picked,
+                    opinion : this.opinion,
+                    role_id : this.detail.receiver
+                }, {
+                    emulateJSON:true
+                }).then(function(res){
+                    toastr.success('审核成功');
+                    this.picked = this.opinion = '';
+                    this.getList();
+                    this.review(this.detail.id);
+                },function(res){
+                    toastr.error('审核失败');
+                });
         }
     },
+
+    events:{
+        pagechange:function(p){
+            this.getList();
+        }
+    },
+
     ready : function () {
         this.getList();
     }

@@ -39,6 +39,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <my-pagination :total="total" :current.sync="current"></my-pagination>
                                 </div>
                             </div>
                         </div>
@@ -118,56 +119,38 @@
                                         <div class="timeline-item" v-show="result.length === 0">
     			                            <div class="row">
     			                                <div class="col-xs-3 date">
-                                                    <a href="javascript:;" class="btn btn-xs btn-info">提交</a>
+                                                    <a href="javascript:;" class="btn btn-xs btn-info" @click="sub">提交</a>
     			                                </div>
     			                                <div class="col-xs-7 content">
-    			                                    <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
+    			                                    <p class="m-b-xs"><strong>{:session('admin_name')}</strong></p>
+                                                    <div class="media-body">
+                                                        <textarea class="form-control" placeholder="意见" v-model="opinion"></textarea>
+                                                    </div>
                                                     <p>
-                                                        <div class="media-body">
-                                                            <textarea class="form-control" placeholder="意见"></textarea>
-                                                        </div>
-
-                                                    </p>
-                                                    <p>
-                                                        <input type="radio" name="name" value="">同意
-                                                        <input type="radio" name="name" value="">拒绝
+                                                        <input type="radio" id="one" value="1" v-model="picked"><label for="one">通过</label>
+                                                        <input type="radio" id="two" value="2" v-model="picked"><label for="two">拒绝</label>
                                                     </p>
     			                                </div>
     			                            </div>
     			                        </div>
-    			                        <!-- <div class="timeline-item">
+
+    			                        <div class="timeline-item" v-show="result" v-for="v in result">
     			                            <div class="row">
     			                                <div class="col-xs-3 date">
-    			                                    <i class="fa fa-check"></i>
-    			                                    6:00 am
+                                                    <i class="fa fa-check" v-if="v.isagree == 1"></i>
+    			                                    <i class="fa fa-close" v-else></i>
+    			                                    {{v.role_name}}
     			                                    <br/>
-    			                                    <small class="text-navy">2 hour ago</small>
+                                                    <small v-if="v.isagree == 1" class="text-navy" v-text="v.time"></small>
+    			                                    <small v-else class="text-danger" v-text="v.time"></small>
     			                                </div>
     			                                <div class="col-xs-7 content no-top-border">
-    			                                    <p class="m-b-xs"><strong>Meeting</strong></p>
+    			                                    <p class="m-b-xs"><strong v-text="v.account"></strong></p>
 
-                                                    <div class="well">
-                                                        已评论
-                                                    </div>
+                                                    <div class="well" v-text="v.opinion"></div>
     			                                </div>
     			                            </div>
     			                        </div>
-    			                        <div class="timeline-item">
-    			                            <div class="row">
-    			                                <div class="col-xs-3 date">
-    			                                    <i class="fa fa-times"></i>
-    			                                    7:00 am
-    			                                    <br/>
-    			                                    <small class="text-navy">3 hour ago</small>
-    			                                </div>
-    			                                <div class="col-xs-7 content">
-    			                                    <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
-                                                    <div class="media-body">
-                                                        <textarea class="form-control" placeholder="意见"></textarea>
-                                                    </div>
-    			                                </div>
-    			                            </div>
-    			                        </div> -->
     			                    </div>
 
                                 </div>
