@@ -34,8 +34,8 @@
                                                 <td v-text="v.proposer"></td>
                                                 <td v-text="v.apply_time"></td>
                                                 <td class="text-right">
-                                                	<button class="btn btn-info btn-xs" @click="review(v.id)">查看</button>
-                                            	</td>
+                                                    <button class="btn btn-info btn-xs" @click="review(v.id)">查看</button>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -118,15 +118,15 @@
                                     </div>
 
                                     <h5>审核跟踪</h5>
-    								<div class="ibox-content inspinia-timeline">
+                                    <div class="ibox-content inspinia-timeline">
 
                                         <div class="timeline-item" v-show="result.length === 0">
-    			                            <div class="row">
-    			                                <div class="col-xs-3 date">
+                                            <div class="row">
+                                                <div class="col-xs-3 date">
                                                     <a href="javascript:;" class="btn btn-xs btn-info" @click="sub">提交</a>
-    			                                </div>
-    			                                <div class="col-xs-7 content">
-    			                                    <p class="m-b-xs"><strong>{:session('admin_name')}</strong></p>
+                                                </div>
+                                                <div class="col-xs-7 content">
+                                                    <p class="m-b-xs"><strong>{:session('admin_name')}</strong></p>
                                                     <div class="media-body">
                                                         <textarea class="form-control" placeholder="意见" v-model="opinion"></textarea>
                                                     </div>
@@ -134,28 +134,28 @@
                                                         <input type="radio" id="one" value="1" v-model="picked"><label for="one">通过</label>
                                                         <input type="radio" id="two" value="2" v-model="picked"><label for="two">拒绝</label>
                                                     </p>
-    			                                </div>
-    			                            </div>
-    			                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-    			                        <div class="timeline-item" v-show="result" v-for="v in result">
-    			                            <div class="row">
-    			                                <div class="col-xs-3 date">
+                                        <div class="timeline-item" v-show="result" v-for="v in result">
+                                            <div class="row">
+                                                <div class="col-xs-3 date">
                                                     <i class="fa fa-check" v-if="v.isagree == 1"></i>
-    			                                    <i class="fa fa-close" v-else></i>
-    			                                    {{v.role_name}}
-    			                                    <br/>
+                                                    <i class="fa fa-close" v-else></i>
+                                                    {{v.role_name}}
+                                                    <br/>
                                                     <small v-if="v.isagree == 1" class="text-navy" v-text="v.time"></small>
-    			                                    <small v-else class="text-danger" v-text="v.time"></small>
-    			                                </div>
-    			                                <div class="col-xs-7 content no-top-border">
-    			                                    <p class="m-b-xs"><strong v-text="v.account"></strong></p>
+                                                    <small v-else class="text-danger" v-text="v.time"></small>
+                                                </div>
+                                                <div class="col-xs-7 content no-top-border">
+                                                    <p class="m-b-xs"><strong v-text="v.account"></strong></p>
 
                                                     <div class="well" v-text="v.opinion"></div>
-    			                                </div>
-    			                            </div>
-    			                        </div>
-    			                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>

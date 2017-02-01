@@ -6,54 +6,20 @@
 
 <link href="__CSS__/style.css" rel="stylesheet">
 
+<style>
+    ul { list-style: none outside none; margin:0; padding: 0; }
+    li { margin: 0 10px; display: inline; }
+    img {
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        display: inline;
+        margin-bottom: 10px;
+    }
+</style>
+
 <div class="wrapper wrapper-content">
     <div class="row animated fadeInDown">
-        <div class="col-lg-3">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <h5>Draggable Events</h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#">Config option 1</a>
-                            </li>
-                            <li><a href="#">Config option 2</a>
-                            </li>
-                        </ul>
-                        <a class="close-link">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="ibox-content">
-                    <div id='external-events'>
-                        <p>Drag a event and drop into callendar.</p>
-                        <div class='external-event navy-bg'>Go to shop and buy some products.</div>
-                        <div class='external-event navy-bg'>Check the new CI from Corporation.</div>
-                        <div class='external-event navy-bg'>Send documents to John.</div>
-                        <div class='external-event navy-bg'>Phone to Sandra.</div>
-                        <div class='external-event navy-bg'>Chat with Michael.</div>
-                        <p class="m-t">
-                            <input type='checkbox' id='drop-remove' class="i-checks" checked /> <label for='drop-remove'>remove after drop</label>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="ibox float-e-margins">
-                <div class="ibox-content">
-                    <h2>FullCalendar</h2> is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is
-                    easily configured to use your own feed format (an extension is provided for Google Calendar).
-                    <p>
-                        <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar documentation</a>
-                    </p>
-                </div>
-            </div>
-        </div>
         <div class="col-lg-9">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
@@ -81,6 +47,46 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Draggable Events</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#">Config option 1</a>
+                            </li>
+                            <li><a href="#">Config option 2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div id='external-events'>
+                        <p>拖拽申请框到日历中编辑申请</p>
+                        <div class='external-event navy-bg'><i class="fa fa-arrows"></i>展场展架申请</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <h2>FullCalendar</h2> is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is
+                    easily configured to use your own feed format (an extension is provided for Google Calendar).
+                    <p>
+                        <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar documentation</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -96,6 +102,16 @@
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
                         <form class="form-horizontal">
+
+                            <div class="form-group" id="data_5"><label class="col-lg-2 control-label">活动时间</label>
+                                <div class="col-lg-10">
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" disabled v-model="stime" />
+                                        <span class="input-group-addon">to</span>
+                                        <input type="text" class="input-sm form-control" disabled v-model="etime | reduceDay" />
+                                    </div>
+                                </div>
+                            </div>
                             
                             <div class="form-group"><label class="col-lg-2 control-label">活动主题</label>
                                 <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
@@ -116,6 +132,24 @@
                                 <div class="col-lg-10">
                                     <textarea class="form-control diff-textarea"></textarea>
                                 </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">附件</label>
+                                <div class="col-lg-12" v-if="images.length > 0">
+                                    <ul>
+                                      <li v-for="(key,image) in images">
+                                        
+                                         <img :src="image" @click='delImage(key)' />
+                                         <a href="#" style="position: absolute;" @click='delImage(key)'>
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </a>
+                                      </li>
+                                   </ul>
+                                   <button @click="removeImage">移除全部图片</button>
+                                    <button @click='uploadImage' >上传</button>
+                                </div>
+                                <a id='addPic' href="" v-on:click="addPic">添加图片 </a>
+                                <input type="file" @change="onFileChange" multiple style="display: none;">
                             </div>
                           
                         </form>
@@ -140,71 +174,5 @@
 <!-- Full Calendar -->
 <script src="__JS__/plugins/fullcalendar/moment.min.js"></script>
 <script src="__JS__/plugins/fullcalendar/fullcalendar.min.js"></script>
-<script>
 
-    $(document).ready(function() {
-
-        $('.i-checks').iCheck({
-            checkboxClass: 'icheckbox_square-green',
-            radioClass: 'iradio_square-green'
-        });
-
-        /* initialize the external events
-         -----------------------------------------------------------------*/
-        $('#external-events div.external-event').each(function() {
-
-            $(this).data('event', {
-                title: $.trim($(this).text()),
-                stick: true
-            });
-
-            $(this).draggable({
-                zIndex: 1111999,
-                revert: true,
-                revertDuration: 0
-            });
-
-        });
-
-
-        /* initialize the calendar
-         -----------------------------------------------------------------*/
-        var date = new Date();
-        var d = date.getDate();
-        var m = date.getMonth();
-        var y = date.getFullYear();
-        var calendar = $('#calendar');
-
-        calendar.fullCalendar({
-            header: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'month,agendaDay'
-            },
-            editable: true,
-            droppable: true, // this allows things to be dropped onto the calendar
-            drop: function() {
-                // is the "remove after drop" checkbox checked?
-                if ($('#drop-remove').is(':checked')) {
-                    // if so, remove the element from the "Draggable Events" list
-                    $(this).remove();
-                }
-            },
-            events: [
-   
-            ],
-
-
-            eventClick: function(calEvent, jsEvent, view) {
-                $('#myModal').modal('show');
-            },
-
-            eventDrop: function(event,dayDelta,minuteDelta,allDay,revertFunc) {
-                console.log('hello')
-            },
-        });
-
-
-    });
-
-</script>
+<script src="__JS__/home/venue.js"></script>

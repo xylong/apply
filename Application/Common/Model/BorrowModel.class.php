@@ -110,7 +110,7 @@ class BorrowModel extends Model
 	public function getApplyById($id)
 	{
 		$apply = $this->where(array('oa_borrow.id' => $id))
-                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'borrow', 'goods', 'other', 'stime', 'etime', 'apply_time'))
+                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'borrow', 'goods', 'other', 'stime', 'etime', 'apply_time', 'receiver'))
                     ->find();
         $result = M('Approve')->join('LEFT JOIN __ADMIN__ ON __APPROVE__.uid = __ADMIN__.id')
                             ->join('LEFT JOIN __ROLE__ ON __APPROVE__.role_id = __ROLE__.id')
@@ -149,7 +149,7 @@ class BorrowModel extends Model
             if ($data['isagree'] == 2) {
             	return $handle;
             }
-            
+
             $step = C('STEP');
             $new_receiver = $step[0][1];
             return $this->save(array('id' => $data['aid'], 'receiver' => $new_receiver));
