@@ -40,7 +40,10 @@ class RentModel extends Model
 	 */
 	public function getApplyByTimes($start, $end)
 	{
-		$sql = "SELECT `id`,`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
+		// $sql = "SELECT `id`,`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
+
+        // 去掉已拒绝的
+        $sql = "SELECT `id`,oa_rent.`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` LEFT JOIN oa_approve ON oa_rent.id = oa_approve.aid WHERE etime >= '{$start}' AND stime <= '{$end}' AND (oa_approve.isagree IS NULL OR oa_approve.isagree = 1)";
 		return $this->query($sql);
 	}
 
@@ -55,34 +58,33 @@ class RentModel extends Model
     {
         // 判断接收人
         $map['receiver'] = array('IN', $_SESSION['role_id']);
-        
-
 
         // 已审核和未审核区分
         if (!$is_examine) {
             $map['oa_approve.aid'] = array('EXP','IS NULL');
 
-            $count = $this->where($map)->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid')->count();
+            $count = $this->where($map)->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid AND __APPROVE__.type = 2')->count();
             $Page = new \Think\Page($count, 10);
             $rows = $this->page($p, 10)
                         ->where($map)
-                        ->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid')
+                        ->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid AND __APPROVE__.type = 2')
                         ->field(array('id', 'code', 'house', 'proposer', 'apply_time'))
                         ->order('apply_time desc')->select();
         } else {
             $map['oa_audit_log.uid'] = session('auth_id');
             $map['oa_audit_log.apply_type'] = 2;
 
-            $count = $this->where($map)->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid')
+            $count = $this->where($map)
+                        ->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid AND __APPROVE__.type = 2')
                         ->join('LEFT JOIN __AUDIT_LOG__ ON __RENT__.id = __AUDIT_LOG__.apply_id')
                         ->count();
             $Page = new \Think\Page($count, 10);
             $rows = $this->page($p, 10)
                         ->where($map)
-                        ->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid')
+                        ->join('LEFT JOIN __APPROVE__ ON __RENT__.id = __APPROVE__.aid AND __APPROVE__.type = 2')
                         ->join('LEFT JOIN __AUDIT_LOG__ ON __RENT__.id = __AUDIT_LOG__.apply_id')
-                        ->field(array('oa_rent.id', 'oa_rent.code', 'oa_rent.house', 'oa_rent.proposer', 'oa_rent.apply_time'))
-                        ->order('apply_time desc')->select();
+                        ->field(array('oa_rent.id', 'oa_rent.code', 'oa_rent.house', 'oa_rent.proposer', 'oa_approve.time apply_time'))
+                        ->order('time desc')->select();
         }
 
         
@@ -102,7 +104,7 @@ class RentModel extends Model
     public function detail($id)
     {
         $apply = $this->where(array('oa_rent.id' => $id))
-                    ->field(array('id', 'code', 'uid', 'house', 'proposer', 'tutor', 'stime', 'reason', 'etime', 'apply_time', 'receiver'))
+                    ->field(array('id', 'code', 'uid', 'phone', 'house', 'proposer', 'tutor', 'stime', 'reason', 'etime', 'apply_time', 'receiver'))
                     ->find();
         $result = M('Approve')->join('LEFT JOIN __ADMIN__ ON __APPROVE__.uid = __ADMIN__.id')
                             ->join('LEFT JOIN __ROLE__ ON __APPROVE__.role_id = __ROLE__.id')

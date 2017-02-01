@@ -1,2 +1,189 @@
 <include file="Public:header" />
+
+<div class="wrapper wrapper-content  animated fadeInRight" id="apply">
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
+                    <h2>申请列表</h2>
+                    <p>
+                        All clients need to be verified before you can send email and set a project.
+                    </p>
+                    <div class="input-group">
+                        <input type="text" placeholder="Search client " class="input form-control">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+                        </span>
+                    </div>
+                    <div class="clients-list">
+                    <ul class="nav nav-tabs">
+                        <span class="pull-right small text-muted">1406 Elements</span>
+                        <li :class="{ active : isActive == v.type }" v-for="v in tab" @click="tabChange(v.type)"><a data-toggle="tab" :href="'#tab-' + v.type"><i class="fa fa-briefcase"></i> {{v.name}}</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="full-height-scroll">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                    	<thead>
+                                    		<th>
+                                    			<td>申请码</td>
+                                    			<td>主题</td>
+                                    			<td v-if="!isActive">申请时间</td>
+                                    			<td v-else>审核时间</td>
+                                    			<td>操作</td>
+                                    		</th>
+                                    	</thead>
+                                        <tbody>
+                                            <tr v-for="v in applys">
+                                                <td v-text="$index + 1"></td>
+                                                <td v-text="v.code"></td>
+                                                <td v-text="v.theme"></td>
+                                                <td v-text="v.apply_time"></td>
+                                                <td class="text-right">
+                                                	<button class="btn btn-info btn-xs" @click="review(v.id)">查看</button>
+                                            	</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <my-pagination v-if="applys.length !== 0" :total="total" :current.sync="current"></my-pagination>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5" v-show="detail.id">
+            <div class="ibox ">
+
+                <div class="ibox-content">
+                    <div class="tab-content">
+                        <div id="contact-1" class="tab-pane active">
+                            <div class="client-detail">
+                                <div class="full-height-scroll">
+
+                                    <div class="row">
+                                        <div class="ibox-content">
+                                            <h2>
+                                                申请详情
+                                            </h2>
+
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>字段</th>
+                                                        <th>值</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>申请码</td>
+                                                        <td v-text="detail.code"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>申请单位</td>
+                                                        <td v-text="detail.uid"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>主题</td>
+                                                        <td v-text="detail.theme"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>联系方式</td>
+                                                        <td v-text="detail.phone"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>借用需求</td>
+                                                        <td v-text="detail.borrow"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>其它</td>
+                                                        <td v-text="detail.other"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>开始时间</td>
+                                                        <td v-text="detail.stime"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>结束时间</td>
+                                                        <td v-text="detail.etime"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>申请时间</td>
+                                                        <td v-text="detail.apply_time"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <h5>审核跟踪</h5>
+    								<div class="ibox-content inspinia-timeline">
+
+    			                        <div class="timeline-item" v-for="v in result">
+    			                            <div class="row">
+    			                                <div class="col-xs-3 date">
+                                                    <i class="fa fa-check" v-if="v.isagree == 1"></i>
+    			                                    <i class="fa fa-close" v-else></i>
+    			                                    {{v.role_name}}
+    			                                    <br/>
+                                                    <small v-if="v.isagree == 1" class="text-navy" v-text="v.time"></small>
+    			                                    <small v-else class="text-danger" v-text="v.time"></small>
+    			                                </div>
+    			                                <div class="col-xs-7 content no-top-border">
+    			                                    <p class="m-b-xs"><strong v-text="v.account"></strong></p>
+
+                                                    <div class="well" v-text="v.opinion"></div>
+    			                                </div>
+    			                            </div>
+    			                        </div>
+
+    			                        <div class="timeline-item" v-show="myturn">
+    			                            <div class="row">
+    			                                <div class="col-xs-3 date">
+                                                    <a href="javascript:;" class="btn btn-xs btn-info" @click="sub">提交</a>
+    			                                </div>
+    			                                <div class="col-xs-7 content">
+    			                                    <p class="m-b-xs"><strong>{:session('admin_name')}</strong></p>
+                                                    <div class="media-body">
+                                                        <textarea class="form-control" placeholder="意见" v-model="opinion"></textarea>
+                                                    </div>
+                                                    <p>
+                                                        <input type="radio" id="one" value="1" v-model="picked"><label for="one">通过</label>
+                                                        <input type="radio" id="two" value="2" v-model="picked"><label for="two">拒绝</label>
+                                                    </p>
+    			                                </div>
+    			                            </div>
+    			                        </div>
+    			                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="template_pagination">
+    <nav>
+        <ul class="pagination">
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(1)"> 首页 </a></li>
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(current - 1)"> 上一页 </a></li>
+            <li v-for="p in grouplist" :class="{'active': current == p.val}"><a href="javascript:;" @click="setCurrent(p.val)"> {{ p.text }} </a></li>
+            <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(current + 1)"> 下一页</a></li>
+            <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(page)"> 尾页 </a></li>
+        </ul>
+    </nav>
+</template>
+
+
 <include file="Public:footer" />
+<script src="__JS__/common/page.js"></script>
+<script src="__JS__/admin/borrow.js"></script>
