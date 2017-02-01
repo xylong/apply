@@ -78,7 +78,7 @@
             },
 
             getEvent: function () {
-                
+
             }
         },
 
@@ -108,9 +108,9 @@
             center: 'title',
             right: 'month,agendaDay'
         },
-        selectable:true,
-        selectHelper:true,
-        axisFormat: 'H(:mm)',
+        // selectable:true,
+        // selectHelper:true,
+        // axisFormat: 'H(:mm)',
         editable: true,
         droppable: true, // this allows things to be dropped onto the calendar
         dropAccept: '.cool-event',
