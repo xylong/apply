@@ -6,7 +6,13 @@ use Think\Controller;
  */
 class VenueController extends BaseController
 {
-	
+	const UPLOAD_DIR = './Public/Upload/';
+	private $venue;
+
+	public function _initialize()
+	{
+		$this->venue = D('Venue');
+	}
 
     public function demo()
     {
@@ -15,7 +21,6 @@ class VenueController extends BaseController
 
     public function up()
     {
-    	$config = C('TMPL_PARSE_STRING');
 	    $images = $_POST['images'];
 	    
 	    foreach ($images as $index => $img) {
@@ -23,7 +28,7 @@ class VenueController extends BaseController
 	        $img= substr($img,$start+1);
 	        $img = str_replace(' ', '+', $img);
 	        $data = base64_decode($img);
-	        $fileName = './Public/Upload/' . uniqid() . '.jpg';
+	        $fileName = self::UPLOAD_DIR . uniqid() . '.jpg';
 	        $success = file_put_contents($fileName, $data);
 	    }
 	    $data=array();
@@ -37,6 +42,26 @@ class VenueController extends BaseController
 	        echo json_encode($data);
 	    }
     }
+
+
+    public function apply()
+    {
+    	if (IS_AJAX) {
+    		if (!$this->venue->create()) {
+				$this->error($this->venue->getError());
+			} else {
+				if ($this->venue->add()) {
+					returnJson(true, '申请提交成功');
+				} else {
+					returnJson(false, '申请提交失败');
+				}
+			}
+    	}
+    	$this->display();
+    }
+
+
+  
 
 
 }

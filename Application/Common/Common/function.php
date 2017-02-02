@@ -44,7 +44,7 @@ function getApplyTime()
  */
 function apply_code()
 {
-	return date('Ymd', time()) . rand(1000, 9999);
+	return date('Ymd', time()) . uniqid();
 }
 
 /**
@@ -65,4 +65,37 @@ function checkAccount($data)
 function checkPhone($data)
 {
 	return preg_match('/^((\(\d{2,3}\))|(\d{3}\-))?13\d{9}$/', $data);
+}
+
+
+/**
+ * 删除图片
+ * @param  string $file 图片显示路径
+ * @return boolean
+ */
+function delFile($file)
+{
+	$file = substr_replace($file, '.', 0, (strlen(WEB_ROOT)));
+	if (is_file($file)) {
+		if (unlink($file)) {
+			return true;
+		}
+		return false;
+	}
+	return false;
+}
+
+
+/**
+ * 按日期生成目录
+ * @param  string $save_path 保存目录
+ * @return string 目录名字
+ */
+function mk_dir($save_path = '') {
+	$date = date('Y-m-d/', time());
+    $dir = $save_path . $date;
+    if (!is_dir('./' .$dir)) {
+    	mkdir('./' . $dir, 0777 , true);
+    }
+    return $date . '/';
 }

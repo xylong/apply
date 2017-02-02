@@ -24,6 +24,7 @@
                                                     <th>ID</th>
                                                     <th>名称</th>
                                                     <th>一卡通</th>
+                                                    <th>手机</th>
                                                     <th class="text-center">操作</th>
                                                 </tr>
                                             </thead>
@@ -32,6 +33,7 @@
                                                     <td v-text="v.id"></td>
                                                     <td v-text="v.account"></td>
                                                     <td v-text="v.id_number"></td>
+                                                    <td v-text="v.phone"></td>
                                                     <td class="text-center">
                                                         <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i>查看</button>
                                                         <button class="btn btn-warning btn-xs" @click="access(v.id)"><i class="fa fa-edit"></i>权限分配</button>
@@ -49,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4" v-show="uid">
             <div class="ibox ">
 
                 <div class="ibox-content">

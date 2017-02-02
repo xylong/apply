@@ -17,12 +17,18 @@ return array(
         '__JS__'        => __ROOT__ . '/Public/js',
         '__IMG__'       => __ROOT__ . '/Public/img',
         '__FONT__'      => __ROOT__ . '/Public/font-awesome',
+        '__UPLOAD__'    => __ROOT__ . '/Public/Upload/',
     ),
 
     /* 审核步骤 */
     'STEP' => array(
         array(10, 12),  // 物资审核步骤
         array(10),  // 青春工坊审核步骤
+        array(
+            array(2,3,5),
+            array(2,3,5),
+            array(4,5)
+        )
     )
 
 

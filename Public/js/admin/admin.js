@@ -14,6 +14,8 @@ var vm = new Vue({
 
     methods : {
         getList : function (p) {
+            this.uid = 0;   // 搜索或点击分页时把右边角色区关掉
+
             if (p) this.current = p;
             var map = {p : this.current};
             if (this.keyword.length > 0) {

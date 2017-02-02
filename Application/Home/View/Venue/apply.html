@@ -114,17 +114,37 @@
                             </div>
                             
                             <div class="form-group"><label class="col-lg-2 control-label">活动主题</label>
-                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="theme">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.theme.isVisible" v-text="prompt.theme.msg"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">申请人</label>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="proposer">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.proposer.isVisible" v-text="prompt.proposer.msg"></span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">联系方式</label>
-                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="phone">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.phone.isVisible" v-text="prompt.phone.msg"></span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">使用数量</label>
-                                <div class="col-lg-10"><input type="text" placeholder="" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="num">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.num.isVisible" v-text="prompt.num.msg"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">摆放地点</label>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="place">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.place.isVisible" v-text="prompt.place.msg"></span>
                                 </div>
                             </div>
 
@@ -137,18 +157,16 @@
                             <div class="form-group"><label class="col-lg-2 control-label">附件</label>
                                 <div class="col-lg-12" v-if="images.length > 0">
                                     <ul>
-                                      <li v-for="(key,image) in images">
-                                        
-                                         <img :src="image" @click='delImage(key)' />
-                                         <a href="#" style="position: absolute;" @click='delImage(key)'>
-                                            <span class="glyphicon glyphicon-remove"></span>
-                                        </a>
-                                      </li>
-                                   </ul>
-                                   <button @click="removeImage">移除全部图片</button>
-                                    <button @click='uploadImage' >上传</button>
+                                        <li v-for="(key,image) in images">
+                                            <img :src="image" @click='delImage(key)' />
+                                            <a href="javascript:;" style="position: absolute;" @click='delImage(key)'>
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.images.isVisible" v-text="prompt.images.msg"></span>
                                 </div>
-                                <a id='addPic' href="" v-on:click="addPic">添加图片 </a>
+                                <a id='addPic' href="javascript:" v-on:click="addPic">添加图片 </a>
                                 <input type="file" @change="onFileChange" multiple style="display: none;">
                             </div>
                           
@@ -157,8 +175,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" @click='sub'>提交</button>
             </div>
         </div>
     </div>

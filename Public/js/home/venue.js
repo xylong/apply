@@ -23,10 +23,25 @@ $('#external-events div.external-event').each(function() {
 
 var vm = new Vue({
     data : {
+        prompt : {
+            theme : {isVisible : false, msg : '活动主题不能为空'},
+            proposer : {isVisible : false, msg : '申请人不能为空'},
+            phone : {isVisible : false, msg : '手机号格式错误'},
+            num : {isVisible : false, msg : '请输入展架数量'},
+            place : {isVisible : false, msg : '请输入摆放地点'},
+            images : {isVisible : false, msg : '请上传活动海报'},
+            // planning : {isVisible : false, msg : '请上传活动策划'}
+        },
+
+        theme : '',
+        proposer : '',
+        phone : '',
+        num : '',
+        place : '',
         stime : '',
         etime : '',
-
-        images: []
+        planning : '',
+        images: [],
     },
 
     filters: {
@@ -54,62 +69,80 @@ var vm = new Vue({
     },
 
     methods : {
-        addPic:function(e){
+        addPic: function(e) {
             e.preventDefault();
             $('input[type=file]').trigger('click');
             return false;
         },
 
-        onFileChange:function(e) {
+        onFileChange: function(e) {
             var files = e.target.files || e.dataTransfer.files;
-            if (!files.length)return; 
+            if (!files.length) return; 
             this.createImage(files);
 
         },
 
-        createImage:function(file) {
-            if(typeof FileReader==='undefined'){
+        createImage: function(file) {
+            if(typeof FileReader==='undefined') {
                 alert('您的浏览器不支持图片上传，请升级您的浏览器');
                 return false;
             }
-            var image = new Image();         
+            var image = new Image();
             var vm = this;
             var leng=file.length;
-            for(var i=0;i<leng;i++){
+            for(var i=0;i<leng;i++) {
                 var reader = new FileReader();
-                reader.readAsDataURL(file[i]); 
-                reader.onload =function(e){
-                vm.images.push(e.target.result);                                    
-                };                 
+                reader.readAsDataURL(file[i]);
+                reader.onload =function(e) {
+                    vm.images.push(e.target.result);
+                };
             }                        
         },
 
-        delImage:function(index){
+        delImage: function(index){
             this.images.shift(index);
         },
 
-        removeImage: function(e) {
-            this.images = [];
+        sub : function () {
+            if (!this.checkData()) return;
+
+            this.$http
+                .post('index.php?s=/Home/Venue/apply', {
+                    theme   : this.theme,
+                    proposer: this.proposer,
+                    phone   : this.phone,
+                    num     : this.num,
+                    place   : this.place,
+                    remark  : this.remark,
+                    planning:this.planning,
+                    images  : this.images,
+                    stime   : this.stime,
+                    etime   : this.etime
+                }, {
+                    emulateJSON:true
+                }).then(function(res) {
+                    toastr.success('申请提交成功');
+                    $('#myModal').modal('hide');
+                    this.theme = this.proposer = this.phone = this.num = this.place = this.remark = this.planning = this.stime = this.etime = '';
+                    this.images = [];
+                    this.images = [];
+                }, function(res){
+                    toastr.error('申请提交失败');
+                });
         },
 
-        uploadImage: function() {
-            var obj = {images : this.images};
-            $.ajax({
-                type: 'post',
-                url: "index.php?s=/Home/Venue/up",
-                data: obj,
-                dataType: "json",
-                success: function(data) {
-                    if(data.status){
-                        alert(data.msg);
-                        return false;
-                    }else{
-                        alert(data.msg);
-                        return false;
-                    }
+        checkData : function () {
+            var flag = true;
+            for (var key in this.prompt) {
+                if (this[key].length === 0) {
+                    this.prompt[key]['isVisible'] = true;
+                    flag = false;
+                } else {
+                    this.prompt[key]['isVisible'] = false;
                 }
-            });
-        }
+            }
+            return flag;
+        },
 
     },
 
