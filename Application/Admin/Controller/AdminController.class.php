@@ -88,5 +88,43 @@ class AdminController extends BaseController
 	}
 
 
+	public function getAllAdmin()
+	{
+		if (IS_AJAX) {
+			$data = $this->admin->where(array('status' => 1))->field(array('id', 'account'))->select();
+			exit(json_encode($data));
+		}
+	}
+
+
+	// 获取负责人
+	public function getHeadByCid()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			$data = D('College')->getHeadByCid($id);
+			exit(json_encode($data));
+		}
+	}
+
+
+	// 为学院设置管理员(负责人)
+	public function setAdminForCid()
+	{
+		if (IS_AJAX) {
+			$uid = I('post.uid');
+			$id = I('post.id');
+			if (D('College')->setHeadForCid($uid, $id)) {
+				returnJson(true, '分配成功');
+			} else {
+				returnJson(false, '分配失败');
+			}
+		}
+	}
+
+
+
+
+
 
 }

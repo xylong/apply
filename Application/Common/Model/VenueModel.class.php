@@ -7,6 +7,7 @@ use Think\Model;
 class VenueModel extends Model
 {
     const UPLOAD_DIR = './Public/Upload/';
+    const APPLY_TYPE = 3;   // 申请类型
 
     protected $_validate = array(
         array('theme', 'require', '活动主题不能为空', 1),   // 活动主题
@@ -47,6 +48,7 @@ class VenueModel extends Model
     }
 
 
+    // 上传图片
     public function saveImg()
     {
         $images = $_POST['images'];
@@ -68,18 +70,82 @@ class VenueModel extends Model
     }
 
 
-    public function savePlan()
+    /**
+     * 根据审核者获取申请
+     * @param  boolean $is_examine  true／false [未审核／已审核]
+     * @param  integer $p  页码
+     * @return array
+     */
+    public function getApplyByUid($is_examine, $p)
     {
-        $plan = $_POST['plan'];
-        $start=strpos($plan, ',');
-        $plan= substr($plan, $start+1);
-        $plan = str_replace(' ', '+', $plan);
-        $data = base64_decode($plan);
-        $fileName = UPLOAD_DIR . uniqid() . '.zip';
-        $success = file_put_contents($fileName, $data);
-        if ($success) {
-            return $fileName;
+        // 已审核和未审核区分
+        if (!$is_examine) {
+            $map['oa_approve.aid'] = array('EXP','IS NULL');    // 未审核条件
+            $map['receiver'] = array('IN', $_SESSION['role_id']);   // 接收人条件
+
+            $count = $this->where($map)->join("LEFT JOIN __APPROVE__ ON __VENUE__.id = __APPROVE__.aid AND __APPROVE__.type = ".self::APPLY_TYPE." AND __APPROVE__.uid = {$_SESSION["auth_id"]}")->count();
+            $Page = new \Think\Page($count, 10);
+            $rows = $this->page($p, 10)
+                        ->where($map)
+                        ->join("LEFT JOIN __APPROVE__ ON __VENUE__.id = __APPROVE__.aid AND __APPROVE__.type = ".self::APPLY_TYPE." AND __APPROVE__.uid = {$_SESSION['auth_id']}")
+                        ->field(array('id', 'code', 'theme', 'apply_time'))
+                        ->order('apply_time desc')->select();
+        } else {
+            $map['oa_audit_log.apply_type'] = 1;    // 申请类型条件
+            $map['oa_approve.uid'] = $_SESSION['auth_id'];  // 自己的审核结果条件
+            $map['oa_audit_log.uid'] = $_SESSION['auth_id'];    // 自己的审核记录条件
+
+            $count = $this->where($map)
+                        ->join("LEFT JOIN __APPROVE__ ON __VENUE__.id = __APPROVE__.aid  AND __APPROVE__.type = ".self::APPLY_TYPE."  AND __APPROVE__.uid = {$_SESSION['auth_id']}")
+                        ->join('LEFT JOIN __AUDIT_LOG__ ON __VENUE__.id = __AUDIT_LOG__.apply_id')
+                        ->count();
+            $Page = new \Think\Page($count, 10);
+            $rows = $this->page($p, 10)
+                        ->where($map)
+                        ->join("LEFT JOIN __APPROVE__ ON __VENUE__.id = __APPROVE__.aid AND __APPROVE__.type = ".self::APPLY_TYPE."  AND __APPROVE__.uid = {$_SESSION['auth_id']}")
+                        ->join('LEFT JOIN __AUDIT_LOG__ ON __VENUE__.id = __AUDIT_LOG__.apply_id')
+                        ->field(array('oa_venue.id', 'oa_venue.code', 'oa_venue.theme', 'oa_approve.time apply_time'))
+                        ->order('time desc')->select();
         }
+
+        return array(
+            'data' => $rows,
+            'count' => $count
+        );
     }
+
+
+    /**
+     * 审核详情
+     * @param  integer $id 申请id
+     * @return array     申请详情和审核结果
+     */
+    public function getApplyById($id)
+    {
+        $apply = $this->where(array('oa_venue.id' => $id))
+                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'proposer', 'num', 'place', 'img', 'planning', 'remark', 'utype', 'stime', 'etime', 'apply_time', 'receiver'))
+                    ->find();
+        $result = M('Approve')->join('LEFT JOIN __ADMIN__ ON __APPROVE__.uid = __ADMIN__.id')
+                            ->join('LEFT JOIN __ROLE__ ON __APPROVE__.role_id = __ROLE__.id')
+                            ->where(array('oa_approve.aid' => $id, 'oa_approve.type' => self::APPLY_TYPE))
+                            ->field('oa_approve.*,oa_admin.account,oa_role.name role_name')
+                            ->select();
+
+        // 检查自己是否审核
+        $myturn = true;
+        foreach ($result as $index => $item) {
+            if ($item['uid'] == $_SESSION['auth_id'] || $item['isagree'] == 2) {
+                $myturn = false;
+                break;
+            }
+        }
+        return array(
+            'apply' => $apply,
+            'result' => $result,
+            'myturn' => $myturn
+        );
+    }
+
+
 
 }

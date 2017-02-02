@@ -1,7 +1,9 @@
 <?php
 namespace Common\Model;
 use Think\Model;
-
+/**
+ * 学院
+ */
 class CollegeModel extends Model
 {
 
@@ -20,6 +22,35 @@ class CollegeModel extends Model
 		);
 	}
 
+
+	/**
+	 * 获取学院的负责人
+	 * @param  integer $id 学院id
+	 * @return array
+	 */
+	public function getHeadByCid($id)
+	{
+		$uid = $this->where(array('id' => $id))->getField('uid');
+		if ($uid) {
+			return explode(',', $uid);
+		}
+		return array();
+	}
+
+
+	/**
+	 * 为学院设置负责人
+	 * @param array $uid 管理员id
+	 * @param integer $id  学院id
+	 */
+	public function setHeadForCid($uid, $id)
+	{
+		$data = array(
+			'uid' => implode(',', $uid),
+			'id' => $id
+		);
+		return $this->save($data);
+	}
 
 
 }

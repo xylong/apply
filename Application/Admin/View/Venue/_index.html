@@ -1,15 +1,17 @@
 <include file="Public:header" />
-<link href="__CSS__/plugins/slick/slick.css" rel="stylesheet">
-<link href="__CSS__/plugins/slick/slick-theme.css" rel="stylesheet">
+<link href="__CSS__/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
 
+<style>
+    .lightBoxGallery img {width: 100px;height: 100px;}
+</style>
 
-<div class="wrapper wrapper-content  animated fadeInRight">
+<div class="wrapper wrapper-content  animated fadeInRight" id="apply">
     <div class="row">
-        <div class="col-sm-7">
+        <div class="col-sm-6">
             <div class="ibox">
                 <div class="ibox-content">
                     <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
-                    <h2>Clients</h2>
+                    <h2>申请列表</h2>
                     <p>
                         All clients need to be verified before you can send email and set a project.
                     </p>
@@ -22,49 +24,35 @@
                     <div class="clients-list">
                     <ul class="nav nav-tabs">
                         <span class="pull-right small text-muted">1406 Elements</span>
-                        <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> Contacts</a></li>
-                        <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> Companies</a></li>
+                        <li :class="{ active : isActive == v.type }" v-for="v in tab" @click="tabChange(v.type)"><a data-toggle="tab" :href="'#tab-' + v.type"><i class="fa fa-briefcase"></i> {{v.name}}</a></li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane active">
                             <div class="full-height-scroll">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-hover">
+                                        <thead>
+                                            <th>
+                                                <td>申请码</td>
+                                                <td>主题</td>
+                                                <td v-if="!isActive">申请时间</td>
+                                                <td v-else>审核时间</td>
+                                                <td>操作</td>
+                                            </th>
+                                        </thead>
                                         <tbody>
-                                        <tr>
-                                            <td class="client-avatar"><img alt="image" src="__IMG__/a2.jpg"> </td>
-                                            <td><a data-toggle="tab" href="#contact-1" class="client-link">Anthony Jackson</a></td>
-                                            <td> Tellus Institute</td>
-                                            <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                            <td> gravida@rbisit.com</td>
-                                            <td class="text-right">
-                                            	<button class="btn btn-info btn-xs"> Tag</button>
-		                                        <button class="btn btn-danger btn-xs">&nbsp;<i class="fa fa-times"></i>&nbsp;</button>
-                                        	</td>
-                                        </tr>
+                                            <tr v-for="v in applys">
+                                                <td v-text="$index + 1"></td>
+                                                <td v-text="v.code"></td>
+                                                <td v-text="v.theme"></td>
+                                                <td v-text="v.apply_time"></td>
+                                                <td class="text-right">
+                                                    <button class="btn btn-info btn-xs" @click="review(v.id)">查看</button>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane">
-                            <div class="full-height-scroll">
-                  				<div class="table-responsive">
-                                    <table class="table table-striped table-hover">
-                                        <tbody>
-                                        <tr>
-                                            <td class="client-avatar"><img alt="image" src="__IMG__/a2.jpg"> </td>
-                                            <td><a data-toggle="tab" href="#contact-1" class="client-link">Anthony Jackson</a></td>
-                                            <td> Tellus Institute</td>
-                                            <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                            <td> gravida@rbisit.com</td>
-                                            <td class="text-right">
-                                            	<button class="btn btn-info btn-xs"> Tag</button>
-		                                        <button class="btn btn-danger btn-xs"> Mag</button>
-                                        	</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                    <my-pagination v-if="applys.length !== 0" :total="total" :current.sync="current"></my-pagination>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-6" v-show="detail.id">
             <div class="ibox ">
 
                 <div class="ibox-content">
@@ -107,99 +95,83 @@
                                 <div class="full-height-scroll">
 
                                     <div class="row">
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-6">
                                             <dl class="dl-horizontal">
-                                                <dt>Created by:</dt> <dd>Alex_Smith</dd>
-                                                <dt>Messages:</dt> <dd>  162</dd>
+                                                <dt>申请码:</dt> <dd v-text="detail.code"></dd>
+                                                <dt>申请人:</dt> <dd v-text="detail.proposer"></dd>
+                                                <dt>展架数量:</dt> <dd v-text="detail.num"></dd>
+                                                <dt>起始时间:</dt> <dd v-text="detail.stime"></dd>
                                             </dl>
                                         </div>
-                                        <div class="col-lg-7" id="cluster_info">
+                                        <div class="col-lg-6" id="cluster_info">
                                             <dl class="dl-horizontal" >
-                                                <dt>Last Updated:</dt> <dd>16.08.2014 12:15:57</dd>
-                                                <dt>Created:</dt> <dd>  10.07.2014 23:36:57 </dd>
+                                                <dt>申请时间:</dt> <dd v-text="detail.apply_time"></dd>
+                                                <dt>联系方式:</dt> <dd v-text="detail.phone"></dd>
+                                                <dt>摆放地点:</dt> <dd v-text="detail.place"></dd>
+                                                <dt>结束时间:</dt> <dd v-text="detail.etime"></dd>
                                             </dl>
                                         </div>
                                     </div>
 
     								<div class="row">
-    					                <div class="col-lg-10 col-lg-offset-1">
-    					                    <h4 class="text-center m">
-    					                        Activity playbill
-    					                    </h4>
 
-    					                    <div class="slick_demo_2">
-    					                        <div>
-    					                            <div class="ibox-content">
-    					                                <img src="__IMG__/gallery/1s.jpg">
-    					                            </div>
-    					                        </div>
-    					                        <div>
-    					                            <div class="ibox-content">
-    					                                <img src="__IMG__/gallery/2s.jpg">
-    					                            </div>
-    					                        </div>
-    					                        <div>
-    					                            <div class="ibox-content">
-    					                                <img src="__IMG__/gallery/3s.jpg">
-    					                            </div>
-    					                        </div>
-    					                        <div>
-    					                            <div class="ibox-content">
-    					                                <img src="__IMG__/gallery/4s.jpg">
-    					                            </div>
-    					                        </div>
-    					                    </div>
-    					                </div>
+                                        <div class="lightBoxGallery">
+                                            <a v-for="v in detail.img" :href="v" data-gallery><img class="feed-photo" :src="v"></a>
+
+                                            <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+                                            <div id="blueimp-gallery" class="blueimp-gallery" style="display: none;">
+                                                <div class="slides" style="width: 138096px;"></div>
+                                                <h3 class="title">Image from Unsplash</h3>
+                                                <a class="prev">‹</a>
+                                                <a class="next">›</a>
+                                                <a class="close">×</a>
+                                                <a class="play-pause"></a>
+                                                <ol class="indicator"></ol>
+                                            </div>
+
+                                        </div>
     				                </div>
 
-                                    <h5>Basic left float timeline</h5>
+                                    <h5>审批结果</h5>
     								<div class="ibox-content inspinia-timeline">
 
-    			                        <div class="timeline-item">
-    			                            <div class="row">
-    			                                <div class="col-xs-3 date">
-    			                                    <i class="fa fa-check"></i>
-    			                                    6:00 am
-    			                                    <br/>
-    			                                    <small class="text-navy">2 hour ago</small>
-    			                                </div>
-    			                                <div class="col-xs-7 content no-top-border">
-    			                                    <p class="m-b-xs"><strong>Meeting</strong></p>
-
-    			                                    <p>web app.</p>
-    			                                </div>
-    			                            </div>
-    			                        </div>
-    			                        <div class="timeline-item">
-    			                            <div class="row">
-    			                                <div class="col-xs-3 date">
-    			                                    <i class="fa fa-times"></i>
-    			                                    7:00 am
-    			                                    <br/>
-    			                                    <small class="text-navy">3 hour ago</small>
-    			                                </div>
-    			                                <div class="col-xs-7 content">
-    			                                    <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
-    			                                    <p>hello world.</p>
-    			                                </div>
-    			                            </div>
-    			                        </div>
-                                        <div class="timeline-item">
+    			                        <div class="timeline-item" v-show="result.length === 0">
                                             <div class="row">
                                                 <div class="col-xs-3 date">
-                                                    <i class="fa fa-times"></i>
-                                                    7:00 am
-                                                    <br/>
-                                                    <small class="text-navy">3 hour ago</small>
+                                                    <a href="javascript:;" class="btn btn-xs btn-info" @click="sub">提交</a>
                                                 </div>
                                                 <div class="col-xs-7 content">
-                                                    <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
-                                                    <p>hello world.</p>
+                                                    <p class="m-b-xs"><strong>{:session('admin_name')}</strong></p>
+                                                    <div class="media-body">
+                                                        <textarea class="form-control" placeholder="意见" v-model="opinion"></textarea>
+                                                    </div>
+                                                    <p>
+                                                        <input type="radio" id="one" value="1" v-model="picked"><label for="one">通过</label>
+                                                        <input type="radio" id="two" value="2" v-model="picked"><label for="two">拒绝</label>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
-    			                    </div>
 
+                                        <div class="timeline-item" v-show="result" v-for="v in result">
+                                            <div class="row">
+                                                <div class="col-xs-3 date">
+                                                    <i class="fa fa-check" v-if="v.isagree == 1"></i>
+                                                    <i class="fa fa-close" v-else></i>
+                                                    {{v.role_name}}
+                                                    <br/>
+                                                    <small v-if="v.isagree == 1" class="text-navy" v-text="v.time"></small>
+                                                    <small v-else class="text-danger" v-text="v.time"></small>
+                                                </div>
+                                                <div class="col-xs-7 content no-top-border">
+                                                    <p class="m-b-xs"><strong v-text="v.account"></strong></p>
+
+                                                    <div class="well" v-text="v.opinion"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+    			                    </div>
                                 </div>
                             </div>
                         </div>
@@ -210,42 +182,33 @@
     </div>
 </div>
 
+<template id="template_pagination">
+    <nav>
+        <ul class="pagination">
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(1)"> 首页 </a></li>
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(current - 1)"> 上一页 </a></li>
+            <li v-for="p in grouplist" :class="{'active': current == p.val}"><a href="javascript:;" @click="setCurrent(p.val)"> {{ p.text }} </a></li>
+            <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(current + 1)"> 下一页</a></li>
+            <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(page)"> 尾页 </a></li>
+        </ul>
+    </nav>
+</template>
+
 <include file="Public:footer" />
 <script src="__JS__/plugins/slick/slick.min.js"></script>
-<!-- blueimp gallery -->
+
+<!--  lightBoxGallery -->
 <script src="__JS__/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+
+
+<script src="__JS__/common/page.js"></script>
+<script src="__JS__/admin/venue.js"></script>
 <script>
+.lightBoxGallery {
+    text-align: center;
+}
 
-    $('.slick_demo_2').slick({
-        infinite: true, // 循环播放
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        // responsive: [
-        //     {
-        //         breakpoint: 1024,
-        //         settings: {
-        //             slidesToShow: 3,
-        //             slidesToScroll: 3,
-        //             infinite: true,
-        //             dots: true
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 600,
-        //         settings: {
-        //             slidesToShow: 2,
-        //             slidesToScroll: 2
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 480,
-        //         settings: {
-        //             slidesToShow: 1,
-        //             slidesToScroll: 1
-        //         }
-        //     }
-        // ]
-    });
-
+.lightBoxGallery img {
+    margin: 5px;
+}
 </script>
