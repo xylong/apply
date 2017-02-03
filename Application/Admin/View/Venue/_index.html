@@ -70,16 +70,16 @@
                         <div id="contact-1" class="tab-pane active">
                             <div class="row m-b-lg">
                                 <div class="col-lg-4 text-center">
-                                    <h2>Nicki Smith</h2>
+                                    <!-- <h2>Nicki Smith</h2>
 
                                     <div class="m-b-sm">
                                         <img alt="image" class="img-circle" src="__IMG__/a2.jpg"
                                              style="width: 62px">
-                                    </div>
+                                    </div> -->
                                 </div>
                  
                                 <div class="col-lg-8">
-                                    <h2>
+                                    <!-- <h2>
                                         About me
                                     </h2>
 
@@ -88,7 +88,7 @@
                                     </p>
                                     <div class="progress progress-striped active m-b-sm">
                                         <div style="width: 60%;" class="progress-bar"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="client-detail">
@@ -135,24 +135,6 @@
                                     <h5>审批结果</h5>
     								<div class="ibox-content inspinia-timeline">
 
-    			                        <div class="timeline-item" v-show="result.length === 0">
-                                            <div class="row">
-                                                <div class="col-xs-3 date">
-                                                    <a href="javascript:;" class="btn btn-xs btn-info" @click="sub">提交</a>
-                                                </div>
-                                                <div class="col-xs-7 content">
-                                                    <p class="m-b-xs"><strong>{:session('admin_name')}</strong></p>
-                                                    <div class="media-body">
-                                                        <textarea class="form-control" placeholder="意见" v-model="opinion"></textarea>
-                                                    </div>
-                                                    <p>
-                                                        <input type="radio" id="one" value="1" v-model="picked"><label for="one">通过</label>
-                                                        <input type="radio" id="two" value="2" v-model="picked"><label for="two">拒绝</label>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                         <div class="timeline-item" v-show="result" v-for="v in result">
                                             <div class="row">
                                                 <div class="col-xs-3 date">
@@ -167,6 +149,24 @@
                                                     <p class="m-b-xs"><strong v-text="v.account"></strong></p>
 
                                                     <div class="well" v-text="v.opinion"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-item" v-show="myturn">
+                                            <div class="row">
+                                                <div class="col-xs-3 date">
+                                                    <a href="javascript:;" class="btn btn-xs btn-info" @click="sub">提交</a>
+                                                </div>
+                                                <div class="col-xs-7 content">
+                                                    <p class="m-b-xs"><strong>{:session('admin_name')}</strong></p>
+                                                    <div class="media-body">
+                                                        <textarea class="form-control" placeholder="意见" v-model="opinion"></textarea>
+                                                    </div>
+                                                    <p>
+                                                        <input type="radio" id="one" value="1" v-model="picked"><label for="one">通过</label>
+                                                        <input type="radio" id="two" value="2" v-model="picked"><label for="two">拒绝</label>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>

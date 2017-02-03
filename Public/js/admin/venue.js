@@ -19,6 +19,10 @@ var vm = new Vue({
 	},
 
 	methods : {
+		tabChange : function (type) {
+			if (type !== this.isActive) this.isActive = type
+		},
+
 		// 申请列表
 		getList : function (p) {
             if (p) this.current = p;
@@ -65,7 +69,9 @@ var vm = new Vue({
                     aid : this.detail.id,
                     isagree : this.picked,
                     opinion : this.opinion,
-                    role_id : this.detail.receiver
+                    role_id : this.detail.receiver,
+                    utype	: this.detail.utype,	// 申请者类型
+                    step	: this.result.length	// 审核到第几步了
                 }, {
                     emulateJSON:true
                 }).then(function(res){

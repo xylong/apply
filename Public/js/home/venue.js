@@ -106,6 +106,12 @@ var vm = new Vue({
         sub : function () {
             if (!this.checkData()) return;
 
+            // 处理截止日期
+            if (this.etime) {
+                var etime = null;
+                etime = this.etime ? this.etime.substring(0, 8) + (parseInt(this.etime.substring(8)) - 1) : null;
+            }
+
             this.$http
                 .post('index.php?s=/Home/Venue/apply', {
                     theme   : this.theme,
@@ -114,10 +120,10 @@ var vm = new Vue({
                     num     : this.num,
                     place   : this.place,
                     remark  : this.remark,
-                    planning:this.planning,
+                    planning: this.planning,
                     images  : this.images,
                     stime   : this.stime,
-                    etime   : this.etime
+                    etime   : etime
                 }, {
                     emulateJSON:true
                 }).then(function(res) {
@@ -171,9 +177,14 @@ calendar.fullCalendar({
     editable: true,
     droppable: true, // this allows things to be dropped onto the calendar
 
-    events: [
-
-    ],
+    events: {
+        url: 'index.php?s=/Home/Venue/index',
+        type: 'get',
+        error: function() {
+            alert('there was an error while fetching events!');
+        },
+        editable : false
+    },
 
 
     eventClick: function(event, jsEvent, view) {

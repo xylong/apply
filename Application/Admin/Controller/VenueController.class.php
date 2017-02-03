@@ -26,6 +26,7 @@ class VenueController extends BaseController
 	}
 
 
+	// 审核详情
 	public function applyDetail()
 	{
 		if (IS_AJAX) {
@@ -41,6 +42,20 @@ class VenueController extends BaseController
 			$data['apply']['img'] = implode(',', $url);
 
 			exit(json_encode($data));
+		}
+	}
+
+
+	// 提交审核结果
+	public function review()
+	{
+		if (IS_AJAX) {
+			$data = I('post.');
+			if ($this->venue->audit($data)) {
+				returnJson(true, '审核成功');
+			} else {
+				returnJson(true, '审核成功');
+			}
 		}
 	}
 
