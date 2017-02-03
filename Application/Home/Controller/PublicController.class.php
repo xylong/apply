@@ -37,7 +37,7 @@ class PublicController extends Controller
 		if (D('User')->doLogin($post)) {
 			$this->error('帐号或密码错误！');
 		}
-		header('Location: ' . U("index/index"));
+		header('Location: ' . U("Base/applyRecord"));
 	}
 
 	// 登出
@@ -54,5 +54,36 @@ class PublicController extends Controller
 			redirect(U(C('USER_AUTH_GATEWAY')));
 		}
 	}
+
+	/*物资借用详情页*/
+	public function getBorrowById($id)
+	{
+		$data = D('Borrow')->getApplyById($id);
+		$this->assign('data', $data);
+		$this->display('apply_borrow');
+	}
+
+	/*青春工坊借用详情页*/
+	public function getHouseById($id)
+	{
+		$data = D('Rent')->detail($id);
+		$this->assign('data', $data);
+		$this->display('apply_house');
+	}
+
+	/*展架展场借用详情页*/
+	public function getVenueById($id)
+	{
+		$config = C('TMPL_PARSE_STRING');
+		$data = D('Venue')->getApplyById($id);
+		$imgs = explode(',', $data['apply']['img']);
+		foreach ($imgs as $img) {
+			$src[] = $config['__UPLOAD__'] . $img;
+		}
+		$data['apply']['img'] = $src;
+		$this->assign('data', $data);
+		$this->display('apply_venue');
+	}
+
 
 }

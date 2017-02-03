@@ -1,0 +1,97 @@
+<include file="Public:header" />
+
+<div class="wrapper wrapper-content" id="apply">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="ibox ">
+
+                <div class="ibox-content">
+                    <div class="tab-content">
+                        <div id="contact-1" class="tab-pane active">
+                            <div class="client-detail">
+                                <div class="full-height-scroll">
+
+                                    <strong>基础信息</strong>
+
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>字段</th>
+                                                <th>值</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>申请码</td>
+                                                <td>{$data.apply.code}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>申请人</td>
+                                                <td>{$data.apply.proposer}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>联系方式</td>
+                                                <td>{$data.apply.phone}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>借用工坊</td>
+                                                <td>{$data.apply.house}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>指导老师</td>
+                                                <td>{$data.apply.tutor}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>使用事由</td>
+                                                <td>{$data.apply.reason}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>开始时间</td>
+                                                <td>{$data.apply.stime}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>结束时间</td>
+                                                <td>{$data.apply.etime}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>申请时间</td>
+                                                <td>{$data.apply.apply_time}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+                                    <hr/>
+                                    <strong>审核结果</strong>
+                                    <div id="vertical-timeline" class="vertical-container dark-timeline">
+                                        <volist name="data.result" id="v">
+                                            <div class="vertical-timeline-block">
+                                                <eq name="v.isagree" value="1">
+                                                    <div class="vertical-timeline-icon navy-bg">
+                                                        <i class="fa fa-check"></i>
+                                                <else/>
+                                                    <div class="vertical-timeline-icon red-bg">
+                                                        <i class="fa fa-times"></i>
+                                                </eq>
+                                                </div>
+                                                <div class="vertical-timeline-content">
+                                                    <p>{$v.opinion}</p>
+                                                    <span class="vertical-date small text-muted"> {$v.account} - {$v.time} </span>
+                                                </div>
+                                            </div>
+                                        </volist>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<include file="Public:footer" />

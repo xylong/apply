@@ -63,6 +63,7 @@ class BorrowController extends BaseController
 		}
 	}
 
+
 	public function getGoods()
 	{
 		if (IS_AJAX) {

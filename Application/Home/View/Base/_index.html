@@ -1,0 +1,71 @@
+<include file="Public:header" />
+
+<div class="wrapper wrapper-content" id="apply">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>申请记录</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-9 m-b-xs">
+                            <div data-toggle="buttons" class="btn-group">
+                                <label v-for="v in type" :class="{ active : isActive == v.type }" class="btn btn-sm btn-white" @click="changeType(v.id)"> <input type="radio" id="option3" name="options"> {{v.name}} </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>申请码 </th>
+                                    <th>申请单位 </th>
+                                    <th>联系方式</th>
+                                    <th>申请时间 </th>
+                                    <th>二维码 </th>
+                                    <th>详情</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="v in applys">
+                                    <td v-text="v.id"></td>
+                                    <td v-text="v.code"></td>
+                                    <td v.text="v.uid"></td>
+                                    <td v-text="v.phone"></td>
+                                    <td v-text="v.apply_time"></td>
+                                    <td><a href="javascript:;">点击查看</a></td>
+                                    <td><a :href="url + '/id/' + v.id">查看<i class="fa fa-hand-o-right text-success"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <my-pagination :total="total" :current.sync="current" v-show="total"></my-pagination>  
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<template id="template_pagination">
+    <nav>
+        <ul class="pagination">
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(1)"> 首页 </a></li>
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="setCurrent(current - 1)"> 上一页 </a></li>
+            <li v-for="p in grouplist" :class="{'active': current == p.val}"><a href="javascript:;" @click="setCurrent(p.val)"> {{ p.text }} </a></li>
+            <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(current + 1)"> 下一页</a></li>
+            <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(page)"> 尾页 </a></li>
+        </ul>
+    </nav>
+</template>
+
+<include file="Public:footer" />
+<script src="__JS__/common/page.js"></script>
+<script src="__JS__/home/apply.js"></script>

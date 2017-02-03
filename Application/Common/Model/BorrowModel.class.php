@@ -93,8 +93,25 @@ class BorrowModel extends Model
                         ->order('time desc')->select();
         }
 
-        
+        return array(
+            'data' => $rows,
+            'count' => $count
+        );
+    }
 
+
+    /**
+     * 根据申请者获取申请
+     * @param  integer $p 页码
+     * @return array
+     */
+    public function applyRecord($p)
+    {
+        $map['uid'] = session('uid');
+        $count = $this->where($map)->count();
+        $Page = new \Think\Page($count, 10);
+        $rows = $this->page($p, 10)->where($map)->order('apply_time desc')->select();
+        
         return array(
             'data' => $rows,
             'count' => $count
@@ -121,7 +138,7 @@ class BorrowModel extends Model
         // 检查自己是否审核
         $myturn = true;
         foreach ($result as $index => $item) {
-        	if ($item['uid'] == $_SESSION['auth_id'] || $item['isagree'] == 2) {
+        	if ($item['uid'] == $_SESSION['auth_id'] || in_array($item['role_id'], $_SESSION['role_id']) || $item['isagree'] == 2) {
         		$myturn = false;
         		break;
         	}
@@ -139,6 +156,13 @@ class BorrowModel extends Model
         $data['type'] = 1;
         $data['uid'] = session('auth_id');
         $data['time'] = date('Y-m-d H:i:s', time());
+
+        // 判断是否被同角色人员审核
+        $map['id'] = array('EQ', $data['aid']);
+        $map['role_id'] = array('IN', $_SESSION['role_id']);
+        if ($this->where($map)->join('LEFT JOIN __APPROVE__ ON __VENUE__.id = __APPROVE__.aid')->find()) {
+            return false;
+        }
 
         // 审核结果入库
         if (M('Approve')->add($data)) {

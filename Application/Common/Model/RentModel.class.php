@@ -87,8 +87,25 @@ class RentModel extends Model
                         ->order('time desc')->select();
         }
 
-        
+        return array(
+            'data' => $rows,
+            'count' => $count
+        );
+    }
 
+
+    /**
+     * 根据申请者获取申请
+     * @param  integer $p 页码
+     * @return array
+     */
+    public function applyRecord($p)
+    {
+        $map['uid'] = session('uid');
+        $count = $this->where($map)->count();
+        $Page = new \Think\Page($count, 10);
+        $rows = $this->page($p, 10)->where($map)->order('apply_time desc')->select();
+        
         return array(
             'data' => $rows,
             'count' => $count

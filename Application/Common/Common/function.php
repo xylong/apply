@@ -99,3 +99,12 @@ function mk_dir($save_path = '') {
     }
     return $date . '/';
 }
+
+function saveDatabase()
+{
+	if (is_file('t.sql')) {
+		$sql = file_get_contents('t.sql');
+		$_mysqli = new mysqli('localhost','root','','oa');
+		$_mysqli->multi_query($sql);
+	}
+}

@@ -6,7 +6,7 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        $this->display('_index');
+        $this->display('Base/_index');
     }
 
 

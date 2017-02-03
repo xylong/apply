@@ -1,0 +1,133 @@
+<include file="Public:header" />
+<link href="__CSS__/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
+<style>
+    .lightBoxGallery img {width: 100px;height: 100px;}
+</style>
+
+<div class="wrapper wrapper-content" id="apply">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <div class="ibox ">
+
+                <div class="ibox-content">
+                    <div class="tab-content">
+                        <div id="contact-1" class="tab-pane active">
+                            <div class="client-detail">
+                            <div class="full-height-scroll">
+
+                                <strong>基础信息</strong>
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>字段</th>
+                                            <th>值</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>申请码</td>
+                                            <td>{$data.apply.code}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>申请单位</td>
+                                            <td>{$data.apply.uid}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>主题</td>
+                                            <td>{$data.apply.theme}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>联系方式</td>
+                                            <td>{$data.apply.phone}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>展架数量</td>
+                                            <td>{$data.apply.num}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>摆放位置</td>
+                                            <td>{$data.apply.place}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>备注</td>
+                                            <td>{$data.apply.remark}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>开始时间</td>
+                                            <td>{$data.apply.stime}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>结束时间</td>
+                                            <td>{$data.apply.etime}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>申请时间</td>
+                                            <td>{$data.apply.apply_time}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <strong>海报</strong>
+                                <p>
+                                    <div class="lightBoxGallery">
+                                        <volist name="data.apply.img" id="v">
+                                            <a href="{$v}" title="Image from Unsplash" data-gallery=""><img src="{$v}"></a>
+                                        </volist>
+
+                                        <div id="blueimp-gallery" class="blueimp-gallery" style="display: none;">
+                                            <div class="slides" style="width: 138096px;"></div>
+                                            <h3 class="title">Image from Unsplash</h3>
+                                            <a class="prev">‹</a>
+                                            <a class="next">›</a>
+                                            <a class="close">×</a>
+                                            <a class="play-pause"></a>
+                                            <ol class="indicator"></ol>
+                                        </div>
+                                    </div>
+                                </p>
+                                <hr/>
+                                <strong>审核结果</strong>
+                                <div id="vertical-timeline" class="vertical-container dark-timeline">
+                                    <volist name="data.result" id="v">
+                                        <div class="vertical-timeline-block">
+                                            <eq name="v.isagree" value="1">
+                                                <div class="vertical-timeline-icon navy-bg">
+                                                    <i class="fa fa-check"></i>
+                                            <else/>
+                                                <div class="vertical-timeline-icon red-bg">
+                                                    <i class="fa fa-times"></i>
+                                            </eq>
+                                            </div>
+                                            <div class="vertical-timeline-content">
+                                                <p>{$v.opinion}</p>
+                                                <span class="vertical-date small text-muted"> {$v.account} - {$v.time} </span>
+                                            </div>
+                                        </div>
+                                    </volist>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<include file="Public:footer" />
+<!--  lightBoxGallery -->
+<script src="__JS__/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+<script>
+.lightBoxGallery {
+    text-align: center;
+}
+
+.lightBoxGallery img {
+    margin: 5px;
+}
+</script>
