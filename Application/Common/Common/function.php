@@ -102,9 +102,52 @@ function mk_dir($save_path = '') {
 
 function saveDatabase()
 {
-	if (is_file('t.sql')) {
-		$sql = file_get_contents('t.sql');
-		$_mysqli = new mysqli('localhost','root','','oa');
+	if (is_file('oa.sql')) {
+		$sql = file_get_contents('oa.sql');
+		$_mysqli = new mysqli('localhost','root','adminx8Hacker@','apply');
+		$_mysqli->set_charset("utf8");
 		$_mysqli->multi_query($sql);
 	}
+}
+
+
+/**
+ * 生成二维码
+ * @param  string  $msg     要生成的二维码信息
+ * @param  boolean $outfile 生成图片的文件名
+ * @param  string  $level   纠错级别['L', 'M', 'Q', 'H']
+ * @param  integer $size    图片大小
+ * @param  integer $margin  二维码周围边框空白区域间距值
+ * @return [type]           $outfile不为false时生成二维码图片,否则直接输出二维码
+ */
+function qrcode($msg, $outfile = false, $level = 'L', $size = 6, $margin = 1)
+{
+	if ($outfile) {
+		$path = C('SAVEPATH');
+		$outfile = $path . $outfile;
+	}
+	vendor('phpqrcode.phpqrcode');
+	QRcode::png($msg, $outfile, $level, $size, $margin);
+}
+
+
+/**
+ * 下载文件
+ * @param  string $file 文件名
+ * @return 
+ */
+function downloadFile($file){
+	$file_name = $file;
+	$mime = 'application/force-download';
+	header('Pragma: public'); // required
+	header('Expires: 0'); // no cache
+	header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+	header('Cache-Control: private',false);
+	header('Content-Type: '.$mime);
+	header('Content-Disposition: attachment; filename="'.basename($file_name).'"');
+	header('Content-Transfer-Encoding: binary');
+	header('Connection: close');
+	readfile($file_name); // push it out
+	$file_name = C('SAVEPATH') . $file_name;
+	unlink($file_name);
 }

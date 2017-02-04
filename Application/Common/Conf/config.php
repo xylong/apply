@@ -9,7 +9,7 @@ return array(
     'DB_PORT'   => 3306, // 端口
     'DB_PREFIX' => 'oa_', // 数据库表前缀
 
-    'URL_MODEL' => 3,
+    // 'URL_MODEL' => 3,
 
 	/* 模板相关配置 */
     'TMPL_PARSE_STRING' => array(
@@ -30,7 +30,9 @@ return array(
             array(2,3,11,5),    // 学院团委->学院党委->林茂/寿刘星->校团委
             array(4,5)  // 校团委指导老师->校团委
         )
-    )
+    ),
 
+    
+    'SAVEPATH' => './Public/qrcode/', // 二维码保存路径
 
 );

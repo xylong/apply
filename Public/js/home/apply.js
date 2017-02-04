@@ -8,6 +8,8 @@ var vm = new Vue({
 		],
 
 		applys : [],
+		qrcode : '',
+		id : 0,
 
 		total: 0,
         display: 10,
@@ -53,6 +55,24 @@ var vm = new Vue({
                     console.log(res.status);
                 });
         },
+
+        // 查看二维码
+        qr : function (id) {
+        	this.id = id;
+            this.$http.get('qrcode', {
+            	id   : this.id,
+            	type : this.isActive
+            }).then(function(res){
+                this.qrcode = res.data;
+                $('#myModal').modal('show');
+            },function(res){
+                console.log(res.status);
+            });
+        },
+
+        download : function () {
+            window.location.href = 'downloadQR?id=' + this.id + '&type=' + this.isActive;
+        }
 	},
 
 	events:{

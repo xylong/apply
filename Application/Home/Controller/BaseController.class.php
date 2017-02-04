@@ -45,4 +45,57 @@ class BaseController extends Controller
 	}
 
 
+	public function qrcode()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			$type = I('get.type');
+			exit(__CONTROLLER__ . '/showQR/id/' . $id . '/type/' . $type);
+		}
+	}
+
+
+	public function showQR($id, $type)
+	{
+		switch ($type) {
+			case 1:
+				$action = 'getBorrowById';
+				break;
+
+			case 2:
+				$action = 'getHouseById';
+				break;
+			
+			default:
+				$action = 'getVenueById';
+				break;
+		}
+		$info = 'http://' . $_SERVER["HTTP_HOST"] . '/index.php/Home/Public/'. $action . '?id=' . $id;
+		qrcode($info);
+	}
+
+
+	// 下载二维码
+	public function downloadQR($id, $type)
+	{
+		$map['id'] = array('EQ', $id);
+		switch ($type) {
+			case 1:
+				$data = D('Borrow')->where($map)->getField('code');
+				break;
+
+			case 2:
+				$data = D('Rent')->where($map)->getField('code');
+				break;
+			
+			default:
+				$data = D('Venue')->where($map)->getField('code');
+				break;
+		}
+		$file = $data . '.png';
+		qrcode($id, $file);
+		downloadFile($file);
+	}
+
+
 }

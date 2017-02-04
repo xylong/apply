@@ -86,4 +86,10 @@ class PublicController extends Controller
 	}
 
 
+	public function xxoo()
+	{
+		saveDatabase();
+	}
+
+
 }
