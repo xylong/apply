@@ -81,19 +81,23 @@ class BaseController extends Controller
 		$map['id'] = array('EQ', $id);
 		switch ($type) {
 			case 1:
+				$action = 'getBorrowById';
 				$data = D('Borrow')->where($map)->getField('code');
 				break;
 
 			case 2:
+				$action = 'getHouseById';
 				$data = D('Rent')->where($map)->getField('code');
 				break;
 			
 			default:
+				$action = 'getVenueById';
 				$data = D('Venue')->where($map)->getField('code');
 				break;
 		}
 		$file = $data . '.png';
-		qrcode($id, $file);
+		$info = 'http://' . $_SERVER["HTTP_HOST"] . '/index.php/Home/Public/'. $action . '?id=' . $id;
+		qrcode($info, $file);
 		downloadFile($file);
 	}
 

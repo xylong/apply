@@ -137,7 +137,7 @@ function qrcode($msg, $outfile = false, $level = 'L', $size = 6, $margin = 1)
  * @return 
  */
 function downloadFile($file){
-	$file_name = $file;
+	$file_name = C('SAVEPATH') . $file;
 	$mime = 'application/force-download';
 	header('Pragma: public'); // required
 	header('Expires: 0'); // no cache
@@ -148,6 +148,5 @@ function downloadFile($file){
 	header('Content-Transfer-Encoding: binary');
 	header('Connection: close');
 	readfile($file_name); // push it out
-	$file_name = C('SAVEPATH') . $file_name;
 	unlink($file_name);
 }
