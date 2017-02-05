@@ -9,7 +9,7 @@
 	                        <h5>按分类展示:</h5>
 	                        <a href="javascript:;" class="file-control" :class="{ active : isActive == v.type }" v-for="v in type" v-text="v.name" @click="tab(v.type)"></a>
 	                        <div class="hr-line-dashed"></div>
-	                        <button class="btn btn-primary btn-block">Upload Files</button>
+	                        <button class="btn btn-primary btn-block">新增</button>
 	                        <div class="hr-line-dashed"></div>
 	                        <h5 v-show="pid">当前分类统计</h5>
 	                        <ul class="folder-list" style="padding: 0" v-show="pid">
