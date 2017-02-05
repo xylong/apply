@@ -70,6 +70,7 @@
                             <div class="client-detail">
                                 <div class="full-height-scroll">
                                     <strong>选择学院/单位</strong>
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.cid.isVisible" v-text="prompt.cid.msg">.</span>
                                     
 									<div class="form-group" id="positionGroup">
 		                                <div class="radio" v-for="v in college">

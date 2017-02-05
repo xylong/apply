@@ -28,12 +28,14 @@ var vm = new Vue({
 
 		isModify : false,
 		detail : {},
-		user : {
-			id : 0,
-			cid : 0,
-			phone : '',
-			password : ''
-		},
+
+		newpwd : '',
+		renewpwd : '',
+		prompt : {
+                phone : {isVisible : false, msg : '手机号格式错误'},
+                password : {isVisible : false, msg : '密码不能小于6位'},
+                repassword : {isVisible : false, msg : '与密码不符'}
+            },
 
 		total: 0,
         display: 10,
@@ -77,18 +79,59 @@ var vm = new Vue({
 		    });
 		},
 
-		addUser : function () {
-			this.getCollegeByType();
-			$('#myModal').modal('show');
-		},
-
 		modify : function () {
 			this.isModify = true;
 		},
 
-		cancel : function () {
-			this.isModify = false;
-		}
+		sub : function () {
+			if (!this.checkData()) return;
+			this.$http
+				.post('addUser', {
+					id : this.detail.id,
+                    phone : this.detail.phone,
+                    password : this.newpwd
+                }, {
+                    emulateJSON:true
+                }).then(function(res){
+                    toastr.success('申请提交成功');
+                    this.phone = this.password = this.repassword = this.society = '';
+                },function(res){
+                    toastr.error('申请提交失败');
+                });
+		},
+
+		checkData : function () {
+            var flag = true;
+
+           	// if (!checkPhone(this.phone)) {
+           	// 	this.prompt.phone.isVisible = true;
+           	// 	flag = false;
+           	// } else {this.prompt.phone.isVisible = false}
+
+           	if (this.newpwd.length < 6) {
+           		this.prompt.password.isVisible = true;
+           		flag = false;
+           	} else {this.prompt.password.isVisible = false}
+
+           	if (this.renewpwd != this.newpwd) {
+           		this.prompt.repassword.isVisible = true;
+           		flag = false;
+           	} else {this.prompt.repassword.isVisible = false}
+
+           	return flag;
+        },
+
+        del : function (id, index) {
+        	this.$http
+				.get('del', {
+					id : id
+				})
+				.then(function(res) {
+					this.list.splice(index, 1);
+		    },function(res){
+		        console.log(res.status);
+		    });
+        }
 	},
 
 	events:{

@@ -6,19 +6,26 @@ class UserModel extends Model
 {
 	protected $_validate = array(
 		array('cid', 'number', ''),	// 学院id
+		array('type', array(1,2,3), '值的范围不正确！', 2, 'in'),
 		array('phone', 'checkPhone', '手机格式错误', 1, 'function'),	// 手机号
 	);
 
 	protected $_auto = array ( 
          array('password','md5', 3, 'function'),
-         array('account', 'initReceiver', 1, 'callback')
+         array('account', 'generateAccount', 1, 'callback')
      );
 
+	// 生成账号
 	public function generateAccount()
 	{
-		$account = rand(100000, 999999);
-		if ($this->where(array('account' => $account))->getField('id')) {
-			
+		for ($i=0; $i < 10; $i++) { 
+			$account[] = rand(100000, 999999);
+		}
+		foreach ($account as $item) {
+			if (!$this->where(array('account' => $item))->getField('id')) {
+				return $item;
+				break;
+			}
 		}
 	}
 

@@ -14,7 +14,6 @@
                         <input type="text" placeholder="输入关键词 " class="input form-control" v-model="keyword">
                         <span class="input-group-btn">
                             <button type="button" class="btn btn btn-primary" @click="getList(1)"> <i class="fa fa-search"></i>搜索</button>
-                            <button type="button" class="btn btn btn-warning" @click="addUser">新增</button>
                         </span>
                     </div>
                     <div class="clients-list">
@@ -44,7 +43,7 @@
                                                     <td v-text="v.phone"></td>
                                                     <td class="text-center">
                                                         <button class="btn btn-info btn-xs" @click="userInfo(v.id)"><i class="fa fa-edit"></i>查看</button>
-                                                        <button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+                                                        <button class="btn btn-danger btn-xs" @click="del(v.id, $index)"><i class="fa fa-times"></i></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -66,7 +65,7 @@
                         <div id="contact-1" class="tab-pane active">
                             <div class="row m-b-lg">
                                 <div class="col-lg-12">
-                                    <button type="button" class="btn btn-warning btn-sm btn-block" @click="modify"><i class="fa fa-envelope"></i>修改</button>
+                                    <button type="button" class="btn btn-warning btn-sm btn-block" @click="modify">修改</button>
                                 </div>
                             </div>
                             <div class="client-detail">
@@ -97,11 +96,11 @@
                                     </table>
 
                                     <form class="form-horizontal" v-show="isModify">
-                                        <div class="form-group"><label class="col-sm-2 control-label">账号</label>
+                                        <!-- <div class="form-group"><label class="col-sm-2 control-label">账号</label>
                                             <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.account">
                                                 <span class="help-block m-b-none">A block of help text </span>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                         <!-- <div class="form-group"><label class="col-sm-2 control-label">密码</label>
                                             <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.password">
@@ -115,26 +114,40 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group"><label class="col-sm-2 control-label">学院</label>
+                                        <div class="form-group"><label class="col-sm-2 control-label">密码</label>
+                                            <div class="col-sm-10">
+                                                <input type="password" class="form-control" v-model="newpwd">
+                                                <span class="help-block m-b-none text-danger" v-show="prompt.password.isVisible" v-text="prompt.password.msg">.</span>
+                                            </div>
+                                        </div>
+                                        <div class="hr-line-dashed"></div>
+
+                                        <div class="form-group"><label class="col-sm-2 control-label">确认密码</label>
+                                            <div class="col-sm-10">
+                                                <input type="password" class="form-control" v-model="renewpwd">
+                                                <span class="help-block m-b-none text-danger" v-show="prompt.repassword.isVisible" v-text="prompt.repassword.msg">.</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="form-group"><label class="col-sm-2 control-label">学院</label>
                                             <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.college">
                                                 <span class="help-block m-b-none">A block of help text </span>
                                             </div>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="form-group"><label class="col-sm-2 control-label">社团</label>
+                                        <!-- <div class="form-group"><label class="col-sm-2 control-label">社团</label>
                                             <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.society">
                                                 <span class="help-block m-b-none">A block of help text </span>
                                             </div>
-                                        </div>
+                                        </div> -->
 
-                                        <div v-show="detail.last_login_time" class="hr-line-dashed"></div>
+                                        <!-- <div v-show="detail.last_login_time" class="hr-line-dashed"></div>
                                         <div v-show="detail.last_login_time" class="form-group"><label class="col-lg-2 control-label">上次登录时间</label>
                                             <div class="col-lg-10"><p class="form-control-static" v-text="detail.last_login_time"></p></div>
-                                        </div>
+                                        </div> -->
                     
                                         <div class="mail-body text-right tooltip-demo">
-                                            <a href="javascript:;" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top"><i class="fa fa-reply"></i> 保存</a>
-                                            <a href="javascript:;" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" @click=""><i class="fa fa-times"></i>取消</a>
+                                            <a href="javascript:;" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" @click="sub"><i class="fa fa-reply"></i> 保存</a>
                                         </div>
                                     </form>
                                 </div>
@@ -163,4 +176,5 @@
 
 <include file="Public:footer" />
 <script src="__JS__/common/page.js"></script>
+<script src="__JS__/common/common.js"></script>
 <script src="__JS__/admin/user.js"></script>

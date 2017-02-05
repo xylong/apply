@@ -34,8 +34,23 @@ class UserController extends BaseController
 	public function addUser()
 	{
 		if (IS_AJAX) {
-			$post = I('post.');
-			exit(json_encode($post));
+			if (!$this->user->create()) {
+				$this->error($this->user->getError());
+			} else {
+				if ($this->user->id) {
+					if ($this->user->save()) {
+						returnJson(true, '修改成功');
+					} else {
+						returnJson(false, '修改失败');
+					}
+				}
+
+				if ($this->user->add()) {
+					returnJson(true, '添加成功');
+				} else {
+					returnJson(false, '添加失败');
+				}
+			}
 		}
 		$this->display('add');
 	}
@@ -48,6 +63,14 @@ class UserController extends BaseController
 			$id = I('get.id');
 			$data = $this->user->getuserInfo($id);
 			exit(json_encode($data));
+		}
+	}
+
+	public function del()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			$this->user->where(array('id' => $id))->save(array('status' => 0));
 		}
 	}
 

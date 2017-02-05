@@ -11,16 +11,18 @@ var vm = new Vue({
                 phone : {isVisible : false, msg : '手机号格式错误'},
                 password : {isVisible : false, msg : '密码不能小于6位'},
                 repassword : {isVisible : false, msg : '与密码不符'},
+                cid : {isVisible : false, msg : '请选择学院/单位'},
                 society : {isVisible : false, msg : ''}
             },
 
 		college : [],
 
-		selected : 0,
-		phone : '',
-		password : '',
-		repassword : '',
-		society : ''
+    cid : 0,
+    phone : '',
+		society : '',
+    password : '',
+    selected : 0,
+    repassword : '',
 	},
 
 	methods : {
@@ -28,7 +30,8 @@ var vm = new Vue({
 			if (!this.checkData()) return;
 
 			this.$http.post('addUser', {
-                    cid : this.selected,
+                    cid : this.cid,
+                    type : this.selected,
                     phone : this.phone,
                     password : this.password,
                     society : this.society,
@@ -63,6 +66,11 @@ var vm = new Vue({
            		this.prompt.repassword.isVisible = true;
            		flag = false;
            	} else {this.prompt.repassword.isVisible = false}
+
+            if (!this.cid) {
+              this.prompt.cid.isVisible = true;
+              flag = false;
+            } else {this.prompt.cid.isVisible = false}
 
            	return flag;
         },
