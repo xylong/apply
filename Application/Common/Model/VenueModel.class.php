@@ -92,7 +92,7 @@ class VenueModel extends Model
     public function getApplyByUid($is_examine, $p)
     {
         // 如果是学院党委团委或者校团委指导老师就存在一一对应的审核关系
-        foreach ($$_SESSION['role_id'] as $rid) {
+        foreach ($_SESSION['role_id'] as $rid) {
             if (in_array($rid, array(2, 3, 4))) {
                 $map['_string'] = 'FIND_IN_SET('.$_SESSION['auth_id'].',oa_college.uid)';   // 筛选出属于自己管理的学院的申请
             }
