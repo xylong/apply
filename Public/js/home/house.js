@@ -59,7 +59,6 @@
                         this.proposer = this.phone = this.tutor = this.house = this.reason = this.start = this.end = '';
                     },function(res){
                         toastr.error('申请提交失败');
-                        alert(res.status);
                     });
                 }
             },

@@ -1,0 +1,93 @@
+<include file="Public:header" />
+
+<div class="wrapper wrapper-content  animated fadeInRight" id="user">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>添加用户</h5>
+                </div>
+                <div class="ibox-content">
+                    <form method="get" class="form-horizontal">
+
+                    	<div class="form-group"><label class="col-sm-2 control-label">选择用户类型</label>
+                            <div class="col-sm-10">
+                                <select class="form-control m-b" v-model="selected">
+                                    <option v-for="v in type" v-bind:value="v.id" v-text="v.name"></option>
+                                </select>
+                                <span class="help-block m-b-none text-danger" v-show="prompt.selected.isVisible" v-text="prompt.selected.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                      
+                        <div class="form-group"><label class="col-sm-2 control-label">手机</label>
+                            <div class="col-sm-10">
+                            	<input type="text" class="form-control" v-model="phone">
+                            	<span class="help-block m-b-none text-danger" v-show="prompt.phone.isVisible" v-text="prompt.phone.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-10">
+                            	<input type="password" class="form-control" v-model="password">
+                            	<span class="help-block m-b-none text-danger" v-show="prompt.password.isVisible" v-text="prompt.password.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">确认密码</label>
+                            <div class="col-sm-10">
+                            	<input type="password" class="form-control" v-model="repassword">
+                            	<span class="help-block m-b-none text-danger" v-show="prompt.repassword.isVisible" v-text="prompt.repassword.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">社团</label>
+                            <div class="col-sm-10">
+                            	<input type="text" class="form-control" v-model="society">
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-white" type="reset">取消</button>
+                                <button class="btn btn-primary" type="button" @click="sub">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox ">
+
+                <div class="ibox-content">
+                    <div class="tab-content">
+                        <div id="contact-1" class="tab-pane active">
+                            <div class="client-detail">
+                                <div class="full-height-scroll">
+                                    <strong>选择学院/单位</strong>
+                                    
+									<div class="form-group" id="positionGroup">
+		                                <div class="radio" v-for="v in college">
+		                                    <label><input type="radio" name="positions" v-model="cid" value="{{v.id}}">{{v.name}}</label>
+		                                </div>
+		                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<include file="Public:footer" />
+<script src="__JS__/common/page.js"></script>
+<script src="__JS__/common/common.js"></script>
+<script src="__JS__/admin/adduser.js"></script>

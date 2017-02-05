@@ -30,6 +30,27 @@ class UserController extends BaseController
 		}
 	}
 
+
+	public function addUser()
+	{
+		if (IS_AJAX) {
+			$post = I('post.');
+			exit(json_encode($post));
+		}
+		$this->display('add');
+	}
+
+
+	// 获取用户信息
+	public function getUserInfo()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			$data = $this->user->getuserInfo($id);
+			exit(json_encode($data));
+		}
+	}
+
 	// 学院列表
 	public function colleges()
 	{
@@ -41,6 +62,15 @@ class UserController extends BaseController
 		}
 
 		$this->display();
+	}
+
+
+	public function getAllCollege()
+	{
+		if (IS_AJAX) {
+			$data = D('College')->field(array('id', 'name'))->select();
+			exit(json_encode($data));
+		}
 	}
 
 

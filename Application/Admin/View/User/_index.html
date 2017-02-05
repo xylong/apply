@@ -5,15 +5,16 @@
         <div class="col-sm-8">
             <div class="ibox">
                 <div class="ibox-content">
-                    <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
+                    <!-- <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span> -->
                     <h2>用户列表</h2>
                     <p>
                         支持账号、手机号搜索
                     </p>
-                    <div class="input-group">
+                    <div class="input-group col-lg-12">
                         <input type="text" placeholder="输入关键词 " class="input form-control" v-model="keyword">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn btn-primary" @click="getList(1)"> <i class="fa fa-search"></i> Search</button>
+                            <button type="button" class="btn btn btn-primary" @click="getList(1)"> <i class="fa fa-search"></i>搜索</button>
+                            <button type="button" class="btn btn btn-warning" @click="addUser">新增</button>
                         </span>
                     </div>
                     <div class="clients-list">
@@ -30,7 +31,7 @@
                                                 <tr>
                                                     <th>头像</th>
                                                     <th>账号</th>
-                                                    <th>昵称</th>
+                                                    <th>学院/单位</th>
                                                     <th>手机</th>
                                                     <th class="text-center">操作</th>
                                                 </tr>
@@ -42,7 +43,7 @@
                                                     <td v-text="v.nickname"></td>
                                                     <td v-text="v.phone"></td>
                                                     <td class="text-center">
-                                                        <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i>查看</button>
+                                                        <button class="btn btn-info btn-xs" @click="userInfo(v.id)"><i class="fa fa-edit"></i>查看</button>
                                                         <button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
                                                     </td>
                                                 </tr>
@@ -57,70 +58,86 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4" v-show="detail.id">
             <div class="ibox ">
 
                 <div class="ibox-content">
                     <div class="tab-content">
                         <div id="contact-1" class="tab-pane active">
                             <div class="row m-b-lg">
-                                <div class="col-lg-4 text-center">
-                                    <h2>Nicki Smith</h2>
-
-                                    <div class="m-b-sm">
-                                        <img alt="image" class="img-circle" src="__IMG__/a2.jpg"
-                                             style="width: 62px">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <strong>
-                                        About me
-                                    </strong>
-
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                    <button type="button" class="btn btn-primary btn-sm btn-block"><i
-                                            class="fa fa-envelope"></i> Send Message
-                                    </button>
+                                <div class="col-lg-12">
+                                    <button type="button" class="btn btn-warning btn-sm btn-block" @click="modify"><i class="fa fa-envelope"></i>修改</button>
                                 </div>
                             </div>
                             <div class="client-detail">
-                            <div class="full-height-scroll">
+                                <div class="full-height-scroll">
+                                    <strong>基础信息</strong>
+                                    <table class="table small m-b-xs" v-show="!isModify">
+                                        <tbody>
+                                            <tr>
+                                                <td>账号</td>
+                                                <td v-text="detail.account"></td>
+                                            </tr><tr>
+                                                <td>手机号</td>
+                                                <td v-text="detail.phone"></td>
+                                            </tr><tr>
+                                                <td>类型</td>
+                                                <td v-text="detail.type | utype"></td>
+                                            </tr><tr>
+                                                <td>学院</td>
+                                                <td v-text="detail.college"></td>
+                                            </tr><tr v-show="detail.society">
+                                                <td>社团</td>
+                                                <td v-text="detail.society"></td>
+                                            </tr><tr v-show="detail.last_login_time">
+                                                <td>上次登录时间</td>
+                                                <td v-text="detail.last_login_time"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <strong>Last activity</strong>
+                                    <form class="form-horizontal" v-show="isModify">
+                                        <div class="form-group"><label class="col-sm-2 control-label">账号</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.account">
+                                                <span class="help-block m-b-none">A block of help text </span>
+                                            </div>
+                                        </div>
 
-                                <ul class="list-group clear-list">
-                                    <li class="list-group-item fist-item">
-                                        <span class="pull-right"> 09:00 pm </span>
-                                        Please contact me
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pull-right"> 10:16 am </span>
-                                        Sign a contract
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pull-right"> 08:22 pm </span>
-                                        Open new shop
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pull-right"> 11:06 pm </span>
-                                        Call back to Sylvia
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="pull-right"> 12:00 am </span>
-                                        Write a letter to Sandra
-                                    </li>
-                                </ul>
-                                <strong>Notes</strong>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <hr/>
+                                        <!-- <div class="form-group"><label class="col-sm-2 control-label">密码</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.password">
+                                                <span class="help-block m-b-none">A block of help text </span>
+                                            </div>
+                                        </div> -->
 
-                            </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">手机号</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.phone">
+                                                <span class="help-block m-b-none">A block of help text </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group"><label class="col-sm-2 control-label">学院</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.college">
+                                                <span class="help-block m-b-none">A block of help text </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group"><label class="col-sm-2 control-label">社团</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" v-model="detail.society">
+                                                <span class="help-block m-b-none">A block of help text </span>
+                                            </div>
+                                        </div>
+
+                                        <div v-show="detail.last_login_time" class="hr-line-dashed"></div>
+                                        <div v-show="detail.last_login_time" class="form-group"><label class="col-lg-2 control-label">上次登录时间</label>
+                                            <div class="col-lg-10"><p class="form-control-static" v-text="detail.last_login_time"></p></div>
+                                        </div>
+                    
+                                        <div class="mail-body text-right tooltip-demo">
+                                            <a href="javascript:;" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top"><i class="fa fa-reply"></i> 保存</a>
+                                            <a href="javascript:;" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" @click=""><i class="fa fa-times"></i>取消</a>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -129,6 +146,8 @@
         </div>
     </div>
 </div>
+
+
 
 <template id="template_pagination">
     <nav>
@@ -139,21 +158,9 @@
             <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(current + 1)"> 下一页</a></li>
             <li :class="{'disabled': current == page}"><a href="javascript:;" @click="setCurrent(page)"> 尾页 </a></li>
         </ul>
-        <!-- <ul class="pagination pull-right">
-            <li><span> 共 {{ total }}  条数据 </span></li>
-            <li><span> 每页显示 {{ display }}  条数据 </span></li>
-            <li><span> 共 {{ page }} 页 </span></li>
-            <li><span> 当前第 {{ current }} 页 </span></li>
-        </ul> -->
     </nav>
 </template>
 
 <include file="Public:footer" />
 <script src="__JS__/common/page.js"></script>
 <script src="__JS__/admin/user.js"></script>
-<script>
-    // $('.footable').footable();
-
-
-
-</script>

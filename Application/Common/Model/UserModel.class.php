@@ -32,6 +32,23 @@ class UserModel extends Model
 		);
 	}
 
+
+	/**
+	 * 用户详情
+	 * @param  integer $id 用户id
+	 * @return array
+	 */
+	public function getuserInfo($id)
+	{
+		$map = array(
+			'oa_user.id' => $id,
+			'oa_user.status' => 1
+		);
+		$field = array('oa_user.id', 'oa_user.account', 'oa_user.type', 'oa_user.phone', 'oa_user.cid', 'oa_user.society', 'oa_user.last_login_time', 'oa_college.name college');
+		return $this->join('LEFT JOIN __COLLEGE__ ON __USER__.cid = __COLLEGE__.id')->where($map)->field($field)->find();
+	}
+
+
 	public function doLogin($data)
 	{
 		$password = md5($data['password']);
