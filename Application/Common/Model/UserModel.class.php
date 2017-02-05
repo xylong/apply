@@ -4,6 +4,23 @@ use Think\Model;
 
 class UserModel extends Model
 {
+	protected $_validate = array(
+		array('cid', 'number', ''),	// 学院id
+		array('phone', 'checkPhone', '手机格式错误', 1, 'function'),	// 手机号
+	);
+
+	protected $_auto = array ( 
+         array('password','md5', 3, 'function'),
+         array('account', 'initReceiver', 1, 'callback')
+     );
+
+	public function generateAccount()
+	{
+		$account = rand(100000, 999999);
+		if ($this->where(array('account' => $account))->getField('id')) {
+			
+		}
+	}
 
 	/**
 	 * 用户列表

@@ -36,7 +36,7 @@ var vm = new Vue({
                     emulateJSON:true
                 }).then(function(res){
                     toastr.success('申请提交成功');
-                    this.phone = this.password = this.society = '';
+                    this.phone = this.password = this.repassword = this.society = '';
                 },function(res){
                     toastr.error('申请提交失败');
                 });
