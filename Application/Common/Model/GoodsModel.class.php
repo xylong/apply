@@ -52,5 +52,53 @@ class GoodsModel extends Model
 	}
 
 
+	/**
+	 * 根据需求编号生成具体需求
+	 * @param  array $need 需求编号
+	 * @return [type]       [description]
+	 */
+	public function getNeed($need)
+	{
+		$classify = $this->where(array('pid' => 0, 'isdel' => 1))->getField('id, name');
+		foreach ($need as $key => $value) {
+            $arr = explode('_', $value);
+            $data[$key]['id'] = $arr[0];
+            $data[$key]['name'] = $classify[$arr[0]];
+            $data[$key]['number'] = $arr[1];
+        }
+        return $data;
+	}
+
+
+	/**
+	 * 提供设备选择
+	 * @param  string $mid 申请借用的物资类型
+	 * @return array      具体物资
+	 */
+	public function provideSelection($arr)
+	{
+		$data = $this->where(array('status' => 0))->select();
+		return node_merge($data, $arr);
+	}
+
+
+	/**
+	 * 更改物品的占用状态
+	 * @param  integer $id 申请id
+	 * @param  array $good 物品id
+	 * @param  string $data   物品id
+	 */
+	public function occupyStatus($id, $goods)
+	{
+		$equipment = '';
+		foreach ($goods as $index => $item) {
+			$this->where(array('id' => $item))->save(array('status' => 1));
+			$equipment .= $item . ',';
+		}
+		$equipment = substr($equipment, 0, -1);
+		return D('Borrow')->where(array('id' => $id))->save(array('goods' => $equipment));
+	}
+
+
 
 }

@@ -150,3 +150,30 @@ function downloadFile($file){
 	readfile($file_name); // push it out
 	unlink($file_name);
 }
+
+
+/**
+ * 数组分类
+ * @param  array  $data 被分类的数组
+ * @param  array  $access 被选中的设备类型
+ * @param  integer $pid  父级id
+ * @return array        分类后的数组
+ */
+function node_merge($node, $access = null, $pid = 0) {
+	$tree = array();
+
+	foreach ($node as $value) {
+		if ($value['pid'] == 0) {
+			if (!in_array($value['id'], $access)) {
+				continue;
+			}
+		}
+
+		if ($value['pid'] == $pid) {
+			$value['child'] = node_merge($node, $access, $value['id']);
+			$tree[] = $value;
+		}
+	}
+
+	return $tree;
+}

@@ -73,7 +73,7 @@ class BorrowModel extends Model
             $rows = $this->page($p, 10)
                         ->where($map)
                         ->join("LEFT JOIN __APPROVE__ ON __BORROW__.id = __APPROVE__.aid AND __APPROVE__.type = 1 AND __APPROVE__.uid = {$_SESSION['auth_id']}")
-                        ->field(array('id', 'code', 'theme', 'apply_time'))
+                        ->field(array('id', 'code', 'theme', 'goods', 'apply_time'))
                         ->order('apply_time desc')->select();
         } else {
             $map['oa_audit_log.apply_type'] = 1;	// 申请类型条件
@@ -89,7 +89,7 @@ class BorrowModel extends Model
                         ->where($map)
                         ->join("LEFT JOIN __APPROVE__ ON __BORROW__.id = __APPROVE__.aid AND __APPROVE__.type = 1  AND __APPROVE__.uid = {$_SESSION['auth_id']}")
                         ->join('LEFT JOIN __AUDIT_LOG__ ON __BORROW__.id = __AUDIT_LOG__.apply_id')
-                        ->field(array('oa_borrow.id', 'oa_borrow.code', 'oa_borrow.theme', 'oa_approve.time apply_time'))
+                        ->field(array('oa_borrow.id', 'oa_borrow.code', 'oa_borrow.theme', 'oa_borrow.goods', 'oa_approve.time apply_time'))
                         ->order('time desc')->select();
         }
 
@@ -135,6 +135,10 @@ class BorrowModel extends Model
                             ->field('oa_approve.*,oa_admin.account,oa_role.name role_name')
                             ->select();
 
+        $need = explode(',', $apply['borrow']);
+        $apply['borrow'] = D('Goods')->getNeed($need);
+        
+
         // 检查自己是否审核
         $myturn = true;
         foreach ($result as $index => $item) {
@@ -160,7 +164,7 @@ class BorrowModel extends Model
         // 判断是否被同角色人员审核
         $map['id'] = array('EQ', $data['aid']);
         $map['role_id'] = array('IN', $_SESSION['role_id']);
-        if ($this->where($map)->join('LEFT JOIN __APPROVE__ ON __VENUE__.id = __APPROVE__.aid')->find()) {
+        if ($this->where($map)->join('LEFT JOIN __APPROVE__ ON __BORROW__.id = __APPROVE__.aid')->find()) {
             return false;
         }
 

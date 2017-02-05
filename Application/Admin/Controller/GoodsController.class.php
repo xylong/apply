@@ -49,6 +49,35 @@ class GoodsController extends BaseController
 	}
 
 
+	// 展示可预约的数据
+	public function order()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			$need = $this->borrow->where(array('id' => $id))->getField('borrow');
+			$need = explode(',', $need);
+        	$need = D('Goods')->getNeed($need);
+
+        	foreach ($need as $key => $value) {
+				$arr[] = $value['id'];
+			}
+			$selection = $this->goods->provideSelection($arr);
+			exit(json_encode($selection));
+		}
+	}
+
+
+	// 提交预约
+	public function makeAppointment()
+	{
+		if (IS_AJAX) {
+			$id = I('post.id');
+			$goods = I('post.goods');
+			return $this->goods->occupyStatus($id, $goods);
+		}
+	}
+
+
 	// 提交审核结果
 	public function review()
 	{

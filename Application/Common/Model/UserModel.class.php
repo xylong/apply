@@ -45,6 +45,7 @@ class UserModel extends Model
 		} else {
 			$map = array('oa_user.type' => $type);
 		}
+		$map['status'] = array('EQ', 1);
 
 		$Page = new \Think\Page($count, 10);
 		$count = $this->where($map)->count();

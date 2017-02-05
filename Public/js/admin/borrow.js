@@ -19,6 +19,10 @@ var vm = new Vue({
         tab : [{type:0,name:'未审核'},{type:1,name:'已审核'}],
         applys : [],
 
+        selection : [], // 可选
+        goods : [],    // 选中
+        oid : 0,    // 申请id
+
         detail : {}, // 申请详情
         result : [], // 审核结果
         myturn : '',  // 
@@ -55,6 +59,7 @@ var vm = new Vue({
                     id : id
                 })
                 .then(function(res) {
+                    this.selection = res.data.selection;
                     this.detail = res.data.apply;
                     this.result = res.data.result;
                     this.myturn = res.data.myturn;
@@ -85,6 +90,52 @@ var vm = new Vue({
                 },function(res){
                     toastr.error('审核失败');
                 });
+        },
+
+        // 预约物资
+        order : function (id) {
+            this.oid = id;
+            this.$http
+                .get('order', {
+                    id : this.oid
+                })
+                .then(function(res) {
+                    this.selection = res.data;
+            },function(res){
+                console.log(res.status);
+            });
+            $('#myModal').modal('show');
+        },
+
+        subOrder : function () {
+            if (this.goods.length === 0) {
+                swal({
+                    title: "预约错误",
+                    text: "您尚未选择物资",
+                    type: "warning",
+                    confirmButtonColor: "#DD6B55",
+                    closeOnConfirm: false
+                });
+                return;
+            }
+
+            this.$http
+                .post('makeAppointment', {
+                    id : this.oid,
+                    goods : this.goods
+                }, {
+                    emulateJSON:true
+                }).then(function(res){
+                    toastr.success('预约成功,物资已锁定');
+                    this.goods = [];
+                    $('#myModal').modal('hide');
+                },function(res){
+                    toastr.error('预约失败');
+                });
+        },
+
+        cancel : function () {
+            this.goods = [];
         }
     },
 

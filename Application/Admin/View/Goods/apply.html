@@ -52,6 +52,7 @@
                                                     <td v-text="v.apply_time"></td>
                                                     <td class="text-right">
                                                         <button class="btn btn-info btn-xs" @click="review(v.id)">查看</button>
+                                                        <button v-show="v.goods == undefined" class="btn btn-warning btn-xs" @click="order(v.id)">预约物资</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -107,7 +108,11 @@
                                                     </tr>
                                                     <tr>
                                                         <td>借用需求</td>
-                                                        <td v-text="detail.borrow"></td>
+                                                        <td>
+                                                            <ul class="unstyled">
+                                                                <li v-for="v in detail.borrow">{{ v.name + ':' + v.number }}</li>
+                                                            </ul>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>其它</td>
@@ -129,6 +134,8 @@
                                             </table>
                                         </div>
                                     </div>
+                                        
+
 
                                     <h5>审核跟踪</h5>
                                     <div class="ibox-content inspinia-timeline">
@@ -178,6 +185,42 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal inmodal fade" id="myModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated bounceInRight">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">预约物资</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <form class="form-horizontal">
+
+                                <div class="form-group" v-for="v in selection">
+                                    <label class="col-sm-2 control-label" v-text="v.name"></label>
+                                    <div class="col-sm-10"><label class="checkbox-inline" v-for="v in v.child">
+                                        <input type="checkbox" v-bind:value="v.id" v-model="goods"> {{v.number}} </label> <label class="checkbox-inline"></label>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-white" @click="cancel">重置</button>
+                    <button type="button" class="btn btn-primary" @click="subOrder">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
 <template id="template_pagination">

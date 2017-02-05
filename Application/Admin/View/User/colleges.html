@@ -23,7 +23,7 @@
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>名称</th>
-                                                    <th>uid</th>
+                                                    <!-- <th>uid</th> -->
                                                     <th class="text-center">操作</th>
                                                 </tr>
                                             </thead>
@@ -31,11 +31,11 @@
                                                 <tr v-for="v in list">
                                                     <td v-text="v.id"></td>
                                                     <td v-text="v.name"></td>
-                                                    <td v-text="v.uid"></td>
+                                                    <!-- <td v-text="v.uid"></td> -->
                                                     <td class="text-center">
-                                                        <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i>查看</button>
+                                                        <!-- <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i>查看</button> -->
                                                         <button class="btn btn-warning btn-xs" @click="allot(v.id)"><i class="fa fa-edit"></i>选择负责人</button>
-                                                        <button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+                                                        <!-- <button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button> -->
                                                     </td>
                                                 </tr>
                                             </tbody>
