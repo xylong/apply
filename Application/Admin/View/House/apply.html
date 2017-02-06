@@ -1,4 +1,5 @@
 <include file="Public:header" />
+<link href="__CSS__/plugins/datapicker/datepicker3.css" rel="stylesheet">
 
 <div class="wrapper wrapper-content  animated fadeInRight" id="apply">
     <div class="row">
@@ -10,11 +11,19 @@
                     <p>
                         All clients need to be verified before you can send email and set a project.
                     </p>
-                    <div class="input-group">
-                        <input type="text" placeholder="Search client " class="input form-control">
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
-                        </span>
+                    <div class="row m-b-sm m-t-sm">
+                        <div class="col-md-11">
+                            <form role="form" class="form-inline" action="/applys/index.php/Admin/Venue/export.html" method="post" id="export">
+                                <div class="form-group" id="data_5">
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" placeholder="选择开始时间">
+                                        <span class="input-group-addon">to</span>
+                                        <input type="text" class="input-sm form-control" placeholder="选择结束时间">
+                                    </div>
+                                </div>
+                                <button class="btn btn-white" type="button"><i class="fa fa-sign-out"></i>导出</button>
+                            </form>
+                        </div>
                     </div>
                     <div class="clients-list">
                     <ul class="nav nav-tabs">
@@ -181,5 +190,16 @@
 
 
 <include file="Public:footer" />
+<!-- Data picker -->
+<script src="__JS__/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- Date range picker -->
+<script src="__JS__/plugins/daterangepicker/daterangepicker.js"></script>
+<script>
+$('#data_5 .input-daterange').datepicker({
+    keyboardNavigation: false,
+    forceParse: false,
+    autoclose: true
+});
+</script>
 <script src="__JS__/common/page.js"></script>
 <script src="__JS__/admin/house_apply.js"></script>

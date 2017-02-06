@@ -6,6 +6,8 @@ var vm = new Vue({
 		status : 1,	// 角色状态
 
 		roles : [], 	// 角色列表
+		node : [],
+		checked : []
 	},
 
 	methods : {
@@ -14,6 +16,16 @@ var vm = new Vue({
 				.get('index.php?s=/Admin/Admin/role')
 				.then(function(res) {
 		    		this.roles = res.data;
+		    	}, function(res){
+		        	console.log(res.status);
+		    	});
+		},
+
+		getNode : function () {
+			this.$http
+				.get('nodes')
+				.then(function(res) {
+		    		this.node = res.data;
 		    	}, function(res){
 		        	console.log(res.status);
 		    	});
@@ -46,5 +58,6 @@ var vm = new Vue({
 
 	ready : function () {
 		this.getRole();
+		this.getNode();
 	}
 }).$mount('#role');

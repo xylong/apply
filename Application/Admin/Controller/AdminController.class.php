@@ -38,6 +38,15 @@ class AdminController extends BaseController
 	}
 
 
+	public function nodes()
+	{
+		if (IS_AJAX) {
+			$data = C('NODE');
+			exit(json_encode($data));
+		}
+	}
+
+
 	// 添加、删除角色
 	public function editRole()
 	{
