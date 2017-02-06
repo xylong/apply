@@ -44,6 +44,9 @@ class BorrowController extends BaseController
 			if (!$this->borrow->create()) {
                 $this->error($this->borrow->getError());
             } else {
+            	if (!$this->borrow->etime) {
+            		$this->borrow->etime = $this->borrow->stime;
+            	}
                 if ($this->borrow->add()) {
                     returnJson(true, '申请提交成功');
                 } else {

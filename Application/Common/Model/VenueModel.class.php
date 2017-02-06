@@ -97,7 +97,8 @@ class VenueModel extends Model
      */
     public function getApplyByTimes($start, $end)
     {
-        $sql = "SELECT id,uid,theme title,DATE_FORMAT(stime,'%Y-%m-%d') `start`,DATE_FORMAT(etime,'%Y-%m-%d') `end` FROM oa_venue WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
+        // $sql = "SELECT id,uid,theme title,DATE_FORMAT(stime,'%Y-%m-%d') `start`,DATE_FORMAT(etime,'%Y-%m-%d') `end` FROM oa_venue WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
+        $sql = "SELECT `id`,`theme` `title`,`stime` `start`,`etime` `end` FROM `oa_venue` WHERE uid = {$_SESSION['uid']} AND etime >= '{$start}' AND stime <= '{$end}'";
         return $this->query($sql);
     }
 
