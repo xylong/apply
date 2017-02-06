@@ -82,6 +82,23 @@ var vm = new Vue({
                 },function(res){
                     toastr.error('审核失败');
                 });
+        },
+        
+        export : function () {
+            var sdate = $('#sdate').val(),
+                edate = $('#edate').val();
+
+            if (sdate > edate) {
+                swal({
+                    title: "导出错误",
+                    text: "开始日期不能大于结束日期",
+                    type: "warning",
+                    confirmButtonColor: "#DD6B55",
+                    closeOnConfirm: false
+                });
+                return;
+            }
+            $('#export').submit();
         }
 	},
 

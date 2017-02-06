@@ -48,11 +48,15 @@ class BorrowModel extends Model
 	 * @param  string $end 截止日期(如：2017-01-01)
 	 * @return array
 	 */
-	public function getApplyByTimes($start, $end)
+	public function getApplyByTimes($start, $end, $flag = false)
 	{
 		// $sql = "SELECT id,uid,theme title,DATE_FORMAT(stime,'%Y-%m-%d') `start`,DATE_FORMAT(etime,'%Y-%m-%d') `end` FROM oa_borrow WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
         
-        $sql = "SELECT `id`,`uid`,`theme` `title`,`stime` `start`,`etime` `end` FROM `oa_borrow` WHERE uid = {$_SESSION['uid']} AND etime >= '{$start}' AND stime <= '{$end}'";
+        if ($flag) {
+            $sql = "SELECT `code`,`account`,`theme`,oa_borrow.`phone`,`stime`,`etime`,`apply_time` FROM `oa_borrow` LEFT JOIN oa_user ON oa_user.id = oa_borrow.uid WHERE apply_time BETWEEN '{$start}' AND '{$end}'";
+        } else {
+            $sql = "SELECT `id`,`uid`,`theme` `title`,`stime` `start`,`etime` `end` FROM `oa_borrow` WHERE uid = {$_SESSION['uid']} AND etime >= '{$start}' AND stime <= '{$end}'";
+        }
 		return $this->query($sql);
 	}
 

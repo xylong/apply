@@ -91,6 +91,30 @@ class GoodsController extends BaseController
 		}
 	}
 
+
+	public function export()
+	{
+		$sdate = I('post.sdate', '');	// 开始时间
+		$edate = I('post.edate', '');	// 结束时间
+
+		$sdate = formatDate($sdate) . ' 00:00:00';
+		$edate = formatDate($edate) . ' 23:59:59';
+		$data = $this->borrow->getApplyByTimes($sdate, $edate, true);
+
+		$title = array(
+			'code' 			=> '申请码',
+			'account' 		=> '申请单位',
+			'theme' 		=> '主题',
+			'phone' 		=> '联系方式',
+			'stime'			=> '开始时间',
+			'etime'			=> '结束时间',
+			'apply_time' 	=> '申请时间',
+		);
+
+		array_unshift($data, $title);
+		$this->applyExport($data);
+	}
+
 	
 
 }

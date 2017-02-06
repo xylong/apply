@@ -38,12 +38,17 @@ class RentModel extends Model
 	 * @param  string $end 截止日期(如：2017-01-01)
 	 * @return array
 	 */
-	public function getApplyByTimes($start, $end)
+	public function getApplyByTimes($start, $end, $flag = false)
 	{
 		// $sql = "SELECT `id`,`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
 
-        // 去掉已拒绝的
-        $sql = "SELECT `id`,oa_rent.`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` LEFT JOIN oa_approve ON oa_rent.id = oa_approve.aid WHERE etime >= '{$start}' AND stime <= '{$end}' AND (oa_approve.isagree IS NULL OR oa_approve.isagree = 1) GROUP BY oa_rent.`id`";
+        if ($flag) {
+            $sql = "SELECT `code`,`account`,`house`,`proposer`,oa_rent.`phone`,`tutor`,`reason`,`stime`,`etime`,`apply_time` FROM `oa_rent` LEFT JOIN oa_user ON oa_user.id = oa_rent.uid WHERE apply_time BETWEEN '{$start}' AND '{$end}'";
+        } else {
+            // 去掉已拒绝的
+            $sql = "SELECT `id`,oa_rent.`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` LEFT JOIN oa_approve ON oa_rent.id = oa_approve.aid WHERE etime >= '{$start}' AND stime <= '{$end}' AND (oa_approve.isagree IS NULL OR oa_approve.isagree = 1) GROUP BY oa_rent.`id`";
+        }
+        
 		return $this->query($sql);
 	}
 

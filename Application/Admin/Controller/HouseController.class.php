@@ -87,5 +87,48 @@ class HouseController extends BaseController
     }
 
 
+    public function export()
+	{
+		$sdate = I('post.sdate', '');	// 开始时间
+		$edate = I('post.edate', '');	// 结束时间
+
+		$sdate = formatDate($sdate) . ' 00:00:00';
+		$edate = formatDate($edate) . ' 23:59:59';
+		$data = $this->rent->getApplyByTimes($sdate, $edate, true);
+		foreach ($data as $index => $item) {
+			switch ($item['house']) {
+				case 1:
+					$data[$index]['house'] = '绘智格';
+					break;
+
+				case 2:
+					$data[$index]['house'] = '艺韵厅';
+					break;
+				
+				default:
+					$data[$index]['house'] = '创意格';
+					break;
+			}
+			
+		}
+
+		$title = array(
+			'code' 			=> '申请码',
+			'account' 		=> '申请单位',
+			'house' 		=> '青春工坊',
+			'proposer' 		=> '申请人',
+			'phone' 		=> '联系方式',
+			'tutor' 		=> '指导老师',
+			'reason' 		=> '使用事由',
+			'stime'			=> '开始时间',
+			'etime'			=> '结束时间',
+			'apply_time' 	=> '申请时间',
+		);
+
+		array_unshift($data, $title);
+		$this->applyExport($data);
+	}
+
+
 
 }

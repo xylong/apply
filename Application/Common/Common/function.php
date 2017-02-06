@@ -177,3 +177,44 @@ function node_merge($node, $access = null, $pid = 0) {
 
 	return $tree;
 }
+
+
+/**
+ * 转化时间格式
+ * @param  string $date 日/月/年
+ * @return string       年/月/日
+ */
+function formatDate($date)
+{
+	$str = '';
+	$tmp = explode('/', $date);
+	for ($i=count($tmp)-1; $i >= 0; $i--) { 
+		$str .= $tmp[$i] . '-';
+	}
+	return rtrim($str, '-');
+}
+
+
+/**
+ * 将数据组装成excel导出格式
+ * @param  array $data 数据库查出来的数据
+ * @return array
+ */
+function recombineExportData($data)
+{
+	$letter = array('A','B', 'C', 'D', 'E', 'F','G','H','I','J','K','L','M','N','O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+	$res = array();
+	
+	foreach ($data as $index => $item) {
+		$i = 0;
+		foreach ($item as $key => $value) {
+			$tmp = array(
+				$letter[$i] . ($index + 1),
+				$value
+			);
+			array_push($res, $tmp);
+			$i++;
+		}
+	}
+	return $res;
+}
