@@ -8,9 +8,12 @@
                 <div class="ibox-content">
                     <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
                     <h2>申请列表</h2>
-                    <p>
-                        All clients need to be verified before you can send email and set a project.
-                    </p>
+                    <div class="input-group">
+                        <input type="text" placeholder="输入申请码搜索" class="input form-control" v-model="apply_code">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn btn-primary" @click="search"> <i class="fa fa-search"></i>查找</button>
+                        </span>
+                    </div>
                     <div class="row m-b-sm m-t-sm">
                         <div class="col-md-11">
                             <form role="form" class="form-inline" action="{:U('Goods/export')}" method="post" id="export">
@@ -52,7 +55,7 @@
                                                     <td v-text="v.apply_time"></td>
                                                     <td class="text-right">
                                                         <button class="btn btn-info btn-xs" @click="review(v.id)">查看</button>
-                                                        <button v-show="v.goods == undefined" class="btn btn-warning btn-xs" @click="order(v.id)">预约物资</button>
+                                                        <button v-show="v.goods == undefined" class="btn btn-warning btn-xs" @click="order(v.id)">选取物资</button>
                                                     </td>
                                                 </tr>
                                             </tbody>

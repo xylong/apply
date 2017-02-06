@@ -40,11 +40,19 @@ function getApplyTime()
 
 /**
  * 申请码
- * @return [type] [description]
+ * @param  integer $len 随机字母长度
+ * @return [type]       [description]
  */
-function apply_code()
+function apply_code($len = 3)
 {
-	return date('Ymd', time()) . uniqid();
+	$letter = array('a','b', 'c', 'd', 'e', 'f','g','h','i','j','k','l','m','n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+	$i = 0;
+	$str = '';
+	while ($i < 3) {
+		$str .= $letter[array_rand($letter)];
+		$i++;
+	}
+	return date('Ymd', time()) . $str;
 }
 
 /**

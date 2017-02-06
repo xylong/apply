@@ -8,6 +8,9 @@ var vm = new Vue({
 			{type:3, name:'重要物资'}
 		],
 
+		number : '',
+		selected : 0,
+
 		inventory : {
 			stock : 0,
 			occupy: 0,
@@ -39,6 +42,28 @@ var vm = new Vue({
 		    },function(res){
 		        console.log(res.status);
 		    });
+		},
+
+		add : function () {
+			$('#myModal').modal('show');
+		},
+
+		sub : function () {
+			if (this.number.length === 0 || this.selected == 0) return;
+
+			this.$http
+				.post('addUser', {
+                    number 	: this.number,
+                    pid		:thi.selected
+                }, {
+                    emulateJSON:true
+                }).then(function(res){
+                    toastr.success('添加成功');
+                    this.number = '';
+                    this.selected = 0;
+                },function(res){
+                    toastr.error('添加失败');
+                });
 		}
 	},
 

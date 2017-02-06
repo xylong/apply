@@ -92,6 +92,18 @@ class GoodsController extends BaseController
 	}
 
 
+	public function search()
+	{
+		if (IS_AJAX) {
+			$code = I('post.code');
+			$map['code'] = array('like', '%'.$code.'%');
+			$data = $this->borrow->where($map)->select();
+			exit(json_encode($data));
+		}
+	}
+
+
+	// 导出
 	public function export()
 	{
 		$sdate = I('post.sdate', '');	// 开始时间
@@ -113,6 +125,14 @@ class GoodsController extends BaseController
 
 		array_unshift($data, $title);
 		$this->applyExport($data);
+	}
+
+
+	public function addGood()
+	{
+		if (IS_AJAX) {
+			
+		}
 	}
 
 	

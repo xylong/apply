@@ -11,6 +11,8 @@
 
 var vm = new Vue({
     data : {
+        apply_code : '',
+
         total: 0,
         display: 10,
         current: 1,
@@ -156,6 +158,22 @@ var vm = new Vue({
                 return;
             }
             $('#export').submit();
+        },
+
+        search : function () {
+            if (this.apply_code.length === 0) return;
+
+            this.$http
+                .post('search', {
+                    code : this.apply_code
+                }, {
+                    emulateJSON:true
+                }).then(function(res){
+                    this.applys = res.data;
+                    this.total = res.data.length;
+                },function(res){
+                    toastr.warning('未找到');
+                });
         }
     },
 
