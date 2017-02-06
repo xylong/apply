@@ -15,6 +15,9 @@ var vm = new Vue({
         display: 10,
         current: 1,
 
+        start : '',
+        end : '',
+
         isActive : 0,
         tab : [{type:0,name:'未审核'},{type:1,name:'已审核'}],
         applys : [],
@@ -136,6 +139,10 @@ var vm = new Vue({
 
         cancel : function () {
             this.goods = [];
+        },
+
+        export : function () {
+            console.log(this.start, this.end)
         }
     },
 
