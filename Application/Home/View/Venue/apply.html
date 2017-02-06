@@ -167,7 +167,14 @@
                                     <span class="help-block m-b-none text-danger" v-show="prompt.images.isVisible" v-text="prompt.images.msg"></span>
                                 </div>
                                 <a id='addPic' href="javascript:" v-on:click="addPic">添加图片 </a>
-                                <input type="file" @change="onFileChange" multiple style="display: none;">
+                                <input id="pic" type="file" @change="onFileChange" multiple style="display: none;">
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">策划</label>
+                                <div class="col-lg-10">
+                                    <a href="" v-on:click="addZip">上传 </a>
+                                    <input id="zip" type="file" @change="fileChange" multiple style="display: none;">
+                                </div>
                             </div>
                           
                         </form>

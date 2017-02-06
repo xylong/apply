@@ -25,7 +25,7 @@ class VenueModel extends Model
 		array('apply_time', 'getApplyTime', 1, 'function'),	// 申请时间
         array('uid', 'getApplicant', 1, 'function'), // 申请者id
         array('img', 'saveImg', 1, 'callback'), // 活动海报
-        // array('planning', 'savePlan', 1, 'callback'),    // 活动策划
+        array('planning', 'savePlan', 1, 'callback'),    // 活动策划
         array('utype', 'getUserType', 1, 'callback'),   // 申请者类型即申请类型
 		array('receiver', 'initReceiver', 1, 'callback')	// 接受者角色
 	);
@@ -67,6 +67,25 @@ class VenueModel extends Model
             $str .= ',' . $dir . $fileName;
         }
         return ltrim(rtrim($str, ','), ',');
+    }
+
+
+    /**
+     * 上传文件
+     * @return string 文件路径
+     */
+    public function savePlan()
+    {
+        $file = $_POST['planning'];
+        $file = preg_replace('/data:.*;base64,/i', '', $file);
+        $data = base64_decode($file);
+
+        $dir = mk_dir(self::UPLOAD_DIR);
+        $fileName = uniqid() . '.zip';
+        $saveName = self::UPLOAD_DIR . $dir . $fileName;
+
+        $success = file_put_contents($saveName, $data);
+        return $dir . $fileName;
     }
 
 

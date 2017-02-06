@@ -42,6 +42,7 @@ var vm = new Vue({
         etime : '',
         planning : '',
         images: [],
+        file : ''
     },
 
     filters: {
@@ -71,7 +72,7 @@ var vm = new Vue({
     methods : {
         addPic: function(e) {
             e.preventDefault();
-            $('input[type=file]').trigger('click');
+            $('#pic').trigger('click');
             return false;
         },
 
@@ -103,9 +104,23 @@ var vm = new Vue({
             this.images.shift(index);
         },
 
-        sub : function () {
-            if (!this.checkData()) return;
+        addZip(e){
+            e.preventDefault();
+            $('#zip').trigger('click');
+            return false;
+        },
 
+        fileChange : function (e) {
+            var files = e.target.files || e.dataTransfer.files;
+                var reader = new FileReader();
+                reader.readAsDataURL(files[0]);
+                reader.onload = function(e){
+                    vm.planning = e.target.result;
+                };
+        },
+
+        sub : function () {
+            // if (!this.checkData()) return;
             // 处理截止日期
             if (this.etime) {
                 var etime = null;
