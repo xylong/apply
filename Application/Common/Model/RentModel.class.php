@@ -43,7 +43,7 @@ class RentModel extends Model
 		// $sql = "SELECT `id`,`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` WHERE (stime >= '{$start}' AND stime < '{$end}') OR (stime < '{$start}' AND etime > '{$end}') OR (etime > '{$start}' AND etime <= '{$end}')";
 
         // 去掉已拒绝的
-        $sql = "SELECT `id`,oa_rent.`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` LEFT JOIN oa_approve ON oa_rent.id = oa_approve.aid WHERE etime >= '{$start}' AND stime <= '{$end}' AND (oa_approve.isagree IS NULL OR oa_approve.isagree = 1)";
+        $sql = "SELECT `id`,oa_rent.`uid`,`house`,`proposer`,`reason` `title`,`stime` `start`,`etime` `end` FROM `oa_rent` LEFT JOIN oa_approve ON oa_rent.id = oa_approve.aid WHERE etime >= '{$start}' AND stime <= '{$end}' AND (oa_approve.isagree IS NULL OR oa_approve.isagree = 1) GROUP BY oa_rent.`id`";
 		return $this->query($sql);
 	}
 
