@@ -10,6 +10,8 @@ var vm = new Vue({
 
 		number : '',
 		selected : 0,
+		isHasId : 0,	// 判断是编辑还是添加
+
 
 		inventory : {
 			stock : 0,
@@ -44,27 +46,102 @@ var vm = new Vue({
 		    });
 		},
 
-		add : function () {
+		add : function (id) {
+			this.isHasId = id;
+			$('#myModal').modal('show');
+		},
+
+		modify : function (id) {
+			this.isHasId = id;
 			$('#myModal').modal('show');
 		},
 
 		sub : function () {
-			if (this.number.length === 0 || this.selected == 0) return;
+			var map = {
+				number : this.number
+			};
+			if (this.isHasId) {
+				map.id = this.isHasId;
+			} else {
+				map.pid = this.selected;
+			}
+
+			if (map.number.length === 0 || map.number == 0) {
+				toastr.warning('编号不能为空');
+				return;
+			}
 
 			this.$http
-				.post('addUser', {
-                    number 	: this.number,
-                    pid		:thi.selected
-                }, {
+				.post('manageGood', map, {
                     emulateJSON:true
                 }).then(function(res){
-                    toastr.success('添加成功');
+                    toastr.success('操作成功');
                     this.number = '';
                     this.selected = 0;
                 },function(res){
-                    toastr.error('添加失败');
+                    toastr.error('操作失败');
+                });
+		},
+
+		del : function (id) {
+			swal({
+		        title: "确定删除?",
+		        text: "删除后将不可恢复!",
+		        type: "warning",
+		        showCancelButton: true,
+		        confirmButtonColor: "#DD6B55",
+		        confirmButtonText: "Yes",
+		        closeOnConfirm: false
+		    }, function () {
+		    	swal("删除成功!", "刷新后查看.", "success");
+		    	vm.doDel(id);
+		    });
+		},
+
+		doDel : function (id) {
+			this.$http
+				.get('delGood', {id : id})
+				.then(function(res) {
+			    },function(res){
+			        console.log(res.status);
+			    });
+		},
+
+		// 切换物品状态
+		switchState : function (id, status) {
+			var state = !status;
+
+			swal({
+		        title: "确认归还?",
+		        text: "",
+		        type: "warning",
+		        showCancelButton: true,
+		        confirmButtonColor: "#DD6B55",
+		        confirmButtonText: "Yes",
+		        closeOnConfirm: false
+		    }, function () {
+		    	swal("操作成功!", "", "success");
+		    	vm.doSwitch(id, state);
+		    });
+
+			
+		},
+
+		doSwitch : function (id, state) {
+			this.$http
+				.post('switchState', {
+					id : id,
+					status : state
+				}, {
+                    emulateJSON:true
+                }).then(function(res){
+                    toastr.success('操作成功');
+                    this.goodsList(this.pid);
+                },function(res){
+                    toastr.error('操作失败');
                 });
 		}
+		
 	},
 
 	ready : function () {
