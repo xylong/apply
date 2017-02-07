@@ -13,6 +13,7 @@ class BaseController extends Controller
 		if (!isset($permit_id)) {
 			redirect(U(C('USER_AUTH_GATEWAY')));
 		}
+		$this->assign('menu_action', 'index');
 	}
 
 

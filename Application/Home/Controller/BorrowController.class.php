@@ -13,6 +13,7 @@ class BorrowController extends BaseController
 	{
 		$this->goods = D('Goods');
 		$this->borrow = D('Borrow');
+        $this->assign('menu_action', 'borrow');
 	}
 
     public function index()

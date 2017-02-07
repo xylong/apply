@@ -187,7 +187,7 @@ calendar.fullCalendar({
     header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'month,agendaDay'
+        right: 'month'
     },
     editable: true,
     droppable: true, // this allows things to be dropped onto the calendar

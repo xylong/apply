@@ -13,6 +13,7 @@ class HouseController extends BaseController
 	{
 		$this->house = D('House');
 		$this->rent = D('Rent');
+		$this->assign('menu_action', 'house');
 	}
 
     public function index()

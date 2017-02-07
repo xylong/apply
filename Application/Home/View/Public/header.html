@@ -48,15 +48,15 @@
                         IN+
                     </div>
                 </li>
-                <li>
+                <li <if condition="$menu_action neq 'index'">class="active"</if>>
                     <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">申请</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
-                        <li><a href="{:U('Borrow/apply')}">物资申请</a></li>
-                        <li><a href="{:U('House/apply')}">青春工坊工坊申请</a></li>
-                        <li><a href="{:U('Venue/apply')}">展场展架申请</a></li>
+                        <li <if condition="$menu_action eq 'borrow'">class="active"</if>><a href="{:U('Borrow/apply')}">物资申请</a></li>
+                        <li <if condition="$menu_action eq 'house'">class="active"</if>><a href="{:U('House/apply')}">青春工坊工坊申请</a></li>
+                        <li <if condition="$menu_action eq 'venue'">class="active"</if>><a href="{:U('Venue/apply')}">展场展架申请</a></li>
                     </ul>
                 </li>
-                <li>
+                <li <if condition="$menu_action eq 'index'">class="active"</if>>
                     <a href="{:U('Base/applyRecord')}"><i class="fa fa-flask"></i> <span class="nav-label">申请记录</span></a>
                 </li>
             </ul>
@@ -71,7 +71,7 @@
                             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
                             <form role="search" class="navbar-form-custom" action="search_results.html">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                                    <input type="text" placeholder="{$menu_action}" class="form-control" name="top-search" id="top-search">
                                 </div>
                             </form>
                         </div>

@@ -12,6 +12,7 @@ class VenueController extends BaseController
 	public function _initialize()
 	{
 		$this->venue = D('Venue');
+		$this->assign('menu_action', 'venue');
 	}
 
     public function index()
