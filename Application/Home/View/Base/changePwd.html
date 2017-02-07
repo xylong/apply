@@ -1,0 +1,80 @@
+<include file="Public:header" />
+
+<div class="wrapper wrapper-content animated fadeInRight" id="pwd">
+	<div class="row">
+		<div class="col-lg-7">
+		    <div class="ibox float-e-margins">
+		        <div class="ibox-title">
+		            <h5>修改密码<small></small></h5>
+		        </div>
+		        <div class="ibox-content">
+		            <div class="row">
+		                <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">重置密码</h3>
+		                	<p>密码长度不能小于6为</p>
+		                    <form role="form">
+		                        <div class="form-group"><label>新密码</label> <input type="password" placeholder="输入新密码" class="form-control" v-model="npwd"></div>
+		                        <div class="form-group"><label>确认密码</label> <input type="password" placeholder="输入确认密码" class="form-control" v-model="rpwd"></div>
+		                        <div>
+		                            <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="button" @click="sub"><strong>确认修改</strong></button>
+		                        </div>
+		                    </form>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+<include file="Public:footer" />
+<script>
+	var vm = new Vue({
+		data : {
+			npwd : '',
+			rpwd : '',
+
+			prompt : {
+				flag : true,
+				info : ''
+			}
+		},
+		methods : {
+			sub : function () {
+				var msg = '';
+				if (this.npwd.length < 6) {
+					this.prompt.info = '密码不能小于6位';
+					this.prompt.flag = false;
+				}
+				if (this.rpwd !== this.npwd) {
+					this.prompt.info = '两次密码输入不一致';
+					this.prompt.flag = false;
+				}
+				if (!this.prompt.flag) {
+					swal({
+	                    title: "错误",
+	                    text: this.prompt.info,
+	                    type: "warning",
+	                    confirmButtonColor: "#DD6B55",
+	                    closeOnConfirm: false
+	                });
+					return;
+				} else {
+					this.prompt.flag = true;
+					this.prompt.info = '';
+				}
+
+				this.$http
+					.post('changePwd', {
+	                    password : this.npwd
+	                }, {
+	                    emulateJSON:true
+	                }).then(function(res){
+	                    toastr.success('修改成功');
+	                    this.npwd = this.rpwd = '';
+	                },function(res){
+	                    toastr.error('修改失败');
+	                });
+			}
+		}
+	}).$mount('#pwd');
+</script>

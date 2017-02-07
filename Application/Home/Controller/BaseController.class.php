@@ -103,4 +103,19 @@ class BaseController extends Controller
 	}
 
 
+	public function changePwd()
+	{
+		if (IS_AJAX) {
+			$password = I('post.password');
+			$data['password'] = md5($password);
+			if (M('User')->where(array('id' => $_SESSION['uid']))->save($data)) {
+				echo true;
+			} else {
+				echo false;
+			}
+		}
+		$this->display();
+	}
+
+
 }
