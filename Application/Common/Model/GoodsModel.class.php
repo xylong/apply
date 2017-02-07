@@ -100,5 +100,21 @@ class GoodsModel extends Model
 	}
 
 
+	/** 获取申请借到的设备
+	 * @param  string $str 借的设备id，逗号连接
+	 * @param  array $arr 借的设备的分类id
+	 * @return       [description]
+	 */
+	public function getRent($str, $arr)
+	{
+		foreach ($arr as $key => $value) {
+			$brr[] = $value['id'];
+		}
+		$sql = 'SELECT * FROM oa_goods WHERE pid = 0 AND `status` = 0 UNION SELECT * FROM oa_goods WHERE id IN('. $str .') AND `status` = 1';
+		$data = $this->query($sql);
+		return node_merge($data, $brr);
+	}
+
+
 
 }

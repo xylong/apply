@@ -40,7 +40,13 @@
                                             </tr>
                                             <tr>
                                                 <td>借用需求</td>
-                                                <td>{$data.apply.borrow}</td>
+                                                <td>
+                                                    <ul class="unstyled">
+                                                        <volist name="data['apply']['borrow']" id="v">
+                                                            <li>{$v.name} : {$v.number}</li>
+                                                        </volist>
+                                                    </ul>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>其它</td>

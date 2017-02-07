@@ -142,7 +142,11 @@ class BorrowModel extends Model
                             ->select();
 
         $need = explode(',', $apply['borrow']);
-        $apply['borrow'] = D('Goods')->getNeed($need);
+        $model = D('Goods');
+        $apply['borrow'] = $model->getNeed($need);
+        if ($apply['goods']) {
+            $apply['goods'] = $model->getRent($apply['goods'], $apply['borrow']);
+        }
         
 
         // 检查自己是否审核
