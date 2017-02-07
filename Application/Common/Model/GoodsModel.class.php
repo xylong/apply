@@ -96,7 +96,8 @@ class GoodsModel extends Model
 			$equipment .= $item . ',';
 		}
 		$equipment = substr($equipment, 0, -1);
-		return D('Borrow')->where(array('id' => $id))->save(array('goods' => $equipment));
+		$lend_time = date('Y-m-d H:i:s', time());
+		return D('Borrow')->where(array('id' => $id))->save(array('goods' => $equipment, 'lend_time' => $lend_time));
 	}
 
 
@@ -110,7 +111,8 @@ class GoodsModel extends Model
 		foreach ($arr as $key => $value) {
 			$brr[] = $value['id'];
 		}
-		$sql = 'SELECT * FROM oa_goods WHERE pid = 0 AND `status` = 0 UNION SELECT * FROM oa_goods WHERE id IN('. $str .') AND `status` = 1';
+
+		$sql = 'SELECT * FROM oa_goods WHERE pid = 0 AND `status` = 0 UNION SELECT * FROM oa_goods WHERE id IN('. $str .')';
 		$data = $this->query($sql);
 		return node_merge($data, $brr);
 	}

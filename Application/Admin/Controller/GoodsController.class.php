@@ -78,6 +78,17 @@ class GoodsController extends BaseController
 	}
 
 
+	// 确认归还
+	public function back()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			$return_time = date('Y-m-d H:i:s', time());
+			return $this->borrow->where(array('id' => $id))->save(array('return_time' => $return_time));
+		}
+	}
+
+
 	// 提交审核结果
 	public function review()
 	{

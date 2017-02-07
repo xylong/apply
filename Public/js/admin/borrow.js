@@ -139,6 +139,18 @@ var vm = new Vue({
                 });
         },
 
+        back : function (id) {
+            this.$http
+                .get('back', {
+                    id : id
+                })
+                .then(function(res) {
+                    toastr.success('确认归还成功');
+            },function(res){
+                console.log(res.status);
+            });
+        },
+
         cancel : function () {
             this.goods = [];
         },
