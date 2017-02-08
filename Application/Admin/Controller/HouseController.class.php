@@ -13,6 +13,7 @@ class HouseController extends BaseController
 	{
 		$this->house = D('House');
 		$this->rent = D('Rent');
+		$this->assign('current', CONTROLLER_NAME . '/' . ACTION_NAME);
 	}
 
 	// 青春工坊管理

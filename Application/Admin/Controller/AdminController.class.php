@@ -13,6 +13,7 @@ class AdminController extends BaseController
 	{
 		$this->role = D('Role');
 		$this->admin = D('Admin');
+		$this->assign('current', CONTROLLER_NAME . '/' . ACTION_NAME);
 	}
 
 	public function index()

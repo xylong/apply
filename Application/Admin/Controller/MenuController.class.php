@@ -12,6 +12,7 @@ class MenuController extends BaseController
 	public function _initialize()
 	{
 		$this->menu = D('Menu');
+        $this->assign('current', CONTROLLER_NAME . '/' . ACTION_NAME);
 	}
 
 

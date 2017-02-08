@@ -11,6 +11,7 @@ class UserController extends BaseController
 	public function _initialize()
 	{
 		$this->user = D('User');
+		$this->assign('current', CONTROLLER_NAME . '/' . ACTION_NAME);
 	}
 	
 	public function index()

@@ -13,6 +13,7 @@ class GoodsController extends BaseController
 	{
 		$this->goods = D('Goods');
 		$this->borrow = D('Borrow');
+		$this->assign('current', CONTROLLER_NAME . '/' . ACTION_NAME);
 	}
 	
 	public function index()
