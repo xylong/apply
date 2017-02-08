@@ -40,6 +40,7 @@ class VenueController extends BaseController
 				$url[] = $config['__UPLOAD__'] . $img;
 			}
 			$data['apply']['img'] = implode(',', $url);
+			$data['apply']['planning'] = $config['__UPLOAD__'] . $data['apply']['planning'];
 
 			exit(json_encode($data));
 		}

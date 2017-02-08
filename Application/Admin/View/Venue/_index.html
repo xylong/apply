@@ -110,7 +110,7 @@
                                                 <dt>申请人:</dt> <dd v-text="detail.proposer"></dd>
                                                 <dt>展架数量:</dt> <dd v-text="detail.num"></dd>
                                                 <dt>起始时间:</dt> <dd v-text="detail.stime"></dd>
-                                                <dt>下载附件:</dt> <dd><a href="javascript::">下载</a></dd>
+                                                <dt>下载附件:</dt> <dd><a :href="detail.planning">下载</a></dd>
                                             </dl>
                                         </div>
                                         <div class="col-lg-6" id="cluster_info">
