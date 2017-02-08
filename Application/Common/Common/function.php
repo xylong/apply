@@ -226,3 +226,32 @@ function recombineExportData($data)
 	}
 	return $res;
 }
+
+
+function arrayPidProcess($data, $res=array(), $pid='0', $endlevel='1'){
+    foreach ($data as $k => $v){
+        if($v['pid']==$pid){
+            $res[$v['id']]=$v;
+            if($endlevel!='0'){
+                if($v['level']==$endlevel){
+                    $child=null;
+                }
+                else{
+                    $child=arrayPidProcess($data,array(),$v['id'],$endlevel);
+                }
+                $res[$v['id']]['child']=$child;
+            }
+            else{
+                $child=arrayPidProcess($data,array(),$v['id']);
+                if($child==''||$child==null){
+                    $res[$v['id']]['child']=null;
+                }
+                else{
+                    $res[$v['id']]['child']=$child;
+                }
+            }
+            
+        }
+    }
+    return $res;
+}

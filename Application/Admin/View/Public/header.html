@@ -48,7 +48,7 @@
                             IN+
                         </div>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">用户管理</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{:U('User/index')}">用户列表</a></li>
@@ -83,10 +83,20 @@
                     <li>
                         <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">系统设置</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{:U('Index/index')}">菜单管理</a></li>
+                            <li><a href="{:U('Menu/index')}">菜单管理</a></li>
                             <li><a href="dashboard_2.html">Dashboard v.2</a></li>
                         </ul>
-                    </li>
+                    </li> -->
+                    <volist name="_SESSION['menu']" id="v">
+                        <li>
+                            <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">{$v.title}</span> <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <volist name="v.child" id="o">
+                                    <li><a href="{:U($o['url'])}">{$o.title}</a></li>
+                                </volist>
+                            </ul>
+                        </li>
+                    </volist>
                 </ul>
             </div>
         </nav>

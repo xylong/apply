@@ -5,7 +5,7 @@ use Think\Controller;
 class IndexController extends BaseController
 {
     public function index(){
-        $this->display('menu');
+        $this->display('Menu/index');
     }
 
 

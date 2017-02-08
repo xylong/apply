@@ -1,0 +1,101 @@
+<include file="Public:header" />
+<div class="wrapper wrapper-content" id="menu">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content mailbox-content">
+                        <div class="file-manager">
+                            <a class="btn btn-block btn-primary compose-mail" href="javascript:;">新增</a>
+                            <div class="space-25"></div>
+                            <h5>菜单结构</h5>
+                           
+                            <div class="ibox ">
+                                <div class="ibox-content">
+
+                                    <div class="dd" id="nestable">
+                                        <ol class="dd-list">
+                                            <li class="dd-item" data-id="1">
+                                                <div class="dd-handle">1 - Lorem ipsum</div>
+                                            </li>
+                                            <li class="dd-item" data-id="2">
+                                                <div class="dd-handle">2 - Dolor sit</div>
+                                                <ol class="dd-list">
+                                                    <li class="dd-item" data-id="3">
+                                                        <div class="dd-handle">3 - Adipiscing elit</div>
+                                                    </li>
+                                                    <li class="dd-item" data-id="4">
+                                                        <div class="dd-handle">4 - Nonummy nibh</div>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 animated fadeInRight">
+            <div class="mail-box-header">
+                <h2>
+                    编辑
+                </h2>
+            </div>
+                <div class="mail-box">
+
+
+                <div class="mail-body">
+
+                    <form class="form-horizontal" method="get">
+                        <div class="form-group"><label class="col-sm-2 control-label">名称</label>
+                            <div class="col-sm-10"><input type="text" class="form-control" v-model="node.title"></div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">链接地址</label>
+                            <div class="col-sm-10"><input type="text" class="form-control" v-model="node.url"></div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">上级菜单</label>
+                            <div class="col-sm-10">
+                                <select class="form-control m-b" v-model="node.pid">
+                                    <option v-for="option in options" v-bind:value="option.id">
+                                        {{ option.title }}
+                                      </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">图标</label>
+                            <div class="col-sm-10"><input type="text" class="form-control" v-model="node.icon"></div>
+                        </div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">排序</label>
+                            <div class="col-sm-10"><input type="text" class="form-control" v-model="node.sort"></div>
+                        </div>
+
+
+                        <div class="form-group"><label class="col-sm-2 control-label">说明</label>
+							<div class="col-sm-10"><textarea class="form-control" name="remark" rows="5" v-model="node.tip"></textarea></div>
+						</div>
+                    </form>
+
+                </div>
+
+                   
+                    <div class="mail-body text-right tooltip-demo">
+                        <a href="javascript:;" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" @click="save"><i class="fa fa-reply"></i> 保存</a>
+                        <a href="javascript:;" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Discard email"><i class="fa fa-times"></i>取消</a>
+                    </div>
+                    <div class="clearfix"></div>
+
+
+
+                </div>
+            </div>
+        </div>
+</div>
+
+<include file="Public:footer" />
+<script src="__JS__/plugins/nestable/jquery.nestable.js"></script>
+<script src="__JS__/admin/menu.js"></script>

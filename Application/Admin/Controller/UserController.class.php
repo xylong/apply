@@ -97,4 +97,10 @@ class UserController extends BaseController
 	}
 
 
+	public function welcome()
+	{
+		$this->display();
+	}
+
+
 }

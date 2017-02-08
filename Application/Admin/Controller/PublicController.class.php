@@ -30,7 +30,10 @@ class PublicController extends Controller
 		if (!D('Admin')->doLogin($post)) {
 			$this->error('帐号或密码错误！');
 		}
-		header('Location: ' . U("index/index"));
+
+		$menu = D('Menu')->menu();
+        session('menu', $menu);
+		header('Location: ' . U("User/welcome"));
 	}
 
 	// 登出
@@ -40,6 +43,7 @@ class PublicController extends Controller
 			session(C('USER_AUTH_KEY'), null);
 			session('admin_name', null);
 			session('role_id', null);
+			session('menu', null);
 
 			redirect(U(C('USER_AUTH_GATEWAY')));
 		} else {
