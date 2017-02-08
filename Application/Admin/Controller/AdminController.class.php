@@ -42,8 +42,41 @@ class AdminController extends BaseController
 	public function nodes()
 	{
 		if (IS_AJAX) {
-			$data = C('NODE');
+			$rid = I('get.rid', 0);
+			if ($rid) {
+				$data = M('RoleMenu')->where(array('rid' => $rid))->getField('mid');
+				if ($data) {
+					$data = explode(',', $data);
+				} else {
+					$data = array();
+				}
+				
+			} else {
+				$data = M('Menu')->where(array('pid' => 0))->field(array('id', 'title'))->select();
+			}
 			exit(json_encode($data));
+		}
+	}
+
+
+	// 给角色设置权限
+	public function saveAuth()
+	{
+		if (IS_AJAX) {
+			$post = I('post.');
+			$mid = implode(',', $post['mid']);
+			$data = array(
+				'rid' => $post['rid'],
+				'mid' => $mid
+			);
+
+			$model = M('RoleMenu');
+			$model->where(array('rid' => $post['rid']))->delete();
+			if ($model->add($data)) {
+				echo 1;
+			} else {
+				echo 0;
+			}
 		}
 	}
 

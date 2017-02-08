@@ -49,14 +49,16 @@
                         </div>
                     </li>
                     <volist name="_SESSION['menu']" id="v">
-                        <li <if condition="strstr($v.url ,  '/' ,  true ) eq strstr($current ,  '/' ,  true ) ">class="active"</if>>
-                            <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">{$v.title}</span> <span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <volist name="v.child" id="o">
-                                    <li <if condition="$o['url'] eq $current ">class="active"</if>><a href="{:U($o['url'])}">{$o.title}</a></li>
-                                </volist>
-                            </ul>
-                        </li>
+                        <in name="v.id" value="$_SESSION['access']">
+                            <li <if condition="strstr($v.url ,  '/' ,  true ) eq strstr($current ,  '/' ,  true ) ">class="active"</if>>
+                                <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">{$v.title}</span> <span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <volist name="v.child" id="o">
+                                        <li <if condition="$o['url'] eq $current ">class="active"</if>><a href="{:U($o['url'])}">{$o.title}</a></li>
+                                    </volist>
+                                </ul>
+                            </li>
+                        </in>
                     </volist>
                 </ul>
             </div>

@@ -31,6 +31,20 @@ class PublicController extends Controller
 			$this->error('帐号或密码错误！');
 		}
 
+
+		// 获取菜单权限
+		$model = M('RoleMenu');
+		$map['rid'] = array('IN', $_SESSION['role_id']);
+		$data = $model->where($map)->getField('mid', true);
+		$arr = array();
+		foreach ($data as $key => $value) {
+			$tmp = explode(',', $value);
+			foreach ($tmp as $index => $item) {
+				array_push($arr, $item);
+			}
+		}
+		$_SESSION['access'] = array_unique($arr);
+
 		$menu = D('Menu')->menu();
         session('menu', $menu);
 		header('Location: ' . U("User/welcome"));

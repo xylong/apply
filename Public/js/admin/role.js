@@ -53,6 +53,43 @@ var vm = new Vue({
 			this.rid = this.roles[index]['id'];
 			this.name = this.roles[index]['name'];
 			this.remark = this.roles[index]['remark'];
+
+			this.$http
+				.get('nodes', {rid : this.rid})
+				.then(function(res) {
+		    		if (res.data) {
+		    			this.checked = res.data;
+		    		} else {
+		    			this.checked = [];
+		    		}
+		    	}, function(res){
+		        	console.log(res.status);
+		    	});
+		},
+
+		saveAuth : function () {
+			if (this.checked.length === 0) {
+				toastr.warning('请选择权限');
+				return;
+			}
+			if (this.rid == 0) {
+				toastr.warning('请选择角色');
+				return;
+			}
+
+			this.$http
+				.post('saveAuth', {
+					rid : this.rid,
+					mid : this.checked
+				}, {
+                    emulateJSON:true
+                })
+                .then(function(res) {
+                	toastr.success('权限设置成功');
+                },function(res){
+                    toastr.error('权限设置失败');
+                });
+
 		}
 	},
 
