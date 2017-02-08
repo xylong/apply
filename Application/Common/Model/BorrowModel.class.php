@@ -79,7 +79,7 @@ class BorrowModel extends Model
             $rows = $this->page($p, 10)
                         ->where($map)
                         ->join("LEFT JOIN __APPROVE__ ON __BORROW__.id = __APPROVE__.aid AND __APPROVE__.type = 1 AND __APPROVE__.uid = {$_SESSION['auth_id']}")
-                        ->field(array('id', 'code', 'theme', 'goods', 'apply_time'))
+                        ->field(array('id', 'code', 'theme', 'goods', 'apply_time', 'lend_time', 'return_time'))
                         ->order('apply_time desc')->select();
         } else {
             $map['oa_audit_log.apply_type'] = 1;	// 申请类型条件
@@ -95,7 +95,7 @@ class BorrowModel extends Model
                         ->where($map)
                         ->join("LEFT JOIN __APPROVE__ ON __BORROW__.id = __APPROVE__.aid AND __APPROVE__.type = 1  AND __APPROVE__.uid = {$_SESSION['auth_id']}")
                         ->join('LEFT JOIN __AUDIT_LOG__ ON __BORROW__.id = __AUDIT_LOG__.apply_id')
-                        ->field(array('oa_borrow.id', 'oa_borrow.code', 'oa_borrow.theme', 'oa_borrow.goods', 'oa_approve.time apply_time'))
+                        ->field(array('oa_borrow.id', 'oa_borrow.code', 'oa_borrow.theme', 'oa_borrow.goods', 'oa_borrow.lend_time', 'oa_borrow.return_time', 'oa_approve.time apply_time'))
                         ->order('time desc')->select();
         }
 
@@ -133,7 +133,7 @@ class BorrowModel extends Model
 	public function getApplyById($id)
 	{
 		$apply = $this->where(array('oa_borrow.id' => $id))
-                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'borrow', 'goods', 'other', 'stime', 'etime', 'apply_time', 'receiver'))
+                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'borrow', 'goods', 'other', 'stime', 'etime', 'apply_time', 'lend_time', 'return_time', 'receiver'))
                     ->find();
         $result = M('Approve')->join('LEFT JOIN __ADMIN__ ON __APPROVE__.uid = __ADMIN__.id')
                             ->join('LEFT JOIN __ROLE__ ON __APPROVE__.role_id = __ROLE__.id')

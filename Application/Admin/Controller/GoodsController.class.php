@@ -78,6 +78,17 @@ class GoodsController extends BaseController
 	}
 
 
+	// 确认归还
+	public function back()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			$return_time = date('Y-m-d H:i:s', time());
+			return $this->borrow->where(array('id' => $id))->save(array('return_time' => $return_time));
+		}
+	}
+
+
 	// 提交审核结果
 	public function review()
 	{
@@ -128,10 +139,47 @@ class GoodsController extends BaseController
 	}
 
 
-	public function addGood()
+	// 管理物品
+	public function manageGood()
 	{
 		if (IS_AJAX) {
-			
+			$post = I('post.');
+			// 编辑
+			if ($post['id']) {
+				return $this->goods->where(array('id' => $post['id']))->save(array('number' => $post['number']));
+			}
+
+			// 新增
+			if ($post['pid']) {
+				$data = array(
+					'number' => $post['number'],
+					'pid'	=> $post['pid']
+				);
+			} else {
+				$data = array(
+					'name' => $post['number'],
+					'pid' => 0
+				);
+			}
+
+			return $this->goods->add($data);
+		}
+	}
+
+	// 删除物品
+	public function delGood()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			return $this->goods->where(array('id' => $id))->save(array('isdel' => 2));
+		}
+	}
+
+	public function switchState()
+	{
+		if (IS_AJAX) {
+			$post = I('post.');
+			return $this->goods->save($post);
 		}
 	}
 
