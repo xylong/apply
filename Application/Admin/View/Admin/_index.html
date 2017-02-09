@@ -35,9 +35,9 @@
                                                     <td v-text="v.id_number"></td>
                                                     <td v-text="v.phone"></td>
                                                     <td class="text-center">
-                                                        <button class="btn btn-info btn-xs"><i class="fa fa-edit"></i>查看</button>
+                                                        <button class="btn btn-info btn-xs" @click="edit(v.id, $index)"><i class="fa fa-edit"></i>编辑</button>
                                                         <button class="btn btn-warning btn-xs" @click="access(v.id)"><i class="fa fa-edit"></i>角色分配</button>
-                                                        <button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+                                                        <button class="btn btn-danger btn-xs" @click="del(v.id, $index)"><i class="fa fa-times"></i></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -74,6 +74,68 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content animated rollIn">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">编辑</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <form class="form-horizontal">
+
+                                <div class="form-group"><label class="col-lg-2 control-label">名字</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" placeholder="" class="form-control" v-model="user.account">
+                                        <span class="help-block m-b-none text-danger" v-show="prompt.account.isVisible" v-text="prompt.account.msg">.</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-lg-2 control-label">一卡通</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" placeholder="" class="form-control" v-model="user.id_number">
+                                        <span class="help-block m-b-none text-danger" v-show="prompt.id_number.isVisible" v-text="prompt.id_number.msg">.</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-lg-2 control-label">手机号</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" placeholder="" class="form-control" v-model="user.phone">
+                                        <span class="help-block m-b-none text-danger" v-show="prompt.phone.isVisible" v-text="prompt.phone.msg">.</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-lg-2 control-label">密码</label>
+                                    <div class="col-lg-10">
+                                        <input type="password" placeholder="" class="form-control" v-model="user.password">
+                                        <span class="help-block m-b-none text-danger" v-show="prompt.password.isVisible" v-text="prompt.password.msg">.</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-lg-2 control-label">确认密码</label>
+                                    <div class="col-lg-10">
+                                        <input type="password" placeholder="" class="form-control" v-model="user.repassword">
+                                        <span class="help-block m-b-none text-danger" v-show="prompt.repassword.isVisible" v-text="prompt.repassword.msg">.</span>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" @click="sub">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
 <template id="template_pagination">
@@ -91,4 +153,5 @@
 <include file="Public:footer" />
 <!-- iCheck -->
 <script src="__JS__/common/page.js"></script>
+<script src="__JS__/common/common.js"></script>
 <script src="__JS__/admin/admin.js"></script>

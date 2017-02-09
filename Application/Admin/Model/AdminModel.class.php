@@ -16,9 +16,14 @@ class AdminModel extends Model
 
 	protected $_auto = array (
 		array('status','1'),
-		array('password', 'md5', 3, 'function'),
+		array('password', 'md5', 1, 'function'),
+		array("password","buildPass",2,"callback"),
 	);
 
+
+	public function buildPass($password) {
+	    return !empty($password) ? md5($password) : false;
+	}
 
 	/**
 	 * 用户列表

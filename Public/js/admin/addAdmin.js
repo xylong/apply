@@ -23,11 +23,14 @@ var vm = new Vue({
 			this.$http.post('addUser', this.user, {
                     emulateJSON:true
                 }).then(function(res){
-                	console.log(res)
-                    toastr.success('申请提交成功');
-                    for (var key in this.user) {
-                    	this.user[key] = '';
-		            }
+                    if (res.data.status) {
+                      toastr.success('申请提交成功');
+                      for (var key in this.user) {
+                        this.user[key] = '';
+                      } 
+                    }else {
+                      toastr.error(res.data.info);
+                    }
                 },function(res){
                     toastr.error('申请提交失败');
                 });

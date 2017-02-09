@@ -28,14 +28,20 @@ class AdminController extends BaseController
 	}
 
 
-	// 添加失败
+	// 添加/修改管理员
 	public function addUser()
 	{
 		if (IS_AJAX) {
 			if (!$this->admin->create()) {
-                $this->error($this->role->getError());
+                $this->error($this->admin->getError());
             } else {
-                if ($this->admin->add()) {
+            	if ($this->admin->id) {
+            		$handle = $this->admin->save();
+            	} else {
+            		$handle = $this->admin->add();
+            	}
+
+                if ($handle) {
                     returnJson(true, '添加成功');
                 } else {
                 	echo $this->admin->getlastsql();
@@ -45,6 +51,20 @@ class AdminController extends BaseController
 		}
 
 		$this->display();
+	}
+
+
+	// 删除管理员
+	public function delUser()
+	{
+		if (IS_AJAX) {
+			$id = I('get.id');
+			if ($this->admin->where(array('id' => $id))->save(array('status' => 0))) {
+				echo 1;
+			} else {
+				echo 0;
+			}
+		}
 	}
 
 
