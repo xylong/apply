@@ -28,6 +28,26 @@ class AdminController extends BaseController
 	}
 
 
+	// 添加失败
+	public function addUser()
+	{
+		if (IS_AJAX) {
+			if (!$this->admin->create()) {
+                $this->error($this->role->getError());
+            } else {
+                if ($this->admin->add()) {
+                    returnJson(true, '添加成功');
+                } else {
+                	echo $this->admin->getlastsql();
+                    returnJson(false, '添加失败');
+                }
+            }
+		}
+
+		$this->display();
+	}
+
+
 	// 角色列表
 	public function role()
 	{

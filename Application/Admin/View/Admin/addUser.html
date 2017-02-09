@@ -1,0 +1,69 @@
+<include file="Public:header" />
+
+<div class="wrapper wrapper-content  animated fadeInRight" id="user">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>添加用户</h5>
+                </div>
+                <div class="ibox-content">
+                    <form method="get" class="form-horizontal">
+
+                    	<div class="form-group"><label class="col-sm-2 control-label">姓名</label>
+                            <div class="col-sm-10">
+                            	<input type="text" class="form-control" v-model="user.account">
+                            	<span class="help-block m-b-none text-danger" v-show="prompt.account.isVisible" v-text="prompt.account.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">一卡通</label>
+                            <div class="col-sm-10">
+                            	<input type="text" class="form-control" v-model="user.id_number">
+                            	<span class="help-block m-b-none text-danger" v-show="prompt.id_number.isVisible" v-text="prompt.id_number.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">手机</label>
+                            <div class="col-sm-10">
+                            	<input type="text" class="form-control" v-model="user.phone">
+                            	<span class="help-block m-b-none text-danger" v-show="prompt.phone.isVisible" v-text="prompt.phone.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-10">
+                            	<input type="password" class="form-control" v-model="user.password">
+                            	<span class="help-block m-b-none text-danger" v-show="prompt.password.isVisible" v-text="prompt.password.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        <div class="form-group"><label class="col-sm-2 control-label">确认密码</label>
+                            <div class="col-sm-10">
+                            	<input type="password" class="form-control" v-model="user.repassword">
+                            	<span class="help-block m-b-none text-danger" v-show="prompt.repassword.isVisible" v-text="prompt.repassword.msg">.</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                        
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary" type="button" @click="sub">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+</div>
+
+<include file="Public:footer" />
+<script src="__JS__/common/common.js"></script>
+<script src="__JS__/admin/addAdmin.js"></script>
