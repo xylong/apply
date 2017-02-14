@@ -208,16 +208,16 @@
                 return
             };
 
-            if (event.id) {
-                if (event.viewable) {
-                    bar.getApply(event.id);
-                    bar.isVisible = true;
-                } else {
-                    bar.info = {};
-                    bar.isVisible = false;
-                }
-                return;
-            };
+            // if (event.id) {
+            //     if (event.viewable) {
+            //         bar.getApply(event.id);
+            //         bar.isVisible = true;
+            //     } else {
+            //         bar.info = {};
+            //         bar.isVisible = false;
+            //     }
+            //     return;
+            // };
             vm.getClassify();
             vm.start = event.start.format('YYYY-MM-DD');
             vm.end = event.end ? event.end.format('YYYY-MM-DD') : null;
