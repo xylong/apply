@@ -35,8 +35,14 @@
                             <img alt="image" class="img-circle" src="__IMG__/profile_small.jpg" />
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{$Think.session.nickname}</strong>
-                             </span> <span class="text-muted text-xs block">{$Think.session.account} <b class="caret"></b></span> </span> </a>
+                            <span class="clear">
+                                <if condition="$_SESSION['society']">
+                                    <span class="block m-t-xs"> <strong class="font-bold">{$Think.session.society}</strong></span>
+                                <else />
+                                    <span class="block m-t-xs"> <strong class="font-bold">{$Think.session.nickname}</strong></span>
+                                </if>
+                                <span class="text-muted text-xs block">{$Think.session.account} <b class="caret"></b></span>
+                            </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="{:U('Base/changePwd')}">修改密码</a></li>
                         </ul>

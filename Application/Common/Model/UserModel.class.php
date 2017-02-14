@@ -79,7 +79,7 @@ class UserModel extends Model
 		$password = md5($data['password']);
 		$map1 = array('oa_user.account' => $data['username'], 'oa_user.password' => $password, 'oa_user.status' => 1);
 		$map2 = array('oa_user.username' => $data['username'], 'oa_user.password' => $password, 'oa_user.status' => 1);
-		$field = array('oa_user.id,account,last_login_time,oa_college.name college');
+		$field = array('oa_user.id,account,last_login_time,society,oa_college.name college');
 
 		if ($user_info = $this->join('LEFT JOIN __COLLEGE__ ON __USER__.cid = __COLLEGE__.id')->field($field)->where($map1)->find()) {
 			$this->setAuthInfo($user_info);
@@ -96,6 +96,9 @@ class UserModel extends Model
 		session(C('USER_AUTH_KEY'), $data['id']);
 		session('account', $data['account']);
 		session('nickname', $data['college']);
+		if ($data['society']) {
+			session('society', $data['society']);
+		}
 
 		$time = time();
 		$_data = array(
