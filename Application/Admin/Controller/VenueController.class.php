@@ -107,5 +107,33 @@ class VenueController extends BaseController
 	}
 
 
+	public function getUnionSelection()
+	{
+		if (IS_AJAX) {
+			$map['name'] = array('IN', array('国际处', '学工部', '保卫处', '党委宣传部'));
+			$data = M('Role')->where($map)->field(array('id', 'name'))->select();
+			exit(json_encode($data));
+		}
+	}
 
+
+	public function setUnions()
+	{
+		if (IS_AJAX) {
+			$id = I('post.id');
+			$union = I('post.union');
+			$data['union'] = implode(',', $union);
+
+			$union = $this->venue->where(array('id' => $id))->getField('unoin');
+			if ($unoin) {
+				return;
+			}
+
+			if ($this->venue->where(array('id' => $id))->save($data)) {
+				echo 1;
+			} else {
+				echo 0;
+			}
+		}
+	}
 }

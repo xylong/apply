@@ -12,7 +12,10 @@ var vm = new Vue({
 
         detail : {}, // 申请详情
         result : [], // 审核结果
-        myturn : '',  // 
+        myturn : '',  // 轮到自己
+        union  : false, // 联合审批
+        departments : [],   // 联合审批部门
+        union_departments : [],
 
         picked : '',    // 提交的审核结果
         opinion : '' // 意见
@@ -53,6 +56,7 @@ var vm = new Vue({
                     this.detail.img = res.data.apply.img.split(',');
                     this.result = res.data.result;
                     this.myturn = res.data.myturn;
+                    this.union = res.data.union;
             },function(res){
                 console.log(res.status);
             });
@@ -99,6 +103,43 @@ var vm = new Vue({
                 return;
             }
             $('#export').submit();
+        },
+
+        setUnion : function () {
+            this.$http
+                .get('index.php?s=/Admin/Venue/getUnionSelection')
+                .then(function(res) {
+                    this.departments = res.data;
+                    $('#myModal').modal('show');
+            },function(res){
+            });
+        },
+
+        saveUnion : function () {
+            if (this.union_departments.length === 0) {
+                swal({
+                    title: "警告",
+                    text: "选择部门不能卫东",
+                    type: "warning",
+                    confirmButtonColor: "#DD6B55",
+                    closeOnConfirm: false
+                });
+                return;
+            }
+
+            this.$http
+                .post('index.php?s=/Admin/Venue/setUnions', {
+                    id : this.detail.id,
+                    union : this.union_departments
+                }, {
+                    emulateJSON:true
+                }).then(function(res){
+                    toastr.success('设置成功');
+                    this.union_departments = [];
+                    $('#myModal').modal('hide');
+                },function(res){
+                    toastr.error('设置失败');
+                });
         }
 	},
 

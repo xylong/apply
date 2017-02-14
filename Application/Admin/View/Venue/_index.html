@@ -168,7 +168,10 @@
                                                     <a href="javascript:;" class="btn btn-xs btn-info" @click="sub">提交</a>
                                                 </div>
                                                 <div class="col-xs-7 content">
-                                                    <p class="m-b-xs"><strong>{:session('admin_name')}</strong></p>
+                                                    <p class="m-b-xs">
+                                                        <strong>{:session('admin_name')}</strong>
+                                                        <a v-show="union" class="pull-right text-navy" @click="setUnion">设置联合审批</a>
+                                                    </p>
                                                     <div class="media-body">
                                                         <textarea class="form-control" placeholder="意见" v-model="opinion"></textarea>
                                                     </div>
@@ -189,6 +192,29 @@
             </div>
         </div>
     </div>
+
+    <div class="modal inmodal fade" id="myModal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">选择联合审批单位</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                            <div class="col-sm-10">
+                                <label v-for="v in departments" class="checkbox-inline"> <input type="checkbox" v-model="union_departments" v-bind:value="v.id"> {{v.name}} </label>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" @click="saveUnion">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
 <template id="template_pagination">

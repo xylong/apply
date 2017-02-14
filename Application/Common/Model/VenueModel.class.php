@@ -197,7 +197,7 @@ class VenueModel extends Model
     public function getApplyById($id)
     {
         $apply = $this->where(array('oa_venue.id' => $id))
-                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'proposer', 'num', 'place', 'img', 'planning', 'remark', 'utype', 'stime', 'etime', 'apply_time', 'receiver'))
+                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'proposer', 'num', 'place', 'img', 'planning', 'remark', 'utype', 'stime', 'etime', 'apply_time', 'receiver', 'union'))
                     ->find();
         $result = M('Approve')->join('LEFT JOIN __ADMIN__ ON __APPROVE__.uid = __ADMIN__.id')
                             ->join('LEFT JOIN __ROLE__ ON __APPROVE__.role_id = __ROLE__.id')
@@ -214,10 +214,17 @@ class VenueModel extends Model
                 break;
             }
         }
+        // 如果是校团委则可以设置联合审批
+        $union = false;
+        if (!$apply['union'] && in_array(5, $_SESSION['role_id'])) {
+            $union = true;
+        }
+        
         return array(
             'apply' => $apply,
             'result' => $result,
-            'myturn' => $myturn
+            'myturn' => $myturn,
+            'union' => $union
         );
     }
 
