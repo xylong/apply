@@ -129,7 +129,7 @@
         }
     }).$mount('#myModal');
 
-    var bar = new Vue({
+    /*var bar = new Vue({
         data : {
             isVisible : false,
             info : {}
@@ -143,11 +143,11 @@
                     .then(function(res) {
                         res.data.borrow = res.data.borrow.split(',').map(function (item) {
                             var tmp = item.split('_');
-                            // for (obj of vm.classify) {
-                            //     if (tmp[0] == obj.id) {
-                            //         return { id : tmp[0], name : obj.name, num : tmp[1] }
-                            //     }
-                            // }
+                            for (obj of vm.classify) {
+                                if (tmp[0] == obj.id) {
+                                    return { id : tmp[0], name : obj.name, num : tmp[1] }
+                                }
+                            }
                             for (var i = 0; i < vm.classify.length; i++) {
                                 if (tmp[0] == vm.classify[i]['id']) {
                                     return { id : tmp[0], name : vm.classify[i]['name'], num : tmp[1] }
@@ -160,7 +160,7 @@
                 });
             }
         }
-    }).$mount('#bar');
+    }).$mount('#bar');*/
 
 
     /* initialize the calendar
