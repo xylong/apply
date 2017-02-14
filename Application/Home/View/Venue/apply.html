@@ -9,7 +9,7 @@
 <style>
     ul { list-style: none outside none; margin:0; padding: 0; }
     li { margin: 0 10px; display: inline; }
-    img {
+    .form-group img {
         width: 100px;
         height: 100px;
         margin: auto;
@@ -121,9 +121,10 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <span class="help-block m-b-none text-danger" v-show="prompt.images.isVisible" v-text="prompt.images.msg"></span>
+                                    
                                 </div>
                                 <a id='addPic' href="javascript:" v-on:click="addPic">添加图片 </a>
+                                <span class="help-block m-b-none text-danger" v-show="prompt.images.isVisible" v-text="prompt.images.msg"></span>
                                 <input id="pic" type="file" @change="onFileChange" multiple style="display: none;">
                             </div>
 
@@ -131,6 +132,7 @@
                                 <div class="col-lg-10">
                                     <a href="" v-on:click="addZip">上传 </a>
                                     <input id="zip" type="file" @change="fileChange" multiple style="display: none;">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.planning.isVisible" v-text="prompt.planning.msg"></span>
                                 </div>
                             </div>
                           

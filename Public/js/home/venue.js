@@ -30,7 +30,7 @@ var vm = new Vue({
             num : {isVisible : false, msg : '请输入展架数量'},
             place : {isVisible : false, msg : '请输入摆放地点'},
             images : {isVisible : false, msg : '请上传活动海报'},
-            // planning : {isVisible : false, msg : '请上传活动策划'}
+            planning : {isVisible : false, msg : '请上传活动策划'}
         },
 
         theme : '',
@@ -120,7 +120,7 @@ var vm = new Vue({
         },
 
         sub : function () {
-            // if (!this.checkData()) return;
+            if (!this.checkData()) return;
             // 处理截止日期
             if (this.etime) {
                 var etime = null;
@@ -155,6 +155,16 @@ var vm = new Vue({
         checkData : function () {
             var flag = true;
             for (var key in this.prompt) {
+                if (key == 'phone') {
+                    if (!checkPhone(this.phone)) {
+                        this.prompt[key]['isVisible'] = true;
+                        flag = false;
+                    } else {
+                        this.prompt[key]['isVisible'] = false;
+                    }
+                    continue;
+                }
+
                 if (this[key].length === 0) {
                     this.prompt[key]['isVisible'] = true;
                     flag = false;
@@ -203,6 +213,18 @@ calendar.fullCalendar({
 
 
     eventClick: function(event, jsEvent, view) {
+        var now = new Date().Format("yyyy-MM-dd");
+        if (!event.id && lessCurrentTime(event.start.format('YYYY-MM-DD'))) {
+            swal({
+                title: "申请错误",
+                text: "起始时间不能小于当前时间",
+                type: "warning",
+                confirmButtonColor: "#DD6B55",
+                closeOnConfirm: false
+            });
+            return
+        };
+        
         vm.stime = event.start.format('YYYY-MM-DD');
         vm.etime = event.end ? event.end.format('YYYY-MM-DD') : null;
         $('#myModal').modal('show');
