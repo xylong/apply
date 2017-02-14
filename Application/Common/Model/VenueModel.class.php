@@ -259,22 +259,20 @@ class VenueModel extends Model
             // 转发申请
             $step = C('STEP');
             $index = self::APPLY_TYPE - 1;  // 申请类型
+            $key = $data['utype'] - 1;
 
             // 根据申请者类型来转发
             $i = $data['step'] + 1;
-            switch ($data['utype']) {
-                case 1:
-                    $new_receiver = $step[$index][0][$i];
-                    break;
-
-                case 2:
-                    $new_receiver = $step[$index][1][$i];
-                    break;
-                
-                default:
-                    $new_receiver = $step[$index][2][$i];
-                    break;
+            if ($i >= count($step[$index][$key])) {
+                if ($union = $this->where(array('id' => $data['aid']))->getField('union')) {
+                    $arr = explode(',', $union);
+                    foreach ($arr as $v) {
+                        array_push($step[$index][$key], $v);
+                    }
+                }
             }
+            $new_receiver = $step[$index][$data['utype'] - 1][$i];
+
             return $this->save(array('id' => $data['aid'], 'receiver' => $new_receiver));
         }
         return false;

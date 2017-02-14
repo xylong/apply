@@ -124,8 +124,8 @@ class VenueController extends BaseController
 			$union = I('post.union');
 			$data['union'] = implode(',', $union);
 
-			$union = $this->venue->where(array('id' => $id))->getField('unoin');
-			if ($unoin) {
+			$union = $this->venue->where(array('id' => $id))->getField('union');
+			if ($union) {
 				return;
 			}
 

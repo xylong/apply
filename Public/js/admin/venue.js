@@ -119,7 +119,7 @@ var vm = new Vue({
             if (this.union_departments.length === 0) {
                 swal({
                     title: "警告",
-                    text: "选择部门不能卫东",
+                    text: "选择部门不能为空",
                     type: "warning",
                     confirmButtonColor: "#DD6B55",
                     closeOnConfirm: false
@@ -135,7 +135,6 @@ var vm = new Vue({
                     emulateJSON:true
                 }).then(function(res){
                     toastr.success('设置成功');
-                    this.union_departments = [];
                     $('#myModal').modal('hide');
                 },function(res){
                     toastr.error('设置失败');
