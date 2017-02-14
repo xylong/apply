@@ -157,5 +157,3 @@ var vm = new Vue({
 vm.$watch('isActive', function() {
     this.getList(1);
 });
-
-
