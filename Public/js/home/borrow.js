@@ -42,7 +42,8 @@
             end : '',
 
             classify : [],
-            borrow : []
+            borrow : [],
+            other : ''
         },
 
         filters: {
@@ -100,6 +101,7 @@
 
                 var data = {
                     borrow: this.borrow,
+                    other : this.other,
                     theme : this.theme,
                     phone : this.phone,
                     stime : this.start
