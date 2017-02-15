@@ -43,7 +43,7 @@
 
             classify : [],
             borrow : [],
-            other : ''
+            other : '',
         },
 
         filters: {

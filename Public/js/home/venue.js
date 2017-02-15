@@ -214,6 +214,7 @@ calendar.fullCalendar({
 
     eventClick: function(event, jsEvent, view) {
         var now = new Date().Format("yyyy-MM-dd");
+        if (event.id) return;
         if (!event.id && lessCurrentTime(event.start.format('YYYY-MM-DD'))) {
             swal({
                 title: "申请错误",
