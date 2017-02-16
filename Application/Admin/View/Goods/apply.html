@@ -6,7 +6,7 @@
         <div class="col-sm-7">
             <div class="ibox">
                 <div class="ibox-content">
-                    <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
+                    <!-- <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span> -->
                     <h2>申请列表</h2>
                     <div class="input-group">
                         <input type="text" placeholder="输入申请码搜索" class="input form-control" v-model="apply_code">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="clients-list">
                         <ul class="nav nav-tabs">
-                            <span class="pull-right small text-muted">1406 Elements</span>
+                            <!-- <span class="pull-right small text-muted">1406 Elements</span> -->
                             <li :class="{ active : isActive == v.type }" v-for="v in tab" @click="tabChange(v.type)"><a data-toggle="tab" :href="'#tab-' + v.type"><i class="fa fa-briefcase"></i> {{v.name}}</a></li>
                         </ul>
                         <div class="tab-content">
