@@ -17,7 +17,7 @@ var vm = new Vue({
         },
         prompt : {
             account : {isVisible : false, msg : '账号不能为空'},
-            password : {isVisible : false, msg : '密码长度不能小于6位'},
+            password : {isVisible : false, msg : ''},
             repassword : {isVisible : false, msg : '两次密码输入不一致'},
             id_number : {isVisible : false, msg : '一卡通不能为空'},
             phone : {isVisible : false, msg : '请输入正确手机号'}
@@ -158,6 +158,11 @@ var vm = new Vue({
                 flag = false;
             } else {this.prompt.phone.isVisible = false}
 
+            if (!this.password_strength()) {
+                this.prompt.password.isVisible = true;
+                flag = false;
+            } else {this.prompt.password.isVisible = false}
+
             if (this.user.password != this.user.repassword) {
                 this.prompt.repassword.isVisible = true;
                 flag = false;
@@ -165,6 +170,44 @@ var vm = new Vue({
 
             return flag;
         },
+
+        password_strength : function () {
+            var numasc = 0;
+            var charasc = 0;
+            var otherasc = 0;
+            if(0 == this.user.password.length){
+                this.prompt.password.msg = '密码不能为空';
+                return false;
+            }else if(this.user.password.length < 8 || this.user.password.length > 12){
+                this.prompt.password.msg = '密码至少8个字符,最多12个字符';
+                return false;
+            }else{
+                for (var i = 0; i < this.user.password.length; i++) {
+                    var asciiNumber = this.user.password.substr(i, 1).charCodeAt();
+                    if (asciiNumber >= 48 && asciiNumber <= 57) {
+                        numasc += 1;
+                    }
+                    if ((asciiNumber >= 65 && asciiNumber <= 90)||(asciiNumber >= 97 && asciiNumber <= 122)) {
+                        charasc += 1;
+                    }
+                    if ((asciiNumber >= 33 && asciiNumber <= 47)||(asciiNumber >= 58 && asciiNumber <= 64)||(asciiNumber >= 91 && asciiNumber <= 96)||(asciiNumber >= 123 && asciiNumber <= 126)) {
+                        otherasc += 1;
+                    }
+                }
+                if(0 == numasc)  {
+                    this.prompt.password.msg = '密码必须含有数字';
+                    return false;
+                }else if(0 == charasc){
+                    this.prompt.password.msg = '密码必须含有字母';
+                    return false;
+                }else if(0 == otherasc){
+                    this.prompt.password.msg = '密码必须含有特殊字符';
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        }
 
     },
 
