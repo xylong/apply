@@ -65,17 +65,19 @@ class VenueController extends BaseController
 
     public function apply()
     {
-    	if (IS_AJAX) {
+    	if (IS_POST) {
     		if (!$this->venue->create()) {
 				$this->error($this->venue->getError());
 			} else {
 				if ($this->venue->add()) {
-					returnJson(true, '申请提交成功');
+					// $this->success('申请提交成功');
+					echo "<script>alert('申请提交成功');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 				} else {
-					returnJson(false, '申请提交失败');
+					$this->error('申请提交失败');
 				}
 			}
     	}
+
     	$this->display();
     }
 

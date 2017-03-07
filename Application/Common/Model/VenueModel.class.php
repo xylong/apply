@@ -49,7 +49,7 @@ class VenueModel extends Model
 
 
     // 上传图片
-    public function saveImg()
+    /*public function saveImg()
     {
         $images = $_POST['images'];
         $dir = mk_dir(self::UPLOAD_DIR);
@@ -67,6 +67,41 @@ class VenueModel extends Model
             $str .= ',' . $dir . $fileName;
         }
         return ltrim(rtrim($str, ','), ',');
+    }*/
+
+
+    public function saveImg()
+    {
+        return $this->upload('images');
+    }
+
+
+    public function upload($name){
+        $upload = new \Think\Upload();
+        $upload->maxSize   =     5242880;
+        $upload->rootPath  =     './Public/';
+        $upload->savePath  =     'Upload/';
+
+        if ($name == 'images') {
+            $str = '';
+            
+            $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');
+            $info   =   $upload->upload();
+            foreach ($info as $file) {
+                $str  .= date('Y-m-d') . '/' . $file['savename'] . ',';
+            }
+            return rtrim($str, ',');
+        }
+
+        
+        $upload->exts      =     array('zip', 'rar', 'tar');
+        // 上传单个文件
+        $info   =   $upload->uploadOne($_FILES[$name]);    
+        if (!$info) {
+            $this->error($upload->getError());
+        }else{
+            return date('Y-m-d') . '/' . $info['savename'];
+        }
     }
 
 
@@ -76,7 +111,8 @@ class VenueModel extends Model
      */
     public function savePlan()
     {
-        $file = $_POST['planning'];
+        return $this->upload('planning');
+        /*$file = $_POST['planning'];
         $file = preg_replace('/data:.*;base64,/i', '', $file);
         $data = base64_decode($file);
 
@@ -85,7 +121,7 @@ class VenueModel extends Model
         $saveName = self::UPLOAD_DIR . $dir . $fileName;
 
         $success = file_put_contents($saveName, $data);
-        return $dir . $fileName;
+        return $dir . $fileName;*/
     }
 
 

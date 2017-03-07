@@ -112,22 +112,29 @@ var vm = new Vue({
 
         fileChange : function (e) {
             var files = e.target.files || e.dataTransfer.files;
-                var reader = new FileReader();
-                reader.readAsDataURL(files[0]);
-                reader.onload = function(e){
-                    vm.planning = e.target.result;
-                };
+            this.planning = files[0].name;
+                // var reader = new FileReader();
+                // reader.readAsDataURL(files[0]);
+                // reader.onload = function(e){
+                //     vm.planning = e.target.result;
+                // };
         },
 
         sub : function () {
             if (!this.checkData()) return;
             // 处理截止日期
             if (this.etime) {
-                var etime = null;
-                etime = this.etime ? this.etime.substring(0, 8) + (parseInt(this.etime.substring(8)) - 1) : null;
+                var etime = this.etime.substring(0, 8) + (parseInt(this.etime.substring(8)) - 1);
+            } else {
+                var etime = this.stime;
             }
 
-            this.$http
+            $('#stime').val(this.stime);
+            $('#etime').val(etime);
+            $('#uploadForm').submit();
+              
+
+            /*this.$http
                 .post('index.php?s=/Home/Venue/apply', {
                     theme   : this.theme,
                     proposer: this.proposer,
@@ -149,7 +156,7 @@ var vm = new Vue({
                     this.images = [];
                 }, function(res){
                     toastr.error('申请提交失败');
-                });
+                });*/
         },
 
         checkData : function () {

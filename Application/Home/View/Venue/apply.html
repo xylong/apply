@@ -58,60 +58,62 @@
             <div class="modal-body">
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" action="{:U('Venue/apply')}" enctype ="multipart/form-data" method="post" id= "uploadForm">
+                            <input type="hidden" name="stime" id="stime">
+                            <input type="hidden" name="etime" id="etime">
 
                             <div class="form-group" id="data_5"><label class="col-lg-2 control-label">活动时间</label>
                                 <div class="col-lg-10">
                                     <div class="input-daterange input-group" id="datepicker">
-                                        <input type="text" class="input-sm form-control" disabled v-model="stime" />
+                                        <input type="text" class="input-sm form-control" name="stime" disabled v-model="stime" />
                                         <span class="input-group-addon">to</span>
-                                        <input type="text" class="input-sm form-control" disabled v-model="etime | reduceDay" />
+                                        <input type="text" class="input-sm form-control" name="etime" disabled v-model="etime | reduceDay" />
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="form-group"><label class="col-lg-2 control-label">活动主题</label>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="" class="form-control" v-model="theme">
+                                    <input type="text" name="theme" class="form-control" v-model="theme">
                                     <span class="help-block m-b-none text-danger" v-show="prompt.theme.isVisible" v-text="prompt.theme.msg"></span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">申请人</label>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="" class="form-control" v-model="proposer">
+                                    <input type="text" name="proposer" class="form-control" v-model="proposer">
                                     <span class="help-block m-b-none text-danger" v-show="prompt.proposer.isVisible" v-text="prompt.proposer.msg"></span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">联系方式</label>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="" class="form-control" v-model="phone">
+                                    <input type="text" name="phone" class="form-control" v-model="phone">
                                     <span class="help-block m-b-none text-danger" v-show="prompt.phone.isVisible" v-text="prompt.phone.msg"></span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">使用数量</label>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="" class="form-control" v-model="num">
+                                    <input type="number" name="num" class="form-control" v-model="num">
                                     <span class="help-block m-b-none text-danger" v-show="prompt.num.isVisible" v-text="prompt.num.msg"></span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">摆放地点</label>
                                 <div class="col-lg-10">
-                                    <input type="text" placeholder="" class="form-control" v-model="place">
+                                    <input type="text" name="place" class="form-control" v-model="place">
                                     <span class="help-block m-b-none text-danger" v-show="prompt.place.isVisible" v-text="prompt.place.msg"></span>
                                 </div>
                             </div>
 
                             <div class="form-group"><label class="col-lg-2 control-label">备注</label>
                                 <div class="col-lg-10">
-                                    <textarea class="form-control diff-textarea"></textarea>
+                                    <textarea class="form-control diff-textarea" name="remark"></textarea>
                                 </div>
                             </div>
 
-                            <div class="form-group"><label class="col-lg-2 control-label">附件</label>
+                            <div class="form-group"><label class="col-lg-2 control-label"><a id='addPic' href="javascript:" v-on:click="addPic">添加图片 </a></label>
                                 <div class="col-lg-12" v-if="images.length > 0">
                                     <ul>
                                         <li v-for="(key,image) in images">
@@ -123,16 +125,17 @@
                                     </ul>
                                     
                                 </div>
-                                <a id='addPic' href="javascript:" v-on:click="addPic">添加图片 </a>
+                                
                                 <span class="help-block m-b-none text-danger" v-show="prompt.images.isVisible" v-text="prompt.images.msg"></span>
-                                <input id="pic" type="file" @change="onFileChange" multiple style="display: none;">
+                                <input id="pic" type="file" name="images" @change="onFileChange" multiple style="display: none;">
                             </div>
 
-                            <div class="form-group"><label class="col-lg-2 control-label">策划</label>
+                            <div class="form-group"><label class="col-lg-2 control-label"><a href="javascript;" v-on:click="addZip">上传策划 </a></label>
                                 <div class="col-lg-10">
-                                    <a href="" v-on:click="addZip">上传 </a>
-                                    <input id="zip" type="file" @change="fileChange" multiple style="display: none;">
+                                    
+                                    <input id="zip" type="file" name="planning" @change="fileChange" multiple style="display: none;">
                                     <span class="help-block m-b-none text-danger" v-show="prompt.planning.isVisible" v-text="prompt.planning.msg"></span>
+                                    <span class="help-block m-b-none" v-show="planning" v-text="planning"></span>
                                 </div>
                             </div>
                           
