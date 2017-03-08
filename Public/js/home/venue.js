@@ -27,7 +27,7 @@ var vm = new Vue({
             theme : {isVisible : false, msg : '活动主题不能为空'},
             proposer : {isVisible : false, msg : '申请人不能为空'},
             phone : {isVisible : false, msg : '手机号格式错误'},
-            num : {isVisible : false, msg : '请输入展架数量'},
+            num : {isVisible : false, msg : '请输入展架数量(0-5之间)'},
             place : {isVisible : false, msg : '请输入摆放地点'},
             images : {isVisible : false, msg : '请上传活动海报'},
             planning : {isVisible : false, msg : '请上传活动策划'}
@@ -164,6 +164,16 @@ var vm = new Vue({
             for (var key in this.prompt) {
                 if (key == 'phone') {
                     if (!checkPhone(this.phone)) {
+                        this.prompt[key]['isVisible'] = true;
+                        flag = false;
+                    } else {
+                        this.prompt[key]['isVisible'] = false;
+                    }
+                    continue;
+                }
+
+                if (key == 'num') {
+                    if (this.num < 0 || this.num > 5) {
                         this.prompt[key]['isVisible'] = true;
                         flag = false;
                     } else {
