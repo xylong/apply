@@ -36,7 +36,8 @@
                 selected : {isVisible : false, msg : '请选择青春工坊'},
                 reason : {isVisible : false, msg : '使用事由不能为空'}
             },
-            houses : []
+            houses : [],
+            times : []  // 一天内的所有时间段
         },
 
         methods : {
@@ -73,11 +74,77 @@
                         this.prompt[key]['isVisible'] = false;
                     }
                 }
+
+                /* 判断时间重叠 */
+                var arr = [];
+                for (var i = 0; i < this.times.length; i++) {
+                    if (this.times[i].house == this.selected) {
+                        arr.push(this.times[i]);
+                    }
+                }
+                
+                for (var n = 0; n < arr.length; n++) {
+                    if ( !(this.end <= arr[n].stime || this.start >= arr[n].etime) ) {
+                        switch (this.selected) {
+                            case '1':
+                                this.prompt.selected.msg = '绘智格预约时间冲突';
+                                break;
+                            case '2':
+                                this.prompt.selected.msg = '艺韵厅预约时间冲突';
+                                break;
+                            case '3':
+                                this.prompt.selected.msg = '创意格预约时间冲突';
+                                break;
+                        }
+                        this.prompt.selected.isVisible = true;
+                        flag = false;
+                    }
+                }
+
                 return flag;
             },
 
-            getEvent: function () {
+            // 判断是否在开放时间内
+            is_in_opening: function () {
+                var stime = this.start.split(' '),
+                    etime = this.end.split(' '),
+                    open = '09:00:00',
+                    close = '21:00:00';
 
+                if (stime[1] >= open && etime[1] <= close) {
+                    return true;
+                }
+                return false;
+            },
+
+            // 最大时间跨度
+            maxSpan : function () {
+                var s = new Date(this.start),
+                    e = new Date(this.end);
+
+                var msec = (e.getTime() - s.getTime()) % (24 * 3600 * 1000);
+                var hours = msec / (3600 * 1000);
+                if (hours > 3) {
+                    return false;
+                }
+                return true;
+            },
+
+            /* 判断时间交叉 */
+            overlapping : function () {
+                var date = this.start.split(' ');
+                date = date[0];
+
+                this.$http
+                    .get('index.php?s=/Home/House/timesInDay', {
+                        date : date
+                    })
+                    .then(function(res) {
+                        if (res.data.length !== 0) {
+                            this.times = res.data;
+                        }
+                    },function(res){
+                    });
             }
         },
 
@@ -161,6 +228,27 @@
 
         eventClick: function(event, jsEvent, view) {
             if (event.id) return;
+            if (!vm.is_in_opening()) {
+                swal({
+                    title: "时间超出",
+                    text: "开放时间从早上9点到晚上九点",
+                    type: "warning",
+                    confirmButtonColor: "#DD6B55",
+                    closeOnConfirm: false
+                });
+                return;
+            }
+            if (!vm.maxSpan()) {
+                swal({
+                    title: "时间超出",
+                    text: "最大的时间跨度为3个小时",
+                    type: "warning",
+                    confirmButtonColor: "#DD6B55",
+                    closeOnConfirm: false
+                });
+                return;
+            }
+            vm.overlapping();
             $('#myModal').modal('show');
         },
 

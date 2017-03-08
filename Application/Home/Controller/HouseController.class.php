@@ -71,5 +71,15 @@ class HouseController extends BaseController
 	}
 
 
+	public function timesInDay()
+	{
+		if (IS_AJAX) {
+			$date = I('get.date');
+			$data = $this->rent->getTimeByDay($date);
+			exit(json_encode($data));
+		}
+	}
+
+
 
 }

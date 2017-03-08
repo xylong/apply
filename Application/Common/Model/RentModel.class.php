@@ -159,4 +159,15 @@ class RentModel extends Model
     }
 
 
+    /**
+     * 获取某一天的所有时间段
+     * @return [type] [description]
+     */
+    public function getTimeByDay($date)
+    {
+        $sql = "SELECT `house`,`stime`,`etime` FROM `oa_rent` WHERE date_format(stime,'%Y-%m-%d') = '{$date}'";
+        return $this->query($sql);
+    }
+
+
 }
