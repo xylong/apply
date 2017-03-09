@@ -93,11 +93,12 @@ class UserModel extends Model
 
 	private function setAuthInfo($data)
 	{
-		session(C('USER_AUTH_KEY'), $data['id']);
-		session('account', $data['account']);
-		session('nickname', $data['college']);
+		$user_auth_key = C('USER_AUTH_KEY');
+		$_SESSION[$user_auth_key] = $data['id'];
+		$_SESSION['account'] = $data['account'];
+		$_SESSION['nickname'] = $data['college'];
 		if ($data['society']) {
-			session('society', $data['society']);
+			$_SESSION['society'] = $data['society'];
 		}
 
 		$time = time();

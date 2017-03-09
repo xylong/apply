@@ -58,6 +58,7 @@ class PublicController extends Controller
 			session('admin_name', null);
 			session('role_id', null);
 			session('menu', null);
+			session_destroy();
 
 			redirect(U(C('USER_AUTH_GATEWAY')));
 		} else {

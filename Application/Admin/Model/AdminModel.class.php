@@ -73,14 +73,15 @@ class AdminModel extends Model
 	private function setAuthInfo($data)
 	{
 		if ($data['account'] === 'admin') {
-			session(C('ADMIN_AUTH_KEY'), true);
+			$admin_auth_key = C('ADMIN_AUTH_KEY');
+			$_SESSION[$admin_auth_key] = true;
 		}
 
 		$role_id = M('RoleUser')->where(array('user_id' => $data['id']))->getField('role_id', true);
-		session('role_id', $role_id);
-
-		session(C('USER_AUTH_KEY'), $data['id']);
-		session('admin_name', $data['account']);
+		$_SESSION['role_id'] = $role_id;
+		$user_auth_key = C('USER_AUTH_KEY');
+		$_SESSION[$user_auth_key] = $data['id'];
+		$_SESSION['admin_name'] = $data['account'];
 
 		$time = time();
 		$_data = array(
