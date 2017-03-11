@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 function checkPhone(data) {
-	return /^((\(\d{2,3}\))|(\d{3}\-))?13\d{9}$/.test(data);
+	return /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/.test(data);
 }
 
 /**
