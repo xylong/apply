@@ -11,6 +11,11 @@ class HouseController extends BaseController
 
 	public function _initialize()
 	{
+		$permit_id = session(C('USER_AUTH_KEY'));
+		if (!isset($permit_id)) {
+			redirect(U(C('USER_AUTH_GATEWAY')));
+		}
+		
 		$this->house = D('House');
 		$this->rent = D('Rent');
 		$this->assign('menu_action', 'house');

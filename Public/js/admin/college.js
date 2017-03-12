@@ -3,6 +3,9 @@ var vm = new Vue({
 		keyword : '',
 		list : [],
 
+        department : '',
+        id : 0,
+
 		total: 0,
         display: 10,
         current: 1,
@@ -62,6 +65,41 @@ var vm = new Vue({
                     toastr.success('分配成功');
                 },function(res){
                     toastr.success('分配失败');
+                });
+        },
+
+        add : function () {
+            $('#myModal').modal('show');
+        },
+
+        edit : function (id, name) {
+            this.id = id;
+            this.department = name;
+            $('#myModal').modal('show');
+        },
+
+        sub : function () {
+            if (this.department.length === 0) return;
+
+            var data = {
+                id : this.id,
+                name : this.department
+            };
+
+            this.$http
+                .post('addDep', data, {
+                    emulateJSON:true
+                }).then(function(res){
+                    if (res.data.status) {
+                        $('#myModal').modal('hide');
+                        toastr.success('操作成功');
+                        this.department = '';
+                        this.cid = 0;
+                    } else {
+                        toastr.warning(res.data.info);
+                    }
+                },function(res){
+                    toastr.error('操作失败');
                 });
         }
 	},

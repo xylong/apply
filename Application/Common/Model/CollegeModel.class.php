@@ -6,6 +6,10 @@ use Think\Model;
  */
 class CollegeModel extends Model
 {
+	protected $_validate = array(
+		array('id', 'number', '', 2, '', 2),
+		array('name', 'require', '学院或部门已存在', 1, 'unique', 3),
+	);
 
 	public function getColleges($p, $keyword)
 	{

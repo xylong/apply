@@ -10,6 +10,11 @@ class UserController extends BaseController
 
 	public function _initialize()
 	{
+		$auth_id = session(C('USER_AUTH_KEY'));
+		if (!isset($auth_id)) {
+			redirect(U(C('USER_AUTH_GATEWAY')));
+		}
+		
 		$this->user = D('User');
 		$this->assign('current', CONTROLLER_NAME . '/' . ACTION_NAME);
 	}
@@ -86,6 +91,31 @@ class UserController extends BaseController
 		}
 
 		$this->display();
+	}
+
+
+	public function addDep()
+	{
+		if (IS_AJAX) {
+			$model = D('College');
+			if (!$model->create()) {
+				$this->error($model->getError());
+			} else {
+				if ($model->id) {
+					if ($model->save()) {
+						returnJson(true, '修改成功');
+					} else {
+						returnJson(false, '修改失败');
+					}
+				}
+
+				if ($model->add()) {
+					returnJson(true, '添加成功');
+				} else {
+					returnJson(false, '添加失败');
+				}
+			}
+		}
 	}
 
 

@@ -11,6 +11,11 @@ class VenueController extends BaseController
 
 	public function _initialize()
 	{
+		$permit_id = session(C('USER_AUTH_KEY'));
+		if (!isset($permit_id)) {
+			redirect(U(C('USER_AUTH_GATEWAY')));
+		}
+		
 		$this->venue = D('Venue');
 		$this->assign('menu_action', 'venue');
 	}

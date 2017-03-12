@@ -11,6 +11,11 @@ class BorrowController extends BaseController
 
 	public function _initialize()
 	{
+        $permit_id = session(C('USER_AUTH_KEY'));
+        if (!isset($permit_id)) {
+            redirect(U(C('USER_AUTH_GATEWAY')));
+        }
+        
 		$this->goods = D('Goods');
 		$this->borrow = D('Borrow');
         $this->assign('menu_action', 'borrow');

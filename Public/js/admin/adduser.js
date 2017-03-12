@@ -3,7 +3,7 @@ var vm = new Vue({
 		type : [
 			{ id : 1, name : '学院团委学生会' },
 			{ id : 2, name : '社团'},
-			{ id : 3, name : '学院团委学生会'},
+			{ id : 3, name : '校级学生组织'},
 		],
 
 		prompt : {

@@ -11,6 +11,11 @@ class GoodsController extends BaseController
 
 	public function _initialize()
 	{
+		$auth_id = session(C('USER_AUTH_KEY'));
+		if (!isset($auth_id)) {
+			redirect(U(C('USER_AUTH_GATEWAY')));
+		}
+		
 		$this->goods = D('Goods');
 		$this->borrow = D('Borrow');
 		$this->assign('current', CONTROLLER_NAME . '/' . ACTION_NAME);

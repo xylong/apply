@@ -11,6 +11,11 @@ class MenuController extends BaseController
 
 	public function _initialize()
 	{
+        $auth_id = session(C('USER_AUTH_KEY'));
+        if (!isset($auth_id)) {
+            redirect(U(C('USER_AUTH_GATEWAY')));
+        }
+        
 		$this->menu = D('Menu');
         $this->assign('current', CONTROLLER_NAME . '/' . ACTION_NAME);
 	}
