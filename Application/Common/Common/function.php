@@ -72,7 +72,7 @@ function checkAccount($data)
  */
 function checkPhone($data)
 {
-	return preg_match('/^((\(\d{2,3}\))|(\d{3}\-))?13\d{9}$/', $data);
+	return preg_match('/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/', $data);
 }
 
 
