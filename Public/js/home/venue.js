@@ -29,7 +29,7 @@ var vm = new Vue({
             phone : {isVisible : false, msg : '手机号格式错误'},
             num : {isVisible : false, msg : '请输入展架数量(0-5之间)'},
             place : {isVisible : false, msg : '请输入摆放地点'},
-            images : {isVisible : false, msg : '请上传活动海报'},
+            images : {isVisible : false, msg : '请上传活动海报(至多3张)'},
             planning : {isVisible : false, msg : '请上传活动策划'}
         },
 
@@ -79,6 +79,7 @@ var vm = new Vue({
         onFileChange: function(e) {
             var files = e.target.files || e.dataTransfer.files;
             if (!files.length) return; 
+            this.images = [];
             this.createImage(files);
 
         },
@@ -101,6 +102,7 @@ var vm = new Vue({
         },
 
         delImage: function(index){
+            var files = document.getElementById('pic').files;
             this.images.shift(index);
         },
 
@@ -164,20 +166,30 @@ var vm = new Vue({
             for (var key in this.prompt) {
                 if (key == 'phone') {
                     if (!checkPhone(this.phone)) {
-                        this.prompt[key]['isVisible'] = true;
+                        this.prompt.phone.isVisible = true;
                         flag = false;
                     } else {
-                        this.prompt[key]['isVisible'] = false;
+                        this.prompt.phone.isVisible = false;
                     }
                     continue;
                 }
 
                 if (key == 'num') {
                     if (this.num < 0 || this.num > 5) {
-                        this.prompt[key]['isVisible'] = true;
+                        this.prompt.num.isVisible = true;
                         flag = false;
                     } else {
-                        this.prompt[key]['isVisible'] = false;
+                        this.prompt.num.isVisible = false;
+                    }
+                    continue;
+                }
+
+                if (key == 'images') {
+                    if (this.images.length === 0 || this.images.length > 3) {
+                        this.prompt.images.isVisible = true;
+                        flag = false;
+                    } else {
+                        this.prompt.images.isVisible = false;
                     }
                     continue;
                 }

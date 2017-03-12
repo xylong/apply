@@ -70,38 +70,19 @@ class VenueModel extends Model
     }*/
 
 
-    public function saveImg()
-    {
-        return $this->upload('images');
-    }
-
-
-    public function upload($name){
+    public function saveImg(){
         $upload = new \Think\Upload();
         $upload->maxSize   =     5242880;
         $upload->rootPath  =     './Public/';
         $upload->savePath  =     'Upload/';
+        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');
 
-        if ($name == 'images') {
-            $str = '';
-            
-            $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');
-            $info   =   $upload->upload();
-            foreach ($info as $file) {
-                $str  .= date('Y-m-d') . '/' . $file['savename'] . ',';
-            }
-            return rtrim($str, ',');
+        $str = '';
+        $info   =   $upload->upload(array($_FILES['images']));
+        foreach ($info as $file) {
+            $str  .= date('Y-m-d') . '/' . $file['savename'] . ',';
         }
-
-        
-        $upload->exts      =     array('zip', 'rar', 'tar');
-        // 上传单个文件
-        $info   =   $upload->uploadOne($_FILES[$name]);    
-        if (!$info) {
-            $this->error($upload->getError());
-        }else{
-            return date('Y-m-d') . '/' . $info['savename'];
-        }
+        return rtrim($str, ',');
     }
 
 
@@ -111,7 +92,19 @@ class VenueModel extends Model
      */
     public function savePlan()
     {
-        return $this->upload('planning');
+        $upload = new \Think\Upload();
+        $upload->maxSize   =     5242880;
+        $upload->rootPath  =     './Public/';
+        $upload->savePath  =     'Upload/';
+        $upload->exts      =     array('zip', 'rar', 'tar');
+
+        // 上传单个文件
+        $info   =   $upload->uploadOne($_FILES['planning']);    
+        if (!$info) {
+            $this->error($upload->getError());
+        }else{
+            return date('Y-m-d') . '/' . $info['savename'];
+        }
         /*$file = $_POST['planning'];
         $file = preg_replace('/data:.*;base64,/i', '', $file);
         $data = base64_decode($file);
