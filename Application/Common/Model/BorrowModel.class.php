@@ -141,7 +141,10 @@ class BorrowModel extends Model
                             ->field('oa_approve.*,oa_admin.account,oa_role.name role_name')
                             ->select();
 
-        $need = explode(',', $apply['borrow']);
+        if ($apply['borrow']) {
+            $need = explode(',', $apply['borrow']);
+        }
+        
         $model = D('Goods');
         $apply['borrow'] = $model->getNeed($need);
         if ($apply['goods']) {
