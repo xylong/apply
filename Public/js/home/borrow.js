@@ -44,6 +44,12 @@
             classify : [],
             borrow : [],
             other : '',
+
+            cue : {
+                theme : {isVisible : false, msg : '活动主题不能为空'},
+                phone : {isVisible : false, msg : '手机号格式错误'},
+                borrow : {isVisible : false, msg : '至少选择一项或填写借用物品'},
+            },
         },
 
         filters: {
@@ -64,8 +70,13 @@
                         return value.replace(/.+\_/, '');
                     }
                 },
-                write : function (newVal, oldVal, index) {
-                    if (newVal) return index + '_' + newVal;
+                write : function (newVal, oldVal, id, index) {
+                    if (/\d/.test(newVal)) {
+                        var limit = parseInt(this.classify[index]['stock']) - parseInt(this.classify[index]['occupy']);
+                        if (parseInt(newVal) <= limit) {
+                            return id + '_' + newVal;
+                        }
+                    }
                 }
             }
         },
@@ -86,18 +97,46 @@
                 });
             },
 
+            checknum : function (val) {
+                console.log(val)
+            },
+
             // 过滤提交的数据
             filterData : function () {
-                if (this.theme.length === 0) return;
-                if (!checkPhone(this.phone)) return;
+                var flag = true;
 
+                if (this.theme.length === 0) {
+                    this.cue.theme.isVisible = true;
+                    flag = false;
+                } else {
+                    this.cue.theme.isVisible = false;
+                }
+
+                if (!checkPhone(this.phone)) {
+                    this.cue.phone.isVisible = true;
+                    flag = false;
+                } else {
+                    this.cue.phone.isVisible = false;
+                }
+                
                 // 处理借用的数量
                 var len = this.borrow.length;
-                if (len === 0) return;
                 for (var i = 0; i < len; i++) {
                     if (this.borrow[i] === undefined) this.borrow[i] = 0;
                 }
+                this.borrow = this.borrow.filter(function (value) {
+                    return value;
+                });
 
+                // 判断是否借用物资
+                if (this.other.length === 0) {
+                    if (this.borrow.length === 0) {
+                        this.cue.borrow.isVisible = true;
+                        flag = false;
+                    } else {this.cue.borrow.isVisible = false;}
+                } else {this.cue.borrow.isVisible = false;}
+
+                if (!flag) return;
 
                 var data = {
                     borrow: this.borrow,

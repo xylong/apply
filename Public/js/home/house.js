@@ -75,6 +75,13 @@
                     }
                 }
 
+                if (!checkPhone(this.phone)) {
+                    this.prompt.phone.isVisible = true;
+                    flag = false;
+                } else {
+                    this.prompt.phone.isVisible = false;
+                }
+
                 /* 判断时间重叠 */
                 var arr = [];
                 for (var i = 0; i < this.times.length; i++) {
@@ -231,7 +238,7 @@
             if (!vm.is_in_opening()) {
                 swal({
                     title: "时间超出",
-                    text: "开放时间从早上9点到晚上九点",
+                    text: "开放时间从早上9点到晚上9点",
                     type: "warning",
                     confirmButtonColor: "#DD6B55",
                     closeOnConfirm: false

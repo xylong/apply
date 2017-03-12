@@ -10,7 +10,7 @@ class BorrowModel extends Model
 		array('theme', 'require', '活动主题必填', 1, '', 1),	// 主题
 		array('phone', 'checkPhone', '手机格式错误', 1, 'function', 1),	// 手机号
         array('stime', 'require', '开始时间必选', 1), // 开始时间
-		array('borrow', 'is_array', '借用详情必填', 1, 'function', 1),	// 申请数量
+		// array('borrow', 'is_array', '借用详情必填', 1, 'function', 1),	// 申请数量
 	);
 
 	protected $_auto = array ( 

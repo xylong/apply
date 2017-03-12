@@ -77,20 +77,6 @@
                     <div class="ibox-content">
                         <form class="form-horizontal">
 
-                            <div class="form-group"><label class="col-lg-2 control-label">活动主题</label>
-                                <div class="col-lg-10">
-                                    <input type="text" placeholder="" class="form-control" v-model="theme">
-                                    <!-- <span class="help-block m-b-none">Example block-level help text here.</span> -->
-                                </div>
-                            </div>
-
-                            <div class="form-group"><label class="col-lg-2 control-label">手机</label>
-                                <div class="col-lg-10">
-                                    <input type="text" placeholder="" class="form-control" v-model="phone">
-                                    <!-- <span class="help-block m-b-none">Example block-level help text here.</span> -->
-                                </div>
-                            </div>
-
                             <div class="form-group" id="data_5"><label class="col-lg-2 control-label">借用时间</label>
                                 <div class="col-lg-10">
                                     <div class="input-daterange input-group" id="datepicker">
@@ -101,10 +87,24 @@
                                 </div>
                             </div>
 
-                            <div class="form-group"><label class="col-lg-2 control-label">其他借用</label>
+                            <div class="form-group"><label class="col-lg-2 control-label">活动主题</label>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="theme">
+                                    <span class="help-block m-b-none text-danger" v-show="cue.theme.isVisible" v-text="cue.theme.msg">.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">手机</label>
+                                <div class="col-lg-10">
+                                    <input type="text" placeholder="" class="form-control" v-model="phone">
+                                    <span class="help-block m-b-none text-danger" v-show="cue.phone.isVisible" v-text="cue.phone.msg">.</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">其它借用</label>
                                 <div class="col-lg-10">
                                     <input type="text" placeholder="" class="form-control" v-model="other">
-                                    <span class="help-block m-b-none">非必填字段</span>
+                                    <span class="help-block m-b-none text-danger" v-show="cue.borrow.isVisible" v-text="cue.borrow.msg">.</span>
                                 </div>
                             </div>
 
@@ -115,7 +115,7 @@
                                             <ul class="list-group clear-list m-t">
                                                 <li class="list-group-item" v-for="v in classify">
                                                     <span class="pull-right">
-                                                        <input type="text" v-model="borrow[$index] | goodsNum v.id">
+                                                        <input type="text" v-model="borrow[$index] | goodsNum v.id $index">
                                                     </span>
                                                     <span class="text-success" v-text="v.name"></span>
                                                     <i class="text-navy" v-text="v.stock-v.occupy"></i>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
                 <button type="button" class="btn btn-primary" @click="sub">提交申请</button>
             </div>
         </div>
