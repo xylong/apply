@@ -103,7 +103,7 @@ var vm = new Vue({
 
         delImage: function(index){
             var files = document.getElementById('pic').files;
-            this.images.shift(index);
+            this.images.splice(index, 1);
         },
 
         addZip(e){
