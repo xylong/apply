@@ -69,6 +69,8 @@ var vm = new Vue({
         },
 
         add : function () {
+            this.id = 0;
+            this.department = '';
             $('#myModal').modal('show');
         },
 
