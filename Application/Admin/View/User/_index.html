@@ -39,7 +39,7 @@
                                                 <tr v-for="v in list">
                                                     <td class="client-avatar"><img alt="image" src="__IMG__/a2.jpg"> </td>
                                                     <td v-text="v.account"></td>
-                                                    <td v-if="v.society" v-text="v.society"></td>
+                                                    <td v-if="v.society" v-text="v.society + '(' + v.nickname + ')'"></td>
                                                     <td v-else v-text="v.nickname"></td>
                                                     <td v-text="v.phone"></td>
                                                     <td class="text-center">

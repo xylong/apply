@@ -35,12 +35,15 @@ class PublicController extends Controller
 		// 获取菜单权限
 		$model = M('RoleMenu');
 		$map['rid'] = array('IN', $_SESSION['role_id']);
-		$data = $model->where($map)->getField('mid', true);
 		$arr = array();
-		foreach ($data as $key => $value) {
-			$tmp = explode(',', $value);
-			foreach ($tmp as $index => $item) {
-				array_push($arr, $item);
+		
+		if ($_SESSION['role_id']) {
+			$data = $model->where($map)->getField('mid', true);
+			foreach ($data as $key => $value) {
+				$tmp = explode(',', $value);
+				foreach ($tmp as $index => $item) {
+					array_push($arr, $item);
+				}
 			}
 		}
 		$_SESSION['access'] = array_unique($arr);
