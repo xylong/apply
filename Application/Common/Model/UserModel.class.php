@@ -49,7 +49,7 @@ class UserModel extends Model
 
 		$Page = new \Think\Page($count, 10);
 		$count = $this->where($map)->count();
-		$rows = $this->page($p, 10)->join('LEFT JOIN __COLLEGE__ ON __USER__.cid = __COLLEGE__.id')->where($map)->field('oa_user.id,account,phone,oa_college.name nickname')->order('id')->select();
+		$rows = $this->page($p, 10)->join('LEFT JOIN __COLLEGE__ ON __USER__.cid = __COLLEGE__.id')->where($map)->field('oa_user.id,account,society,phone,oa_college.name nickname')->order('id')->select();
 
 		return array(
 			'data' => $rows,

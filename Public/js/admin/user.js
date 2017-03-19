@@ -103,10 +103,12 @@ var vm = new Vue({
 		checkData : function () {
             var flag = true;
 
-           	// if (!checkPhone(this.phone)) {
-           	// 	this.prompt.phone.isVisible = true;
-           	// 	flag = false;
-           	// } else {this.prompt.phone.isVisible = false}
+            if (this.detail.phone.length !== 0) {
+	           	if (!checkPhone(this.detail.phone)) {
+	           		this.prompt.phone.isVisible = true;
+	           		flag = false;
+	           	} else {this.prompt.phone.isVisible = false}
+            }
 
            	if (this.newpwd.length < 6) {
            		this.prompt.password.isVisible = true;
