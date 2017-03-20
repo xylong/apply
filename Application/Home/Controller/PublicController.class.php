@@ -87,9 +87,9 @@ class PublicController extends Controller
 	}
 
 
-	public function xxoo()
+	public function demo()
 	{
-		saveDatabase();
+		$this->display('demo');
 	}
 
 

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>学生社团活动审批管理系统</title>
+
+    <link href="__CSS__/bootstrap.min.css" rel="stylesheet">
+    <link href="__FONT__/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <link href="__CSS__/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="__CSS__/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <link href="__CSS__/animate.css" rel="stylesheet">
+    <link href="__CSS__/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="__IMG__/favicon.ico">
+
+</head>
+
+
+    <div id="wrapper">
+        <div id="page-wrapper" class="gray-bg">
+            <if condition="isset($_SESSION['uid'])">
+                <div class="row border-bottom">
+                    <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                        <div class="navbar-header">
+                            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
+                            <form role="search" class="navbar-form-custom" action="search_results.html">
+                                <div class="form-group">
+                                    <input type="text" placeholder="" class="form-control" name="top-search" id="top-search">
+                                </div>
+                            </form>
+                        </div>
+                            
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <span class="m-r-sm text-muted welcome-message"><a href="{:U('Admin/Index/index')}">管理中心</a></span>
+                            </li>
+                            <li class="dropdown">
+                                <ul class="dropdown-menu dropdown-alerts">
+                                    <li>
+                                        <a href="mailbox.html">
+                                            <div>
+                                                <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="profile.html">
+                                            <div>
+                                                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                                <span class="pull-right text-muted small">12 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="grid_options.html">
+                                            <div>
+                                                <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a href="notifications.html">
+                                                <strong>See All Alerts</strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <a href="{:U('Public/logout')}">
+                                    <i class="fa fa-sign-out"></i> 退出
+                                </a>
+                            </li>
+                        </ul>
+                            
+
+                        </nav>
+                </div>
+            </if>
+           
+
+        <div class="wrapper wrapper-content" id="house">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content mailbox-content">
+                                <div class="file-manager">
+                                    <a class="btn btn-block btn-primary compose-mail" href="javascript:;" @click="add">新增</a>
+                                    <div class="space-25"></div>
+                                    <h5>青春工坊</h5>
+
+                                    <div class="ibox ">
+                                        <div class="ibox-content">
+                                            <div class="dd" id="nestable">
+                                                <ol class="dd-list">
+                                                    <li class="dd-item" v-for="v in houses">
+                                                        <div class="dd-handle" v-text="v.name" @click="display($index)"></div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 animated fadeInRight">
+                    <div class="mail-box-header">
+                        <h2>
+                            青春工坊信息
+                        </h2>
+                    </div>
+                        <div class="mail-box">
+
+
+                        <div class="mail-body">
+
+                            <form class="form-horizontal" method="get">
+                                <div class="form-group"><label class="col-sm-2 control-label">名称</label>
+                                    <div class="col-sm-10"><input type="text" class="form-control" v-model="name"></div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">备注</label>
+        							<div class="col-sm-10"><textarea class="form-control" rows="5" v-model="describe"></textarea></div>
+        						</div>
+                            </form>
+
+                        </div>
+
+
+                            <div class="mail-body text-right tooltip-demo" v-show="isVisible">
+                                <a href="javascript:;" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Send" @click="sub"><i class="fa fa-reply"></i> 保存</a>
+                            </div>
+                            <div class="clearfix"></div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="footer">
+            <div class="pull-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2015
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <script src="__JS__/jquery-2.1.1.js"></script>
+    <script src="__JS__/bootstrap.min.js"></script>
+    <script src="__JS__/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="__JS__/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <script src="__JS__/inspinia.js"></script>
+    <script src="__JS__/plugins/pace/pace.min.js"></script>
+
+    <script src="__JS__/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <script src="__JS__/plugins/toastr/toastr.min.js"></script>
+
+    <script src="__JS__/vue/vue.js"></script>
+    <script src="__JS__/vue/vue-resource.js"></script>
+    <script src="__JS__/common/common.js"></script>
+
+</html>
+<script src="__JS__/admin/house.js"></script>
