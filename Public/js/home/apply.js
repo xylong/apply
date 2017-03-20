@@ -4,7 +4,7 @@ var vm = new Vue({
 		type : [
 			{ id : 1, name : '物资' },
 			{ id : 2, name : '青春工坊'},
-			{ id : 3, name : '展场展架'},
+			{ id : 3, name : '青广活动'},
 		],
 
 		applys : [],
