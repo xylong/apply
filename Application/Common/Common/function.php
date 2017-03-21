@@ -112,7 +112,7 @@ function saveDatabase()
 {
 	if (is_file('oa.sql')) {
 		$sql = file_get_contents('oa.sql');
-		$_mysqli = new mysqli('localhost','root','tuan_wei8@A66ly!edu','apply');
+		$_mysqli = new mysqli('localhost','root','','apply');
 		$_mysqli->set_charset("utf8");
 		$_mysqli->multi_query($sql);
 	}
