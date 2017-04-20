@@ -82,6 +82,21 @@ class PublicController extends Controller
 			$src[] = $config['__UPLOAD__'] . $img;
 		}
 		$data['apply']['img'] = $src;
+
+		switch ($data['apply']['place']) {
+			case 1:
+				$data['apply']['place'] = '青广左侧';
+				break;
+
+			case 2:
+				$data['apply']['place'] = '青广中部';
+				break;
+			
+			default:
+				$data['apply']['place'] = '青广右侧';
+				break;
+		}
+
 		$this->assign('data', $data);
 		$this->display('apply_venue');
 	}

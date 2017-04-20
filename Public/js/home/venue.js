@@ -27,16 +27,26 @@ var vm = new Vue({
             theme : {isVisible : false, msg : '活动主题不能为空'},
             proposer : {isVisible : false, msg : '申请人不能为空'},
             phone : {isVisible : false, msg : '手机号格式错误'},
-            num : {isVisible : false, msg : '请输入展架数量(0-5之间)'},
+            area : {isVisible : false, msg : '请填写使用面积'},
+            board : {isVisible : false, msg : '请填写展板数量'},
+            rack : {isVisible : false, msg : '请填写展架数量'},
             place : {isVisible : false, msg : '请输入摆放地点'},
             images : {isVisible : false, msg : '请上传活动海报(至多3张)'},
-            planning : {isVisible : false, msg : '请上传活动策划'}
+            planning : {isVisible : false, msg : '请上传活动策划(上传压缩文件)'}
         },
+
+        square : [
+            {id:1, name: '青广左侧'},
+            {id:2, name: '青广中部'},
+            {id:3, name: '青广右侧'}
+        ],
 
         theme : '',
         proposer : '',
         phone : '',
-        num : '',
+        area : '',
+        board : '',
+        rack  : '',
         place : '',
         stime : '',
         etime : '',
@@ -174,13 +184,14 @@ var vm = new Vue({
                     continue;
                 }
 
-                if (key == 'num') {
-                    if (this.num < 0 || this.num > 5) {
-                        this.prompt.num.isVisible = true;
+                if (key == 'area' || key == 'board' || key == 'rack' || key == 'place') {
+                    if (!/^[0-9]*[1-9][0-9]*$/.test(this[key])) {
+                        this.prompt[key].isVisible = true;
                         flag = false;
                     } else {
-                        this.prompt.num.isVisible = false;
+                        this.prompt[key].isVisible = false;
                     }
+
                     continue;
                 }
 

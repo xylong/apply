@@ -93,16 +93,33 @@
                                 </div>
                             </div>
 
-                            <div class="form-group"><label class="col-lg-2 control-label">使用数量</label>
+                            <div class="form-group"><label class="col-lg-2 control-label">使用面积(㎡)</label>
                                 <div class="col-lg-10">
-                                    <input type="number" min="1" max="5" name="num" class="form-control" v-model="num">
-                                    <span class="help-block m-b-none text-danger" v-show="prompt.num.isVisible" v-text="prompt.num.msg"></span>
+                                    <input type="text" class="form-control" name="area" v-model="area">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.area.isVisible" v-text="prompt.area.msg"></span>
                                 </div>
                             </div>
 
-                            <div class="form-group"><label class="col-lg-2 control-label">摆放地点</label>
+                            <div class="form-group"><label class="col-lg-2 control-label">展板数量</label>
                                 <div class="col-lg-10">
-                                    <input type="text" name="place" class="form-control" v-model="place">
+                                    <input type="text" class="form-control" name="board" v-model="board">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.board.isVisible" v-text="prompt.board.msg"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-lg-2 control-label">展架数量</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="rack" v-model="rack">
+                                    <span class="help-block m-b-none text-danger" v-show="prompt.rack.isVisible" v-text="prompt.rack.msg"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group"><label class="col-sm-2 control-label">摆放地点</label>
+
+                                <div class="col-sm-10">
+                                    <select class="form-control m-b" name="place" v-model="place">
+                                        <option v-for="option in square" v-bind:value="option.id" v-text="option.name"></option>
+                                    </select>
                                     <span class="help-block m-b-none text-danger" v-show="prompt.place.isVisible" v-text="prompt.place.msg"></span>
                                 </div>
                             </div>

@@ -13,8 +13,10 @@ class VenueModel extends Model
         array('theme', 'require', '活动主题不能为空', 1),   // 活动主题
         array('proposer', 'require', '申请人不能为空', 1), // 申请人
         array('phone', 'checkPhone', '手机格式错误', 1, 'function'),  // 手机号
-        array('num', 'number', '展架数量必填', 1),    // 展架数量
-        array('place', 'require', '摆放地点必填', 1), // 摆放地点
+        array('area', 'number', '展架数量必填', 1),    // 展架数量
+        array('board', 'number', '展架数量必填', 1),    // 展架数量
+        array('rack', 'number', '展架数量必填', 1),    // 展架数量
+        array('place', 'number', '摆放地点必填', 1), // 摆放地点
         array('remark', 'require', '', 2),  // 备注
         array('stime', 'require', '开始时间不能为空', 1),   // 开始时间
         array('etime', 'require', '结束时间不能为空', 2, ),	// 结束时间
@@ -226,7 +228,7 @@ class VenueModel extends Model
     public function getApplyById($id)
     {
         $apply = $this->where(array('oa_venue.id' => $id))
-                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'proposer', 'num', 'place', 'img', 'planning', 'remark', 'utype', 'stime', 'etime', 'apply_time', 'receiver', 'union'))
+                    ->field(array('id', 'code', 'uid', 'theme', 'phone', 'proposer', 'num', 'place', 'img', 'planning', 'remark', 'utype', 'stime', 'etime', 'apply_time', 'receiver', 'union', 'area', 'board', 'rack'))
                     ->find();
         $result = M('Approve')->join('LEFT JOIN __ADMIN__ ON __APPROVE__.uid = __ADMIN__.id')
                             ->join('LEFT JOIN __ROLE__ ON __APPROVE__.role_id = __ROLE__.id')

@@ -108,8 +108,9 @@
                                             <dl class="dl-horizontal">
                                                 <dt>申请码:</dt> <dd v-text="detail.code"></dd>
                                                 <dt>申请人:</dt> <dd v-text="detail.proposer"></dd>
-                                                <dt>展架数量:</dt> <dd v-text="detail.num"></dd>
+                                                <dt>展架数量:</dt> <dd v-text="detail.rack"></dd>
                                                 <dt>起始时间:</dt> <dd v-text="detail.stime"></dd>
+                                                <dt>使用面积(㎡):</dt> <dd v-text="detail.area"></dd>
                                                 <dt>下载附件:</dt> <dd><a :href="detail.planning">下载</a></dd>
                                             </dl>
                                         </div>
@@ -117,8 +118,12 @@
                                             <dl class="dl-horizontal" >
                                                 <dt>申请时间:</dt> <dd v-text="detail.apply_time"></dd>
                                                 <dt>联系方式:</dt> <dd v-text="detail.phone"></dd>
-                                                <dt>摆放地点:</dt> <dd v-text="detail.place"></dd>
+                                                <dt>展板数量:</dt> <dd v-text="detail.board"></dd>
                                                 <dt>结束时间:</dt> <dd v-text="detail.etime"></dd>
+                                                <dt>摆放地点:</dt> 
+                                                <dd v-if="detail.place == 1">青广左侧</dd>
+                                                <dd v-if="detail.place == 2">青广中部</dd>
+                                                <dd v-if="detail.place == 3">青广右侧</dd>
                                             </dl>
                                         </div>
                                     </div>
