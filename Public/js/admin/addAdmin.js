@@ -43,10 +43,10 @@ var vm = new Vue({
            		flag = false
            	} else {this.prompt.account.isVisible = false;}
 
-           	if (!checkPhone(this.user.phone)) {
-           		this.prompt.phone.isVisible = true;
-           		flag = false;
-           	} else {this.prompt.phone.isVisible = false}
+           	// if (!checkPhone(this.user.phone)) {
+           	// 	this.prompt.phone.isVisible = true;
+           	// 	flag = false;
+           	// } else {this.prompt.phone.isVisible = false}
 
            	if (this.user.password.length < 6) {
            		this.prompt.password.isVisible = true;
@@ -58,10 +58,10 @@ var vm = new Vue({
            		flag = false;
            	} else {this.prompt.repassword.isVisible = false}
 
-            if (this.user.id_number.length === 0) {
-              this.prompt.id_number.isVisible = true;
-              flag = false;
-            } else {this.prompt.id_number.isVisible = false}
+            // if (this.user.id_number.length === 0) {
+            //   this.prompt.id_number.isVisible = true;
+            //   flag = false;
+            // } else {this.prompt.id_number.isVisible = false}
 
            	return flag;
         },
