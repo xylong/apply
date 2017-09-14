@@ -30,7 +30,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr v-for="v in list">
-                                                    <td v-text="v.id"></td>
+                                                    <td v-text="$index + 1 + this.current * 10 - 10"></td>
                                                     <td v-text="v.account"></td>
                                                     <td v-text="v.id_number"></td>
                                                     <td v-text="v.phone"></td>
@@ -97,14 +97,14 @@
 
                                 <div class="form-group"><label class="col-lg-2 control-label">一卡通</label>
                                     <div class="col-lg-10">
-                                        <input type="text" placeholder="" class="form-control" v-model="user.id_number">
+                                        <input type="text" placeholder="非必填" class="form-control" v-model="user.id_number">
                                         <span class="help-block m-b-none text-danger" v-show="prompt.id_number.isVisible" v-text="prompt.id_number.msg">.</span>
                                     </div>
                                 </div>
 
                                 <div class="form-group"><label class="col-lg-2 control-label">手机号</label>
                                     <div class="col-lg-10">
-                                        <input type="text" placeholder="" class="form-control" v-model="user.phone">
+                                        <input type="text" placeholder="非必填" class="form-control" v-model="user.phone">
                                         <span class="help-block m-b-none text-danger" v-show="prompt.phone.isVisible" v-text="prompt.phone.msg">.</span>
                                     </div>
                                 </div>
@@ -154,4 +154,4 @@
 <!-- iCheck -->
 <script src="__JS__/common/page.js"></script>
 <script src="__JS__/common/common.js"></script>
-<script src="__JS__/admin/admin.js"></script>
+<script src="__JS__/admin/admins.js"></script>
