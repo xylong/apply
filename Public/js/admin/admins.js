@@ -96,7 +96,8 @@ var vm = new Vue({
                 confirmButtonText: "Yes",
                 closeOnConfirm: false
             }, function () {
-                vm.delAdmin(id);
+                console.log(index);
+                vm.delAdmin(id, index);
             });
         },
 
@@ -119,6 +120,16 @@ var vm = new Vue({
             this.user.id_number = this.list[index].id_number;
             this.user.phone = this.list[index].phone;
 
+            this.user.password = this.user.repassword = '';
+
+            this.prompt = {
+                account : {isVisible : false, msg : '账号不能为空'},
+                password : {isVisible : false, msg : ''},
+                repassword : {isVisible : false, msg : '两次密码输入不一致'},
+                id_number : {isVisible : false, msg : '一卡通不能为空'},
+                phone : {isVisible : false, msg : '请输入正确手机号'}
+            };
+
             $('#myModal').modal('show');
         },
 
@@ -127,15 +138,31 @@ var vm = new Vue({
 
             var data = {};
             for (var item in this.user) {
-                if (this.user[item] === 0 || this.user[item] === '') continue;
+                if (this.user[item] === 0 || this.user[item] === '') {
+                    if (item !== 'id_number' && item !== 'phone') {
+                        continue;
+                    }
+                }
                 data[item] = this.user[item];
             }
+
+            var self = this;
 
             this.$http
                 .post('addUser', data, {
                     emulateJSON:true
                 }).then(function(res){
                     toastr.success('分配成功');
+
+                    for (var i = self.list.length - 1; i >= 0; i--) {
+                        if (self.user.id == self.list[i]['id']) {
+                            self.list[i]['account'] = self.user.account;
+                            self.list[i]['id_number'] = self.user.id_number;
+                            self.list[i]['phone'] = self.user.phone;
+                        }
+                    }
+
+                    $('#myModal').modal('hide');
                 },function(res){
                     toastr.success('分配失败');
                 });
@@ -148,25 +175,28 @@ var vm = new Vue({
                 flag = false
             } else {this.prompt.account.isVisible = false;}
 
-            if (!this.user.id_number) {
+            /*if (!this.user.id_number) {
               this.prompt.id_number.isVisible = true;
               flag = false;
-            } else {this.prompt.id_number.isVisible = false}
+            } else {this.prompt.id_number.isVisible = false}*/
 
-            if (!checkPhone(this.user.phone)) {
-                this.prompt.phone.isVisible = true;
-                flag = false;
-            } else {this.prompt.phone.isVisible = false}
+            // if (!checkPhone(this.user.phone)) {
+            //     this.prompt.phone.isVisible = true;
+            //     flag = false;
+            // } else {this.prompt.phone.isVisible = false}
 
-            if (!this.password_strength()) {
-                this.prompt.password.isVisible = true;
-                flag = false;
-            } else {this.prompt.password.isVisible = false}
+            if (this.user.password.length != 0) {
+                if (!this.password_strength()) {
+                    this.prompt.password.isVisible = true;
+                    flag = false;
+                } else {this.prompt.password.isVisible = false}
 
-            if (this.user.password != this.user.repassword) {
-                this.prompt.repassword.isVisible = true;
-                flag = false;
-            } else {this.prompt.repassword.isVisible = false}
+                if (this.user.password != this.user.repassword) {
+                    this.prompt.repassword.isVisible = true;
+                    flag = false;
+                } else {this.prompt.repassword.isVisible = false}
+            }
+
 
             return flag;
         },
